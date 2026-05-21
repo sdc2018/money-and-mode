@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 90" width="440" height="90" font-family="Georgia, serif">
+
+  <!-- Icon circle -->
+  <circle cx="45" cy="45" r="42" fill="#2D6A4F"/>
+
+  <!-- Stem -->
+  <line x1="45" y1="76" x2="45" y2="22" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Left leaf (upper-left) -->
+  <path d="M45,54 C38,46 24,42 28,33 C31,27 45,46 45,54Z" fill="white" opacity="0.95"/>
+
+  <!-- Right leaf (upper-right) -->
+  <path d="M45,40 C52,32 66,28 62,19 C59,13 45,32 45,40Z" fill="white" opacity="0.95"/>
+
+  <!-- Bud -->
+  <circle cx="45" cy="19" r="7" fill="#E76F51"/>
+
+  <!-- Site name -->
+  <text x="102" y="40" font-size="28" font-weight="bold" fill="#1a1a2e" letter-spacing="0.3">Fun in the Life</text>
+
+  <!-- Tagline -->
+  <text x="104" y="62" font-size="12.5" fill="#888" letter-spacing="0.2">From Daily Growth to Wealth: A Life Well Lived</text>
+
+  <!-- Subtle underline accent -->
+  <line x1="102" y1="70" x2="238" y2="70" stroke="#E76F51" stroke-width="1.5" opacity="0.6"/>
+
+</svg>
