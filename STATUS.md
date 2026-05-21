@@ -3,7 +3,7 @@
 **Site:** https://money-and-mode.com  
 **Site Name:** Fun in the Life  
 **Tagline:** From Daily Growth to Wealth: A Life Well Lived  
-**Last Updated:** May 21, 2026  
+**Last Updated:** May 21, 2026 (Session 1 — Full housekeeping done)  
 
 ---
 
@@ -155,34 +155,53 @@
 
 ---
 
-## Security Alerts
+## WordPress Housekeeping — Completed May 21, 2026
 
-⚠️ **/wp-login.php receiving 2,879 bot hits** — Brute-force login attempts  
-**Fix:** Install Wordfence (free) or limit login attempts via AIOSEO Security settings  
+| Task | Status | Notes |
+|------|--------|-------|
+| Comments, pingbacks, trackbacks | ✅ Disabled | All turned off globally |
+| WordPress core | ✅ Updated | 6.9 → 7.0 |
+| Timezone | ✅ Fixed | Asia/Kolkata (IST, UTC+5:30) |
+| Public registration | ✅ Disabled | "Anyone can register" = OFF |
+| Permalinks | ✅ Confirmed | /%postname%/ — SEO-friendly |
+| MonsterInsights (GA) | ✅ Activated | Needs GA4 tracking ID connected |
+| IONOS Single Sign-On | ✅ Activated | Fixes IONOS dashboard login |
+| Wordfence Security | ✅ Active | Firewall learning mode until May 28 |
+| All plugins | ✅ Up to date | No updates needed |
+| All themes | ✅ Up to date | No updates needed |
+| Wordfence free license | ⚠️ Manual step | WP Admin → Wordfence → Help → Resume Installation → enter sandipc@gmail.com |
+| Hide WordPress version | ⚠️ Manual step | AIOSEO → General Settings → Advanced → uncheck "Output Generator Tag" |
+| Google Analytics GA4 | ⚠️ Manual step | MonsterInsights active — needs GA4 Measurement ID |
+| Google Search Console | ⚠️ Not done | Submit sitemap after GA connected |
 
-⚠️ **WordPress version publicly visible** in HTML meta tags  
-**Fix:** AIOSEO → Search Appearance → Uncheck "Show WordPress version"  
+---
+
+## Security Status
+
+✅ **Wordfence active** — brute force protection running on /wp-login.php  
+⚠️ **WordPress 7.0 version tag visible** — fix manually via AIOSEO → General Settings → Advanced
 
 ---
 
 ## GitHub Repository
 
 **Repo:** https://github.com/sdc2018/money-and-mode  
-**Status:** 🟡 Setting up  
+**Status:** ✅ Live  
 **Branch:** main  
 
 ---
 
 ## Open Actions
 
-- [ ] Publish 3 written articles to WordPress
-- [ ] Fix security: block wp-login.php brute force
-- [ ] Fix SEO: add meta descriptions
-- [ ] Hide WordPress version in AIOSEO
-- [ ] Connect Google Search Console
-- [ ] Install Google Analytics (GA4)
-- [ ] Receive Sandip's financial freedom thoughts → write series
-- [ ] Create Phase 3 social media handles
+- [ ] Publish 3 written articles to WordPress (ready in /articles/)
+- [ ] Complete Wordfence license (enter sandipc@gmail.com on wordfence.com)
+- [ ] Hide WP version: AIOSEO → General Settings → Advanced → uncheck generator tag
+- [ ] Connect MonsterInsights to GA4 Measurement ID
+- [ ] Submit sitemap to Google Search Console
+- [ ] Add meta descriptions to existing pages via AIOSEO
+- [ ] Write next batch of articles (ChatGPT explained, Free AI tools, Talk to AI)
+- [ ] Get Sandip's financial freedom initial thoughts → write series
+- [ ] Create Phase 3 social media handles (Pinterest first)
 - [ ] Apply for Google AdSense when traffic hits 5,000/month
 
 ---
