@@ -160,7 +160,7 @@ All diagrams are custom SVG (800px wide, Georgia serif font, brand colours), upl
 | Pinterest | @sandip2787 (sdc67@yahoo.com) | ✅ Live — profile, 3 boards, 3 pins |
 | Instagram | To be created | ⚪ Phase 3 |
 | Facebook Page | To be created | ⚪ Phase 3 |
-| Twitter/X | To be created | ⚪ Phase 3 |
+| Twitter/X | @justindia25 | ✅ Account exists |
 | YouTube | To be created | ⚪ Phase 3 |
 
 ---
