@@ -3,7 +3,7 @@
 **Site:** https://money-and-mode.com  
 **Site Name:** Fun in the Life  
 **Tagline:** From Daily Growth to Wealth: A Life Well Lived  
-**Last Updated:** May 21, 2026 (Session 5 — Articles 4–8 written, diagrams created & uploaded, all 5 articles published as WordPress drafts with diagrams embedded)  
+**Last Updated:** May 22, 2026 (Session 5 — Articles 4–8 drafted in WP; Pinterest photo + Twitter @justIndia25 bio & 3 tweets done by Sandip)  
 
 ---
 
@@ -170,7 +170,7 @@ All diagrams are custom SVG (800px wide, Georgia serif font, brand colours), upl
 | Pinterest | @sandip2787 (sdc67@yahoo.com) | ✅ Live — profile, 3 boards, 3 pins |
 | Instagram | To be created | ⚪ Phase 3 |
 | Facebook Page | To be created | ⚪ Phase 3 |
-| Twitter/X | @justIndia25 | ⚠️ Needs profile bio + 3 tweets — drafts ready in social-media/ |
+| Twitter/X | @justIndia25 | ✅ Live — bio set, 3 article tweets posted |
 | YouTube | To be created | ⚪ Phase 3 |
 
 ---
@@ -229,7 +229,7 @@ All diagrams are custom SVG (800px wide, Georgia serif font, brand colours), upl
 - [ ] Get Sandip's financial freedom initial thoughts → write series
 - [x] Pinterest account created — @sandip2787 (sdc67@yahoo.com) — Phase 3 begins
 - [x] Pinterest profile set up — name "Fun in the Life", bio, website money-and-mode.com all live
-- [ ] Pinterest profile photo — Sandip to upload manually (headshot or logo)
+- [x] Pinterest profile photo — uploaded by Sandip ✅
 - [x] Pinterest boards created — "AI Tips & Tools", "Money & Financial Freedom", "Life, Growth & Daily Habits"
 - [x] Pinterest pins created — all 3 articles pinned to AI Tips & Tools board with diagrams
 - [ ] Pinterest Rich Pins — enable via schema validation (checking)
