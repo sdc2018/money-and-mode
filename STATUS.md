@@ -3,7 +3,7 @@
 **Site:** https://money-and-mode.com  
 **Site Name:** Fun in the Life  
 **Tagline:** From Daily Growth to Wealth: A Life Well Lived  
-**Last Updated:** May 21, 2026 (Session 4 — Diagrams live on all 3 articles; MonsterInsights OAuth done; Pinterest @sandip2787 created)  
+**Last Updated:** May 21, 2026 (Session 4 — Diagrams live on 3 articles; MonsterInsights done; Pinterest @sandip2787 profile set up with bio + website)  
 
 ---
 
@@ -157,7 +157,7 @@ All diagrams are custom SVG (800px wide, Georgia serif font, brand colours), upl
 
 | Platform | Handle | Status |
 |----------|--------|--------|
-| Pinterest | @sandip2787 (sdc67@yahoo.com) | ✅ Created |
+| Pinterest | @sandip2787 (sdc67@yahoo.com) | ✅ Live — profile set up |
 | Instagram | To be created | ⚪ Phase 3 |
 | Facebook Page | To be created | ⚪ Phase 3 |
 | Twitter/X | To be created | ⚪ Phase 3 |
@@ -215,6 +215,8 @@ All diagrams are custom SVG (800px wide, Georgia serif font, brand colours), upl
 - [ ] Write next batch of articles (ChatGPT explained, Free AI tools, Talk to AI)
 - [ ] Get Sandip's financial freedom initial thoughts → write series
 - [x] Pinterest account created — @sandip2787 (sdc67@yahoo.com) — Phase 3 begins
+- [x] Pinterest profile set up — name "Fun in the Life", bio, website money-and-mode.com all live
+- [ ] Pinterest profile photo — Sandip to upload manually (headshot or logo)
 - [ ] Apply for Google AdSense when traffic hits 5,000/month
 
 ---
