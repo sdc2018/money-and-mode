@@ -3,7 +3,7 @@
 **Site:** https://money-and-mode.com  
 **Site Name:** Fun in the Life  
 **Tagline:** From Daily Growth to Wealth: A Life Well Lived  
-**Last Updated:** May 21, 2026 (Session 4 — Diagrams live on 3 articles; MonsterInsights done; Pinterest @sandip2787 profile set up with bio + website)  
+**Last Updated:** May 21, 2026 (Session 5 — Articles 4–8 written, diagrams created & uploaded, all 5 articles published as WordPress drafts with diagrams embedded)  
 
 ---
 
@@ -12,7 +12,7 @@
 | Phase | Focus | Status |
 |-------|-------|--------|
 | Phase 1 | Site audit, content foundation, SEO setup | 🟡 In Progress |
-| Phase 2 | Content engine (AI + Financial Freedom series) | 🔵 Planning |
+| Phase 2 | Content engine (AI + Financial Freedom series) | 🟡 In Progress |
 | Phase 3 | Social media handles + distribution | ⚪ Not Started |
 | Phase 4 | Monetisation (Google Ads / ad framework) | ⚪ Not Started |
 
@@ -107,7 +107,12 @@
 | 1 | How AI Is Changing Everyday Life | how AI is changing everyday life | ✅ Published (Post ID 74) |
 | 2 | How to Use AI to Save 2 Hours Every Day | how to use AI to save time | ✅ Published (Post ID 76) |
 | 3 | Will AI Take My Job? | will AI take my job | ✅ Published (Post ID 77) |
-| 4–10 | See content calendar | Various | 📝 Planned |
+| 4 | What Is ChatGPT? | what is ChatGPT explained simply | 📋 Draft (Post ID 93) — publish Jun 6 |
+| 5 | 10 Free AI Tools | best free AI tools for everyday use | 📋 Draft (Post ID 94) — publish Jun 10 |
+| 6 | How to Talk to AI | how to use ChatGPT for beginners | 📋 Draft (Post ID 95) — publish Jun 13 |
+| 7 | AI for Parents | AI for kids education | 📋 Draft (Post ID 96) — publish Jun 17 |
+| 8 | AI & Healthcare | how AI is changing healthcare | 📋 Draft (Post ID 97) — publish Jun 20 |
+| 9–24 | See content calendar | Various | 📝 Planned |
 
 ### Financial Freedom Series
 | # | Title | Status |
@@ -117,15 +122,20 @@
 **All article files:** `/articles/`  
 **Content calendar + 10 ideas:** `/articles/10-article-ideas-content-calendar.md`
 
-### Diagrams & Images (Session 4)
+### Diagrams & Images
 
 | File | WordPress ID | Used In | Description |
 |------|-------------|---------|-------------|
 | `assets/images/ai-in-your-life.svg` | 80 (PNG) | Post 74 | Wheel diagram — 8 ways AI is in daily life |
 | `assets/images/time-savings-chart.svg` | 81 (PNG) | Post 76 | Bar chart — time saved before/after AI (4 tasks) |
 | `assets/images/ai-job-risk.svg` | 82 (PNG) | Post 77 | Two-column — disrupted roles vs thriving roles |
+| `assets/images/what-is-chatgpt.svg` | 88 (PNG) | Post 93 | 3-step flow: you type → AI thinks → you get answer |
+| `assets/images/10-free-ai-tools.svg` | 89 (PNG) | Post 94 | Grid of 10 AI tools with use cases |
+| `assets/images/how-to-talk-to-ai.svg` | 90 (PNG) | Post 95 | Before/after: vague ask vs. clear ask (4 examples) |
+| `assets/images/ai-for-parents.svg` | 91 (PNG) | Post 96 | 5 ways AI helps children learn better |
+| `assets/images/ai-healthcare.svg` | 92 (PNG) | Post 97 | 5 ways AI is changing healthcare |
 
-All diagrams are custom SVG (800px wide, Georgia serif font, brand colours), uploaded as PNG to WordPress and embedded in article content with captions.
+All diagrams are custom SVG (800px wide, Georgia serif font, brand colours), uploaded as PNG to WordPress and embedded in article content.
 
 ---
 
@@ -136,9 +146,9 @@ All diagrams are custom SVG (800px wide, Georgia serif font, brand colours), upl
 | Week | Dates | Articles |
 |------|-------|---------|
 | 1 | May 26, 30 | AI Everyday Life ✅ + AI Save Time ✅ |
-| 2 | Jun 3, 6 | Will AI Take My Job ✅ + What is ChatGPT |
-| 3 | Jun 10, 13 | 10 Free AI Tools + How to Talk to AI |
-| 4 | Jun 17, 20 | AI for Parents + AI & Healthcare |
+| 2 | Jun 3, 6 | Will AI Take My Job ✅ + What is ChatGPT 📋 |
+| 3 | Jun 10, 13 | 10 Free AI Tools 📋 + How to Talk to AI 📋 |
+| 4 | Jun 17, 20 | AI for Parents 📋 + AI & Healthcare 📋 |
 | 5–12 | Jun 24–Aug 15 | See full calendar in content-calendar.md |
 
 ---
@@ -212,7 +222,10 @@ All diagrams are custom SVG (800px wide, Georgia serif font, brand colours), upl
 - [x] Submit sitemap to Google Search Console — already verified and submitted
 - [x] Add meta descriptions to 3 published articles via AIOSEO — live on all 3 posts
 - [x] Add custom diagrams/images to all 3 published articles — live on site
-- [ ] Write next batch of articles (ChatGPT explained, Free AI tools, Talk to AI)
+- [x] Write articles 4–8 (ChatGPT, Free AI Tools, Talk to AI, AI for Parents, AI Healthcare) — all done, saved in /articles/
+- [x] Create custom diagrams for articles 4–8 — 5 SVGs made, uploaded as PNGs (WP IDs 88–92)
+- [x] Publish articles 4–8 as WordPress drafts — Post IDs 93–97, diagrams embedded, AIOSEO meta set
+- [ ] Review & publish drafts 93–97 on schedule (Jun 6, 10, 13, 17, 20)
 - [ ] Get Sandip's financial freedom initial thoughts → write series
 - [x] Pinterest account created — @sandip2787 (sdc67@yahoo.com) — Phase 3 begins
 - [x] Pinterest profile set up — name "Fun in the Life", bio, website money-and-mode.com all live

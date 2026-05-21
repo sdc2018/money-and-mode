@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" font-family="Georgia, serif">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#F9F7F4" rx="16"/>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-size="21" font-weight="bold" fill="#1a1a2e">5 Ways AI Can Help Your Child Learn</text>
+  <text x="400" y="62" text-anchor="middle" font-size="13" fill="#666">Not a shortcut. A patient tutor — available at midnight, for free.</text>
+
+  <!-- Card 1: Homework Help -->
+  <rect x="30" y="82" width="348" height="120" fill="white" rx="12" stroke="#2D6A4F" stroke-width="1.5"/>
+  <rect x="30" y="82" width="348" height="44" fill="#2D6A4F" rx="12 12 0 0"/>
+  <text x="60" y="100" font-size="20" fill="white">📚</text>
+  <text x="90" y="100" font-size="14" font-weight="bold" fill="white">1. Homework Explained Differently</text>
+  <text x="90" y="116" font-size="11" fill="#c8e6c9">Multiple explanations until it clicks</text>
+  <text x="46" y="142" font-size="12" fill="#444">Ask AI to explain maths with apples, or</text>
+  <text x="46" y="160" font-size="12" fill="#444">photosynthesis "like I'm 8 years old." AI will</text>
+  <text x="46" y="178" font-size="12" fill="#444">try a new way until the child understands.</text>
+
+  <!-- Card 2: Writing Feedback -->
+  <rect x="422" y="82" width="348" height="120" fill="white" rx="12" stroke="#2D6A4F" stroke-width="1.5"/>
+  <rect x="422" y="82" width="348" height="44" fill="#2D6A4F" rx="12 12 0 0"/>
+  <text x="452" y="100" font-size="20" fill="white">✏️</text>
+  <text x="482" y="100" font-size="14" font-weight="bold" fill="white">2. Writing Feedback</text>
+  <text x="482" y="116" font-size="11" fill="#c8e6c9">Improve essays — without writing them</text>
+  <text x="438" y="142" font-size="12" fill="#444">Child writes their essay first. Then AI points</text>
+  <text x="438" y="160" font-size="12" fill="#444">out what works and what to improve. They</text>
+  <text x="438" y="178" font-size="12" fill="#444">learn from feedback — not from shortcuts.</text>
+
+  <!-- Card 3: Language Practice -->
+  <rect x="30" y="216" width="348" height="120" fill="white" rx="12" stroke="#E76F51" stroke-width="1.5"/>
+  <rect x="30" y="216" width="348" height="44" fill="#E76F51" rx="12 12 0 0"/>
+  <text x="60" y="234" font-size="20" fill="white">🌍</text>
+  <text x="90" y="234" font-size="14" font-weight="bold" fill="white">3. Language Practice</text>
+  <text x="90" y="250" font-size="11" fill="#ffe0d8">Conversational practice — any language</text>
+  <text x="46" y="276" font-size="12" fill="#444">AI can hold full conversations in English,</text>
+  <text x="46" y="294" font-size="12" fill="#444">French, or any language — patiently, at the</text>
+  <text x="46" y="312" font-size="12" fill="#444">child's pace. No embarrassment, no judgment.</text>
+
+  <!-- Card 4: Curiosity -->
+  <rect x="422" y="216" width="348" height="120" fill="white" rx="12" stroke="#E76F51" stroke-width="1.5"/>
+  <rect x="422" y="216" width="348" height="44" fill="#E76F51" rx="12 12 0 0"/>
+  <text x="452" y="234" font-size="20" fill="white">🔭</text>
+  <text x="482" y="234" font-size="14" font-weight="bold" fill="white">4. Feeding Curiosity</text>
+  <text x="482" y="250" font-size="11" fill="#ffe0d8">Deep dives on any topic they love</text>
+  <text x="438" y="276" font-size="12" fill="#444">"Why is the sky blue?" can lead to a 30-minute</text>
+  <text x="438" y="294" font-size="12" fill="#444">exploration of light, physics, and atmosphere.</text>
+  <text x="438" y="312" font-size="12" fill="#444">AI encourages questions — never tires of them.</text>
+
+  <!-- Card 5: Coding — spans full width -->
+  <rect x="30" y="350" width="740" height="100" fill="white" rx="12" stroke="#555" stroke-width="1.5"/>
+  <rect x="30" y="350" width="740" height="44" fill="#555" rx="12 12 0 0"/>
+  <text x="68" y="368" font-size="20" fill="white">💻</text>
+  <text x="100" y="368" font-size="14" font-weight="bold" fill="white">5. Learning to Code (Ages 12+)</text>
+  <text x="100" y="386" font-size="11" fill="#ddd">AI as a coding tutor — explains errors, suggests next steps, answers "why"</text>
+  <text x="46" y="414" font-size="12" fill="#444">A child can type "I want to make a simple game in Python — teach me step by step." AI becomes their personal</text>
+  <text x="46" y="432" font-size="12" fill="#444">coding teacher. Mistakes become learning moments. No shame, no cost — just practice.</text>
+
+  <!-- Footer -->
+  <text x="400" y="490" text-anchor="middle" font-size="10" fill="#bbb">money-and-mode.com — Fun in the Life</text>
+</svg>

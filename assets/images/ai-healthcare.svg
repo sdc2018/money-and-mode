@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" font-family="Georgia, serif">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#F9F7F4" rx="16"/>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-size="21" font-weight="bold" fill="#1a1a2e">How AI Is Changing Healthcare</text>
+  <text x="400" y="62" text-anchor="middle" font-size="13" fill="#666">Not replacing doctors — helping them do more, for more people.</text>
+
+  <!-- Top 2 large cards -->
+
+  <!-- Card 1: Diagnosis -->
+  <rect x="30" y="82" width="358" height="148" fill="white" rx="12" stroke="#2D6A4F" stroke-width="1.5"/>
+  <rect x="30" y="82" width="358" height="46" fill="#2D6A4F" rx="12 12 0 0"/>
+  <text x="62" y="104" font-size="22" fill="white">🔬</text>
+  <text x="96" y="102" font-size="14" font-weight="bold" fill="white">Faster, More Accurate Diagnosis</text>
+  <text x="96" y="120" font-size="11" fill="#c8e6c9">AI reads scans — and never gets tired</text>
+  <text x="46" y="148" font-size="12" fill="#444">AI trained on millions of X-rays and scans can spot</text>
+  <text x="46" y="166" font-size="12" fill="#444">cancer, heart disease, and diabetic eye damage at</text>
+  <text x="46" y="184" font-size="12" fill="#444">specialist level — even in rural clinics without</text>
+  <text x="46" y="202" font-size="12" fill="#444">nearby specialists. Closing India's urban-rural gap.</text>
+  <!-- Stat callout -->
+  <rect x="46" y="210" width="322" height="14" fill="transparent"/>
+  <text x="209" y="222" text-anchor="middle" font-size="11" fill="#2D6A4F" font-style="italic">In studies, AI matched specialists in detecting certain cancers</text>
+
+  <!-- Card 2: Drug Discovery -->
+  <rect x="412" y="82" width="358" height="148" fill="white" rx="12" stroke="#2D6A4F" stroke-width="1.5"/>
+  <rect x="412" y="82" width="358" height="46" fill="#2D6A4F" rx="12 12 0 0"/>
+  <text x="444" y="104" font-size="22" fill="white">💊</text>
+  <text x="478" y="102" font-size="14" font-weight="bold" fill="white">Drug Discovery — Faster</text>
+  <text x="478" y="120" font-size="11" fill="#c8e6c9">Years of research, compressed</text>
+  <text x="428" y="148" font-size="12" fill="#444">Drug development used to take 10–15 years. With</text>
+  <text x="428" y="166" font-size="12" fill="#444">AI, that's shrinking to 2–3 years. AI simulates</text>
+  <text x="428" y="184" font-size="12" fill="#444">molecular reactions and screens thousands of</text>
+  <text x="428" y="202" font-size="12" fill="#444">compounds — finding leads in days, not decades.</text>
+  <text x="591" y="222" text-anchor="middle" font-size="11" fill="#2D6A4F" font-style="italic">Faster cures for diseases that have waited too long</text>
+
+  <!-- Bottom 3 cards -->
+
+  <!-- Card 3: Phone health tools -->
+  <rect x="30" y="246" width="228" height="136" fill="white" rx="12" stroke="#E76F51" stroke-width="1.5"/>
+  <rect x="30" y="246" width="228" height="46" fill="#E76F51" rx="12 12 0 0"/>
+  <text x="60" y="264" font-size="22" fill="white">📱</text>
+  <text x="88" y="264" font-size="13" font-weight="bold" fill="white">Health in Your Pocket</text>
+  <text x="88" y="282" font-size="11" fill="#ffe0d8">Phone-based AI health tools</text>
+  <text x="46" y="308" font-size="11.5" fill="#444">Skin analysis apps. Heart rhythm</text>
+  <text x="46" y="326" font-size="11.5" fill="#444">detection from your Apple Watch.</text>
+  <text x="46" y="344" font-size="11.5" fill="#444">Symptom trackers. Early warnings</text>
+  <text x="46" y="362" font-size="11.5" fill="#444">before problems become serious.</text>
+
+  <!-- Card 4: Understanding reports -->
+  <rect x="286" y="246" width="228" height="136" fill="white" rx="12" stroke="#E76F51" stroke-width="1.5"/>
+  <rect x="286" y="246" width="228" height="46" fill="#E76F51" rx="12 12 0 0"/>
+  <text x="316" y="264" font-size="22" fill="white">📋</text>
+  <text x="344" y="264" font-size="13" font-weight="bold" fill="white">Understand Your Reports</text>
+  <text x="344" y="282" font-size="11" fill="#ffe0d8">Upload, ask, understand</text>
+  <text x="302" y="308" font-size="11.5" fill="#444">Photo your blood test or scan</text>
+  <text x="302" y="326" font-size="11.5" fill="#444">report and ask Claude or ChatGPT</text>
+  <text x="302" y="344" font-size="11.5" fill="#444">to explain it in plain English —</text>
+  <text x="302" y="362" font-size="11.5" fill="#444">before your doctor's appointment.</text>
+
+  <!-- Card 5: Mental health -->
+  <rect x="542" y="246" width="228" height="136" fill="white" rx="12" stroke="#555" stroke-width="1.5"/>
+  <rect x="542" y="246" width="228" height="46" fill="#555" rx="12 12 0 0"/>
+  <text x="572" y="264" font-size="22" fill="white">🧘</text>
+  <text x="600" y="264" font-size="13" font-weight="bold" fill="white">Mental Health Support</text>
+  <text x="600" y="282" font-size="11" fill="#ddd">A gentle first step</text>
+  <text x="558" y="308" font-size="11.5" fill="#444">AI chatbots offer a private, non-</text>
+  <text x="558" y="326" font-size="11.5" fill="#444">judgmental space to talk through</text>
+  <text x="558" y="344" font-size="11.5" fill="#444">anxiety, stress, and worry —</text>
+  <text x="558" y="362" font-size="11.5" fill="#444">while always recommending a doctor.</text>
+
+  <!-- Bottom reminder -->
+  <rect x="30" y="396" width="740" height="52" fill="#1a1a2e" rx="10"/>
+  <text x="400" y="418" text-anchor="middle" font-size="13" font-weight="bold" fill="white">⚕️  Important: AI is a tool, not a doctor.</text>
+  <text x="400" y="438" text-anchor="middle" font-size="12" fill="#aaa">Use it to understand, prepare, and ask better questions. Always see a real doctor for diagnosis and treatment.</text>
+
+  <!-- Footer -->
+  <text x="400" y="492" text-anchor="middle" font-size="10" fill="#bbb">money-and-mode.com — Fun in the Life</text>
+</svg>

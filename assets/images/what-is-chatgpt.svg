@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480" font-family="Georgia, serif">
+  <!-- Background -->
+  <rect width="800" height="480" fill="#F9F7F4" rx="16"/>
+
+  <!-- Title -->
+  <text x="400" y="44" text-anchor="middle" font-size="21" font-weight="bold" fill="#1a1a2e">How ChatGPT Works</text>
+  <text x="400" y="66" text-anchor="middle" font-size="13" fill="#666">You ask. It thinks. You get a useful answer. That's it.</text>
+
+  <!-- STEP 1: You Type -->
+  <rect x="40" y="90" width="210" height="270" fill="white" rx="14" stroke="#2D6A4F" stroke-width="2"/>
+  <rect x="40" y="90" width="210" height="54" fill="#2D6A4F" rx="14 14 0 0"/>
+  <text x="145" y="114" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Step 1</text>
+  <text x="145" y="134" text-anchor="middle" font-size="13" fill="#c8e6c9">You type a question</text>
+  <!-- Chat bubble icon area -->
+  <text x="145" y="188" text-anchor="middle" font-size="42">💬</text>
+  <text x="145" y="238" text-anchor="middle" font-size="13" fill="#555">You write a message</text>
+  <text x="145" y="258" text-anchor="middle" font-size="13" fill="#555">in plain language —</text>
+  <text x="145" y="278" text-anchor="middle" font-size="13" fill="#555">just like texting</text>
+  <text x="145" y="298" text-anchor="middle" font-size="13" fill="#555">a friend</text>
+  <!-- Example -->
+  <rect x="60" y="316" width="170" height="36" fill="#EDF7ED" rx="8"/>
+  <text x="145" y="330" text-anchor="middle" font-size="10" fill="#2D6A4F" font-style="italic">"Write me a polite email</text>
+  <text x="145" y="344" text-anchor="middle" font-size="10" fill="#2D6A4F" font-style="italic">to follow up with a client"</text>
+
+  <!-- Arrow 1 -->
+  <line x1="260" y1="225" x2="298" y2="225" stroke="#E76F51" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="298,218 312,225 298,232" fill="#E76F51"/>
+
+  <!-- STEP 2: AI Processes -->
+  <rect x="295" y="90" width="210" height="270" fill="white" rx="14" stroke="#E76F51" stroke-width="2"/>
+  <rect x="295" y="90" width="210" height="54" fill="#E76F51" rx="14 14 0 0"/>
+  <text x="400" y="114" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Step 2</text>
+  <text x="400" y="134" text-anchor="middle" font-size="13" fill="#ffe0d8">AI reads and thinks</text>
+  <!-- Brain icon -->
+  <text x="400" y="188" text-anchor="middle" font-size="42">🧠</text>
+  <text x="400" y="238" text-anchor="middle" font-size="13" fill="#555">Trained on billions</text>
+  <text x="400" y="258" text-anchor="middle" font-size="13" fill="#555">of pages of text,</text>
+  <text x="400" y="278" text-anchor="middle" font-size="13" fill="#555">it understands</text>
+  <text x="400" y="298" text-anchor="middle" font-size="13" fill="#555">what you need</text>
+  <!-- What it knows -->
+  <rect x="315" y="316" width="170" height="36" fill="#FFF0ED" rx="8"/>
+  <text x="400" y="330" text-anchor="middle" font-size="10" fill="#E76F51" font-style="italic">Books · Law · Medicine</text>
+  <text x="400" y="344" text-anchor="middle" font-size="10" fill="#E76F51" font-style="italic">Finance · History · Writing</text>
+
+  <!-- Arrow 2 -->
+  <line x1="515" y1="225" x2="553" y2="225" stroke="#2D6A4F" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="553,218 567,225 553,232" fill="#2D6A4F"/>
+
+  <!-- STEP 3: You Get an Answer -->
+  <rect x="550" y="90" width="210" height="270" fill="white" rx="14" stroke="#2D6A4F" stroke-width="2"/>
+  <rect x="550" y="90" width="210" height="54" fill="#2D6A4F" rx="14 14 0 0"/>
+  <text x="655" y="114" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Step 3</text>
+  <text x="655" y="134" text-anchor="middle" font-size="13" fill="#c8e6c9">You get a clear answer</text>
+  <!-- Document icon -->
+  <text x="655" y="188" text-anchor="middle" font-size="42">✅</text>
+  <text x="655" y="238" text-anchor="middle" font-size="13" fill="#555">A real, useful reply</text>
+  <text x="655" y="258" text-anchor="middle" font-size="13" fill="#555">in human language —</text>
+  <text x="655" y="278" text-anchor="middle" font-size="13" fill="#555">not code, not</text>
+  <text x="655" y="298" text-anchor="middle" font-size="13" fill="#555">technical jargon</text>
+  <!-- Example output -->
+  <rect x="570" y="316" width="170" height="36" fill="#EDF7ED" rx="8"/>
+  <text x="655" y="330" text-anchor="middle" font-size="10" fill="#2D6A4F" font-style="italic">"Dear Rajesh, I hope you're</text>
+  <text x="655" y="344" text-anchor="middle" font-size="10" fill="#2D6A4F" font-style="italic">well. Just following up…"</text>
+
+  <!-- Bottom callout -->
+  <rect x="40" y="380" width="720" height="72" fill="#2D6A4F" rx="12"/>
+  <text x="400" y="406" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Think of it as a brilliant friend who has read everything —</text>
+  <text x="400" y="428" text-anchor="middle" font-size="13" fill="#c8e6c9">available on your phone, 24 hours a day, for free.</text>
+  <text x="400" y="446" text-anchor="middle" font-size="12" fill="#81c784">No appointment needed. No silly question too small.</text>
+
+  <!-- Footer -->
+  <text x="400" y="472" text-anchor="middle" font-size="10" fill="#bbb">money-and-mode.com — Fun in the Life</text>
+</svg>
