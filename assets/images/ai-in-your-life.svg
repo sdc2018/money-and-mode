@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" font-family="Georgia, serif">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#F9F7F4" rx="16"/>
+
+  <!-- Title -->
+  <text x="400" y="48" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a1a2e">You're Already Using AI Every Day</text>
+  <text x="400" y="72" text-anchor="middle" font-size="14" fill="#666">You just didn't know it had a name</text>
+
+  <!-- Centre circle -->
+  <circle cx="400" cy="280" r="58" fill="#2D6A4F" opacity="0.9"/>
+  <text x="400" y="274" text-anchor="middle" font-size="15" font-weight="bold" fill="white">YOUR</text>
+  <text x="400" y="294" text-anchor="middle" font-size="15" font-weight="bold" fill="white">DAILY</text>
+  <text x="400" y="314" text-anchor="middle" font-size="15" font-weight="bold" fill="white">LIFE</text>
+
+  <!-- Spoke lines -->
+  <line x1="400" y1="222" x2="400" y2="158" stroke="#ccc" stroke-width="2" stroke-dasharray="4,4"/>
+  <line x1="351" y1="240" x2="284" y2="196" stroke="#ccc" stroke-width="2" stroke-dasharray="4,4"/>
+  <line x1="342" y1="280" x2="262" y2="280" stroke="#ccc" stroke-width="2" stroke-dasharray="4,4"/>
+  <line x1="351" y1="320" x2="284" y2="364" stroke="#ccc" stroke-width="2" stroke-dasharray="4,4"/>
+  <line x1="400" y1="338" x2="400" y2="402" stroke="#ccc" stroke-width="2" stroke-dasharray="4,4"/>
+  <line x1="449" y1="320" x2="516" y2="364" stroke="#ccc" stroke-width="2" stroke-dasharray="4,4"/>
+  <line x1="458" y1="280" x2="538" y2="280" stroke="#ccc" stroke-width="2" stroke-dasharray="4,4"/>
+  <line x1="449" y1="240" x2="516" y2="196" stroke="#ccc" stroke-width="2" stroke-dasharray="4,4"/>
+
+  <!-- Node: Netflix/Streaming (top) -->
+  <circle cx="400" cy="134" r="44" fill="#E76F51"/>
+  <text x="400" y="128" text-anchor="middle" font-size="22">📺</text>
+  <text x="400" y="148" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Streaming</text>
+  <text x="400" y="163" text-anchor="middle" font-size="9" fill="#fff" opacity="0.85">"Watch next" picks</text>
+
+  <!-- Node: Maps (top-left) -->
+  <circle cx="258" cy="170" r="44" fill="#2196F3"/>
+  <text x="258" y="164" text-anchor="middle" font-size="22">🗺️</text>
+  <text x="258" y="184" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Navigation</text>
+  <text x="258" y="199" text-anchor="middle" font-size="9" fill="#fff" opacity="0.85">Real-time rerouting</text>
+
+  <!-- Node: Banking (left) -->
+  <circle cx="218" cy="280" r="44" fill="#9C27B0"/>
+  <text x="218" y="274" text-anchor="middle" font-size="22">🏦</text>
+  <text x="218" y="294" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Banking</text>
+  <text x="218" y="309" text-anchor="middle" font-size="9" fill="#fff" opacity="0.85">Fraud detection</text>
+
+  <!-- Node: Shopping (bottom-left) -->
+  <circle cx="258" cy="390" r="44" fill="#FF9800"/>
+  <text x="258" y="384" text-anchor="middle" font-size="22">🛒</text>
+  <text x="258" y="404" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Shopping</text>
+  <text x="258" y="419" text-anchor="middle" font-size="9" fill="#fff" opacity="0.85">"You may also like"</text>
+
+  <!-- Node: Phone Camera (bottom) -->
+  <circle cx="400" cy="426" r="44" fill="#607D8B"/>
+  <text x="400" y="420" text-anchor="middle" font-size="22">📸</text>
+  <text x="400" y="440" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Camera</text>
+  <text x="400" y="455" text-anchor="middle" font-size="9" fill="#fff" opacity="0.85">Auto-enhance, face ID</text>
+
+  <!-- Node: Email Spam (bottom-right) -->
+  <circle cx="542" cy="390" r="44" fill="#E91E63"/>
+  <text x="542" y="384" text-anchor="middle" font-size="22">📧</text>
+  <text x="542" y="404" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Email</text>
+  <text x="542" y="419" text-anchor="middle" font-size="9" fill="#fff" opacity="0.85">Spam filtering</text>
+
+  <!-- Node: Voice Assistant (right) -->
+  <circle cx="582" cy="280" r="44" fill="#009688"/>
+  <text x="582" y="274" text-anchor="middle" font-size="22">🎙️</text>
+  <text x="582" y="294" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Assistants</text>
+  <text x="582" y="309" text-anchor="middle" font-size="9" fill="#fff" opacity="0.85">Siri, Google, Alexa</text>
+
+  <!-- Node: Search (top-right) -->
+  <circle cx="542" cy="170" r="44" fill="#795548"/>
+  <text x="542" y="164" text-anchor="middle" font-size="22">🔍</text>
+  <text x="542" y="184" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Search</text>
+  <text x="542" y="199" text-anchor="middle" font-size="9" fill="#fff" opacity="0.85">Predicts what you want</text>
+
+  <!-- Footer note -->
+  <text x="400" y="490" text-anchor="middle" font-size="11" fill="#999">funInTheLife.com — AI in everyday life</text>
+</svg>

@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520" font-family="Georgia, serif">
+  <!-- Background -->
+  <rect width="800" height="520" fill="#F9F7F4" rx="16"/>
+
+  <!-- Title -->
+  <text x="400" y="44" text-anchor="middle" font-size="21" font-weight="bold" fill="#1a1a2e">Will AI Take Your Job?</text>
+  <text x="400" y="66" text-anchor="middle" font-size="13" fill="#666">An honest look at what's at risk — and what isn't</text>
+
+  <!-- Divider line -->
+  <line x1="400" y1="88" x2="400" y2="500" stroke="#ddd" stroke-width="2" stroke-dasharray="6,4"/>
+
+  <!-- LEFT COLUMN — At Risk -->
+  <rect x="30" y="88" width="348" height="50" fill="#E76F51" rx="10 10 0 0"/>
+  <text x="204" y="108" text-anchor="middle" font-size="16" font-weight="bold" fill="white">⚠️  Roles Being Disrupted</text>
+  <text x="204" y="128" text-anchor="middle" font-size="12" fill="#ffe0d8">Repetitive, rule-based, predictable work</text>
+
+  <!-- At-risk items -->
+  <rect x="30" y="138" width="348" height="350" fill="white" rx="0 0 10 10" opacity="0.7"/>
+
+  <!-- Row items at risk -->
+  <g>
+    <rect x="46" y="154" width="316" height="44" rx="8" fill="#FFF0ED"/>
+    <text x="72" y="173" font-size="13" fill="#c0392b">📄</text>
+    <text x="92" y="173" font-size="13" font-weight="bold" fill="#333">Data entry &amp; document processing</text>
+    <text x="92" y="190" font-size="11" fill="#888">AI reads, extracts and files documents instantly</text>
+  </g>
+  <g>
+    <rect x="46" y="206" width="316" height="44" rx="8" fill="#FFF0ED"/>
+    <text x="72" y="225" font-size="13" fill="#c0392b">📞</text>
+    <text x="92" y="225" font-size="13" font-weight="bold" fill="#333">Basic customer service</text>
+    <text x="92" y="242" font-size="11" fill="#888">Chatbots now handle 80% of routine queries</text>
+  </g>
+  <g>
+    <rect x="46" y="258" width="316" height="44" rx="8" fill="#FFF0ED"/>
+    <text x="72" y="277" font-size="13" fill="#c0392b">🧾</text>
+    <text x="92" y="277" font-size="13" font-weight="bold" fill="#333">Routine bookkeeping</text>
+    <text x="92" y="294" font-size="11" fill="#888">AI categorises, reconciles and flags errors</text>
+  </g>
+  <g>
+    <rect x="46" y="310" width="316" height="44" rx="8" fill="#FFF0ED"/>
+    <text x="72" y="329" font-size="13" fill="#c0392b">📝</text>
+    <text x="92" y="329" font-size="13" font-weight="bold" fill="#333">Standard content &amp; translation</text>
+    <text x="92" y="346" font-size="11" fill="#888">Templated writing and basic translation</text>
+  </g>
+  <g>
+    <rect x="46" y="362" width="316" height="44" rx="8" fill="#FFF0ED"/>
+    <text x="72" y="381" font-size="13" fill="#c0392b">💻</text>
+    <text x="92" y="381" font-size="13" font-weight="bold" fill="#333">Entry-level coding &amp; testing</text>
+    <text x="92" y="398" font-size="11" fill="#888">AI writes boilerplate code and runs basic tests</text>
+  </g>
+  <g>
+    <rect x="46" y="414" width="316" height="44" rx="8" fill="#FFF0ED"/>
+    <text x="72" y="433" font-size="13" fill="#c0392b">📊</text>
+    <text x="92" y="433" font-size="13" font-weight="bold" fill="#333">Basic data analysis &amp; reporting</text>
+    <text x="92" y="450" font-size="11" fill="#888">Dashboards and standard reports automated</text>
+  </g>
+
+  <!-- RIGHT COLUMN — Safe -->
+  <rect x="422" y="88" width="348" height="50" fill="#2D6A4F" rx="10 10 0 0"/>
+  <text x="596" y="108" text-anchor="middle" font-size="16" font-weight="bold" fill="white">✅  Roles That Will Thrive</text>
+  <text x="596" y="128" text-anchor="middle" font-size="12" fill="#c8e6c9">Human judgment, relationships, creativity</text>
+
+  <!-- Safe items -->
+  <rect x="422" y="138" width="348" height="350" fill="white" rx="0 0 10 10" opacity="0.7"/>
+
+  <g>
+    <rect x="438" y="154" width="316" height="44" rx="8" fill="#EDF7ED"/>
+    <text x="464" y="173" font-size="13" fill="#2D6A4F">🤝</text>
+    <text x="484" y="173" font-size="13" font-weight="bold" fill="#333">Relationship &amp; sales roles</text>
+    <text x="484" y="190" font-size="11" fill="#888">Trust, empathy and negotiation stay human</text>
+  </g>
+  <g>
+    <rect x="438" y="206" width="316" height="44" rx="8" fill="#EDF7ED"/>
+    <text x="464" y="225" font-size="13" fill="#2D6A4F">🎨</text>
+    <text x="484" y="225" font-size="13" font-weight="bold" fill="#333">Creative &amp; design work</text>
+    <text x="484" y="242" font-size="11" fill="#888">Original vision, taste and storytelling</text>
+  </g>
+  <g>
+    <rect x="438" y="258" width="316" height="44" rx="8" fill="#EDF7ED"/>
+    <text x="464" y="277" font-size="13" fill="#2D6A4F">👩‍⚕️</text>
+    <text x="484" y="277" font-size="13" font-weight="bold" fill="#333">Healthcare &amp; care work</text>
+    <text x="484" y="294" font-size="11" fill="#888">Physical care, compassion, bedside presence</text>
+  </g>
+  <g>
+    <rect x="438" y="310" width="316" height="44" rx="8" fill="#EDF7ED"/>
+    <text x="464" y="329" font-size="13" fill="#2D6A4F">👩‍🏫</text>
+    <text x="484" y="329" font-size="13" font-weight="bold" fill="#333">Teaching &amp; mentoring</text>
+    <text x="484" y="346" font-size="11" fill="#888">Motivation, inspiration, human connection</text>
+  </g>
+  <g>
+    <rect x="438" y="362" width="316" height="44" rx="8" fill="#EDF7ED"/>
+    <text x="464" y="381" font-size="13" fill="#2D6A4F">🔧</text>
+    <text x="484" y="381" font-size="13" font-weight="bold" fill="#333">Skilled trades &amp; hands-on work</text>
+    <text x="484" y="398" font-size="11" fill="#888">Plumbing, electrical, construction — physical</text>
+  </g>
+  <g>
+    <rect x="438" y="414" width="316" height="44" rx="8" fill="#EDF7ED"/>
+    <text x="464" y="433" font-size="13" fill="#2D6A4F">🧠</text>
+    <text x="484" y="433" font-size="13" font-weight="bold" fill="#333">Strategic leadership</text>
+    <text x="484" y="450" font-size="11" fill="#888">Complex decisions with incomplete information</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="400" y="510" text-anchor="middle" font-size="10" fill="#bbb">funInTheLife.com — The honest answer about AI and jobs</text>
+</svg>

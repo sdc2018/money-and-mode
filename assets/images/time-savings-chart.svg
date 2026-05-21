@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480" font-family="Georgia, serif">
+  <!-- Background -->
+  <rect width="800" height="480" fill="#F9F7F4" rx="16"/>
+
+  <!-- Title -->
+  <text x="400" y="44" text-anchor="middle" font-size="21" font-weight="bold" fill="#1a1a2e">How AI Gives You 2 Hours Back Every Day</text>
+  <text x="400" y="66" text-anchor="middle" font-size="13" fill="#666">Time spent on common tasks — before and after using AI</text>
+
+  <!-- Legend -->
+  <rect x="240" y="84" width="16" height="16" fill="#B5C4B1" rx="3"/>
+  <text x="262" y="97" font-size="13" fill="#444">Without AI</text>
+  <rect x="360" y="84" width="16" height="16" fill="#2D6A4F" rx="3"/>
+  <text x="382" y="97" font-size="13" fill="#444">With AI</text>
+  <rect x="470" y="84" width="16" height="16" fill="#E76F51" rx="3" opacity="0.85"/>
+  <text x="492" y="97" font-size="13" fill="#444">Time saved</text>
+
+  <!-- Axes -->
+  <line x1="160" y1="390" x2="720" y2="390" stroke="#ccc" stroke-width="1.5"/>
+  <line x1="160" y1="120" x2="160" y2="390" stroke="#ccc" stroke-width="1.5"/>
+
+  <!-- Y-axis labels (minutes) -->
+  <text x="148" y="394" text-anchor="end" font-size="11" fill="#888">0</text>
+  <line x1="155" y1="322" x2="720" y2="322" stroke="#eee" stroke-width="1"/>
+  <text x="148" y="326" text-anchor="end" font-size="11" fill="#888">10</text>
+  <line x1="155" y1="254" x2="720" y2="254" stroke="#eee" stroke-width="1"/>
+  <text x="148" y="258" text-anchor="end" font-size="11" fill="#888">20</text>
+  <line x1="155" y1="186" x2="720" y2="186" stroke="#eee" stroke-width="1"/>
+  <text x="148" y="190" text-anchor="end" font-size="11" fill="#888">30</text>
+  <line x1="155" y1="118" x2="720" y2="118" stroke="#eee" stroke-width="1"/>
+  <text x="148" y="122" text-anchor="end" font-size="11" fill="#888">40 min</text>
+
+  <!-- Task 1: Writing Emails -->
+  <!-- Without AI: 40 min → bar height = 272px (40*6.8) from y=390 → top at y=118 -->
+  <rect x="188" y="118" width="60" height="272" fill="#B5C4B1" rx="4"/>
+  <text x="218" y="112" text-anchor="middle" font-size="12" font-weight="bold" fill="#555">40m</text>
+  <!-- With AI: 8 min → height=54px, top at y=336 -->
+  <rect x="256" y="336" width="60" height="54" fill="#2D6A4F" rx="4"/>
+  <text x="286" y="330" text-anchor="middle" font-size="12" font-weight="bold" fill="#2D6A4F">8m</text>
+  <!-- Saved badge -->
+  <rect x="200" y="404" width="120" height="22" fill="#E76F51" rx="4" opacity="0.85"/>
+  <text x="260" y="419" text-anchor="middle" font-size="11" fill="white" font-weight="bold">Saved: 32 min</text>
+  <!-- Label -->
+  <text x="260" y="445" text-anchor="middle" font-size="13" fill="#333" font-weight="bold">Writing</text>
+  <text x="260" y="460" text-anchor="middle" font-size="11" fill="#777">Emails &amp; Messages</text>
+
+  <!-- Task 2: Research -->
+  <!-- Without AI: 35 min → height=238 → top at 152 -->
+  <rect x="328" y="152" width="60" height="238" fill="#B5C4B1" rx="4"/>
+  <text x="358" y="146" text-anchor="middle" font-size="12" font-weight="bold" fill="#555">35m</text>
+  <!-- With AI: 7 min → height=48 → top at 342 -->
+  <rect x="396" y="342" width="60" height="48" fill="#2D6A4F" rx="4"/>
+  <text x="426" y="336" text-anchor="middle" font-size="12" font-weight="bold" fill="#2D6A4F">7m</text>
+  <!-- Saved -->
+  <rect x="340" y="404" width="120" height="22" fill="#E76F51" rx="4" opacity="0.85"/>
+  <text x="400" y="419" text-anchor="middle" font-size="11" fill="white" font-weight="bold">Saved: 28 min</text>
+  <text x="400" y="445" text-anchor="middle" font-size="13" fill="#333" font-weight="bold">Research</text>
+  <text x="400" y="460" text-anchor="middle" font-size="11" fill="#777">Finding Information</text>
+
+  <!-- Task 3: Reading Documents -->
+  <!-- Without AI: 38 min → height=258 → top at 132 -->
+  <rect x="468" y="132" width="60" height="258" fill="#B5C4B1" rx="4"/>
+  <text x="498" y="126" text-anchor="middle" font-size="12" font-weight="bold" fill="#555">38m</text>
+  <!-- With AI: 5 min → height=34 → top at 356 -->
+  <rect x="536" y="356" width="60" height="34" fill="#2D6A4F" rx="4"/>
+  <text x="566" y="350" text-anchor="middle" font-size="12" font-weight="bold" fill="#2D6A4F">5m</text>
+  <!-- Saved -->
+  <rect x="480" y="404" width="120" height="22" fill="#E76F51" rx="4" opacity="0.85"/>
+  <text x="540" y="419" text-anchor="middle" font-size="11" fill="white" font-weight="bold">Saved: 33 min</text>
+  <text x="540" y="445" text-anchor="middle" font-size="13" fill="#333" font-weight="bold">Documents</text>
+  <text x="540" y="460" text-anchor="middle" font-size="11" fill="#777">Summarising &amp; Reading</text>
+
+  <!-- Task 4: Planning / Decisions -->
+  <!-- Without AI: 25 min → height=170 → top at 220 -->
+  <rect x="608" y="220" width="60" height="170" fill="#B5C4B1" rx="4"/>
+  <text x="638" y="214" text-anchor="middle" font-size="12" font-weight="bold" fill="#555">25m</text>
+  <!-- With AI: 6 min → height=41 → top at 349 -->
+  <rect x="676" y="349" width="60" height="41" fill="#2D6A4F" rx="4"/>
+  <text x="706" y="343" text-anchor="middle" font-size="12" font-weight="bold" fill="#2D6A4F">6m</text>
+  <!-- Saved -->
+  <rect x="620" y="404" width="120" height="22" fill="#E76F51" rx="4" opacity="0.85"/>
+  <text x="680" y="419" text-anchor="middle" font-size="11" fill="white" font-weight="bold">Saved: 19 min</text>
+  <text x="680" y="445" text-anchor="middle" font-size="13" fill="#333" font-weight="bold">Planning</text>
+  <text x="680" y="460" text-anchor="middle" font-size="11" fill="#777">Decisions &amp; Scheduling</text>
+
+  <!-- Total saved callout -->
+  <rect x="286" y="118" width="228" height="44" fill="#1a1a2e" rx="8" opacity="0"/>
+
+  <!-- Footer -->
+  <text x="400" y="478" text-anchor="middle" font-size="10" fill="#bbb">funInTheLife.com</text>
+</svg>

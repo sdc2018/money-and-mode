@@ -3,7 +3,7 @@
 **Site:** https://money-and-mode.com  
 **Site Name:** Fun in the Life  
 **Tagline:** From Daily Growth to Wealth: A Life Well Lived  
-**Last Updated:** May 21, 2026 (Session 3 — Meta descriptions set on all 3 articles, sitemap confirmed submitted, functions.php cleaned up)  
+**Last Updated:** May 21, 2026 (Session 4 — Custom SVG diagrams designed and inserted into all 3 published articles)  
 
 ---
 
@@ -117,6 +117,16 @@
 **All article files:** `/articles/`  
 **Content calendar + 10 ideas:** `/articles/10-article-ideas-content-calendar.md`
 
+### Diagrams & Images (Session 4)
+
+| File | WordPress ID | Used In | Description |
+|------|-------------|---------|-------------|
+| `assets/images/ai-in-your-life.svg` | 80 (PNG) | Post 74 | Wheel diagram — 8 ways AI is in daily life |
+| `assets/images/time-savings-chart.svg` | 81 (PNG) | Post 76 | Bar chart — time saved before/after AI (4 tasks) |
+| `assets/images/ai-job-risk.svg` | 82 (PNG) | Post 77 | Two-column — disrupted roles vs thriving roles |
+
+All diagrams are custom SVG (800px wide, Georgia serif font, brand colours), uploaded as PNG to WordPress and embedded in article content with captions.
+
 ---
 
 ## 12-Week Publishing Calendar
@@ -201,6 +211,7 @@
 - [ ] MonsterInsights reports OAuth — Sandip to run Setup Wizard at MonsterInsights.com (needs Google login)
 - [x] Submit sitemap to Google Search Console — already verified and submitted
 - [x] Add meta descriptions to 3 published articles via AIOSEO — live on all 3 posts
+- [x] Add custom diagrams/images to all 3 published articles — live on site
 - [ ] Write next batch of articles (ChatGPT explained, Free AI tools, Talk to AI)
 - [ ] Get Sandip's financial freedom initial thoughts → write series
 - [ ] Create Phase 3 social media handles (Pinterest first)
