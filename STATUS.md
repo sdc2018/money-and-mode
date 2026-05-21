@@ -3,7 +3,7 @@
 **Site:** https://money-and-mode.com  
 **Site Name:** Fun in the Life  
 **Tagline:** From Daily Growth to Wealth: A Life Well Lived  
-**Last Updated:** May 21, 2026 (Session 4 — Custom SVG diagrams designed and inserted into all 3 published articles)  
+**Last Updated:** May 21, 2026 (Session 4 — Diagrams live on all 3 articles; MonsterInsights OAuth done; Pinterest @sandip2787 created)  
 
 ---
 
@@ -157,7 +157,7 @@ All diagrams are custom SVG (800px wide, Georgia serif font, brand colours), upl
 
 | Platform | Handle | Status |
 |----------|--------|--------|
-| Pinterest | To be created | ⚪ Phase 3 |
+| Pinterest | @sandip2787 (sdc67@yahoo.com) | ✅ Created |
 | Instagram | To be created | ⚪ Phase 3 |
 | Facebook Page | To be created | ⚪ Phase 3 |
 | Twitter/X | To be created | ⚪ Phase 3 |
@@ -208,13 +208,13 @@ All diagrams are custom SVG (800px wide, Georgia serif font, brand colours), upl
 - [x] Complete Wordfence license — done by Sandip
 - [x] Hide WP version — done via functions.php, verified live
 - [x] GA4 tracking live — G-LR3QLHFKBH tag on site, MonsterInsights connected
-- [ ] MonsterInsights reports OAuth — Sandip to run Setup Wizard at MonsterInsights.com (needs Google login)
+- [x] MonsterInsights reports OAuth — completed by Sandip (Google login done)
 - [x] Submit sitemap to Google Search Console — already verified and submitted
 - [x] Add meta descriptions to 3 published articles via AIOSEO — live on all 3 posts
 - [x] Add custom diagrams/images to all 3 published articles — live on site
 - [ ] Write next batch of articles (ChatGPT explained, Free AI tools, Talk to AI)
 - [ ] Get Sandip's financial freedom initial thoughts → write series
-- [ ] Create Phase 3 social media handles (Pinterest first)
+- [x] Pinterest account created — @sandip2787 (sdc67@yahoo.com) — Phase 3 begins
 - [ ] Apply for Google AdSense when traffic hits 5,000/month
 
 ---
