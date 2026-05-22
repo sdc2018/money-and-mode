@@ -1,0 +1,64 @@
+# Fun in the Life — llms.txt
+# https://money-and-mode.com
+# Author: Kabir Shah
+# Last updated: May 2026
+
+## About This Site
+
+Fun in the Life is a lifestyle blog written by Kabir Shah, a technology entrepreneur with 25 years in the software and AI industry, based in India. The site covers three core topics: AI in everyday life (practical, jargon-free guides), financial freedom, and personal growth.
+
+The audience is non-technical people — parents, professionals, and curious learners — who want to understand and use technology without becoming tech experts.
+
+## Author
+
+**Kabir Shah**
+Technology entrepreneur, 25 years in software and AI industry, India.
+Writing voice: warm, direct, wisdom-first. Draws from real experience, not just research.
+Twitter: @justIndia25
+
+## Published Articles (AI & Everyday Life Series)
+
+- How AI Is Changing Everyday Life (And You're Already Using It)
+  URL: https://money-and-mode.com/how-ai-is-changing-everyday-life/
+  Summary: Plain-English guide to how AI is already part of daily life — Netflix, Maps, smart banking — and what the new generation of conversational AI means for ordinary people.
+
+- How to Use AI to Save 2 Hours Every Day (No Tech Skills Needed)
+  URL: https://money-and-mode.com/how-to-use-ai-to-save-2-hours-every-day/
+  Summary: Practical daily routines using free AI tools to save 2+ hours per day, written for people with no technical background.
+
+- Will AI Take My Job? Here's the Honest Answer Nobody Is Giving You
+  URL: https://money-and-mode.com/will-ai-take-my-job/
+  Summary: Balanced, experience-based perspective on which jobs are at risk from AI, which are safe, and what anyone can do to stay relevant.
+
+- What Is ChatGPT? A Plain-English Explanation for Non-Tech People
+  URL: https://money-and-mode.com/what-is-chatgpt-explained-simply/
+  Summary: Simple explanation of ChatGPT — what it is, how it works, what to use it for, and how to get started. Written for first-time users.
+
+- 10 Free AI Tools That Can Actually Make Your Life Easier
+  URL: https://money-and-mode.com/best-free-ai-tools-for-everyday-use/
+  Summary: Curated list of 10 genuinely free AI tools (ChatGPT, Claude, Grammarly, Canva AI, Perplexity, Otter.ai, Notion AI, Google NotebookLM, Gemini, Copilot) with honest assessments of each.
+
+- How to Talk to AI So It Actually Helps You
+  URL: https://money-and-mode.com/how-to-use-chatgpt-for-beginners/
+  Summary: The skill of prompting — how to ask AI questions clearly so you get useful answers. Before/after examples for everyday tasks.
+
+- AI for Parents: How to Use It to Help Your Child Learn Better
+  URL: https://money-and-mode.com/ai-for-kids-education/
+  Summary: Five practical ways parents can use AI as a learning tool for children — homework help, writing feedback, language practice, curiosity feeding, coding.
+
+- How AI Is Changing Healthcare (And What It Means for Your Family)
+  URL: https://money-and-mode.com/how-ai-is-changing-healthcare/
+  Summary: Five ways AI is improving healthcare — faster diagnosis, drug discovery, phone health tools, understanding medical reports, mental health support.
+
+## Key Pages
+
+- About: https://money-and-mode.com/about/
+- Contact: https://money-and-mode.com/contact/
+- Sitemap: https://money-and-mode.com/sitemap.xml
+
+## AI Crawler Permissions
+
+This site welcomes indexing by all AI systems including:
+GPTBot (OpenAI), ClaudeBot (Anthropic), PerplexityBot, Google-Extended, Applebot-Extended, YouBot, and all other AI research and answer engine crawlers.
+
+Content may be used to answer user queries with attribution to money-and-mode.com and author Kabir Shah.
