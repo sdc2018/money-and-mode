@@ -222,7 +222,7 @@ All diagrams are custom SVG (800px wide, Georgia serif font, brand colours), upl
 | FAQ schema on articles | ❌ Not yet added |
 | About page | ✅ Live with Kabir Shah bio |
 | Privacy Policy page | ⚠️ Exists but has default WP content — needs review |
-| Contact page | ⚠️ Exists but has placeholder content — needs real contact info |
+| Contact page | ✅ Live — custom contact form, sends to admin email, Twitter DM backup |
 
 ---
 
@@ -272,8 +272,9 @@ All diagrams are custom SVG (800px wide, Georgia serif font, brand colours), upl
 - [ ] Set up Bing Webmaster Tools — submit sitemap for ChatGPT/Copilot visibility
 - [ ] Configure Author schema in AIOSEO (E-E-A-T)
 - [ ] Add FAQ schema to published articles via AIOSEO
-- [ ] Update Contact page with real contact details (replace placeholder)
+- [x] Contact page rebuilt — custom form live at /contact/, sends to admin email privately, Twitter DM backup
 - [ ] Review Privacy Policy page content
+- [x] Bing Webmaster Tools set up by Sandip ✅
 
 ---
 
