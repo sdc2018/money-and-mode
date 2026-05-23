@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460" font-family="Georgia, serif">
+  <rect width="800" height="460" fill="#F9F7F4" rx="16"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a1a2e">Your Savings Rate Decides Everything</text>
+  <text x="400" y="58" text-anchor="middle" font-size="13" fill="#666" font-style="italic">Same income. Radically different futures. The only number that matters.</text>
+
+  <!-- Column headers -->
+  <rect x="40" y="75" width="720" height="36" fill="#2D6A4F" rx="8"/>
+  <text x="220" y="98" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Savings Rate</text>
+  <text x="480" y="98" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Years to Financial Freedom</text>
+  <text x="680" y="98" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Path</text>
+
+  <!-- Row data -->
+  <!-- Row 1: 5% -->
+  <rect x="40" y="111" width="720" height="30" fill="#fff5f5" rx="4"/>
+  <text x="220" y="131" text-anchor="middle" font-size="13" fill="#c0392b" font-weight="bold">5%</text>
+  <text x="480" y="131" text-anchor="middle" font-size="13" fill="#c0392b">66 years</text>
+  <text x="680" y="131" text-anchor="middle" font-size="11" fill="#c0392b">Never free</text>
+
+  <!-- Row 2: 10% -->
+  <rect x="40" y="143" width="720" height="30" fill="#fff8f8" rx="4"/>
+  <text x="220" y="163" text-anchor="middle" font-size="13" fill="#e74c3c" font-weight="bold">10%</text>
+  <text x="480" y="163" text-anchor="middle" font-size="13" fill="#e74c3c">51 years</text>
+  <text x="680" y="163" text-anchor="middle" font-size="11" fill="#888">Typical American</text>
+
+  <!-- Row 3: 20% -->
+  <rect x="40" y="175" width="720" height="30" fill="#fef9f0" rx="4"/>
+  <text x="220" y="195" text-anchor="middle" font-size="13" fill="#e67e22" font-weight="bold">20%</text>
+  <text x="480" y="195" text-anchor="middle" font-size="13" fill="#e67e22">37 years</text>
+  <text x="680" y="195" text-anchor="middle" font-size="11" fill="#888">Making progress</text>
+
+  <!-- Row 4: 30% -->
+  <rect x="40" y="207" width="720" height="30" fill="#fdf6e3" rx="4"/>
+  <text x="220" y="227" text-anchor="middle" font-size="13" fill="#d4ac0d" font-weight="bold">30%</text>
+  <text x="480" y="227" text-anchor="middle" font-size="13" fill="#d4ac0d">28 years</text>
+  <text x="680" y="227" text-anchor="middle" font-size="11" fill="#888">Getting serious</text>
+
+  <!-- Row 5: 40% -->
+  <rect x="40" y="239" width="720" height="30" fill="#f0faf0" rx="4"/>
+  <text x="220" y="259" text-anchor="middle" font-size="13" fill="#27ae60" font-weight="bold">40%</text>
+  <text x="480" y="259" text-anchor="middle" font-size="13" fill="#27ae60">22 years</text>
+  <text x="680" y="259" text-anchor="middle" font-size="11" fill="#27ae60">FIRE territory</text>
+
+  <!-- Row 6: 50% — highlighted -->
+  <rect x="40" y="271" width="720" height="30" fill="#e8f5e9" rx="4"/>
+  <text x="220" y="291" text-anchor="middle" font-size="13" fill="#2D6A4F" font-weight="bold">50%</text>
+  <text x="480" y="291" text-anchor="middle" font-size="13" fill="#2D6A4F" font-weight="bold">17 years</text>
+  <text x="680" y="291" text-anchor="middle" font-size="11" fill="#2D6A4F" font-weight="bold">Strong FIRE path ✓</text>
+
+  <!-- Row 7: 65% -->
+  <rect x="40" y="303" width="720" height="30" fill="#e3f2fd" rx="4"/>
+  <text x="220" y="323" text-anchor="middle" font-size="13" fill="#1565c0" font-weight="bold">65%</text>
+  <text x="480" y="323" text-anchor="middle" font-size="13" fill="#1565c0">10.5 years</text>
+  <text x="680" y="323" text-anchor="middle" font-size="11" fill="#1565c0">Early retirement</text>
+
+  <!-- Row 8: 75% -->
+  <rect x="40" y="335" width="720" height="30" fill="#ede7f6" rx="4"/>
+  <text x="220" y="355" text-anchor="middle" font-size="13" fill="#6a1b9a" font-weight="bold">75%</text>
+  <text x="480" y="355" text-anchor="middle" font-size="13" fill="#6a1b9a">7 years</text>
+  <text x="680" y="355" text-anchor="middle" font-size="11" fill="#6a1b9a">Aggressive FIRE</text>
+
+  <!-- Divider -->
+  <line x1="40" y1="375" x2="760" y2="375" stroke="#ddd" stroke-width="1"/>
+  <text x="400" y="392" text-anchor="middle" font-size="10.5" fill="#888" font-style="italic">Assumes: 5% real return on diversified portfolio · 4% safe withdrawal rate · starting from zero</text>
+
+  <!-- Key insight box -->
+  <rect x="40" y="405" width="720" height="44" fill="#1a1a2e" rx="10"/>
+  <text x="400" y="424" text-anchor="middle" font-size="13" font-weight="bold" fill="white">The gap between 10% and 50%: 34 fewer years of required work.</text>
+  <text x="400" y="441" text-anchor="middle" font-size="12" fill="#aaa">Same salary. A different decision about what to do with it.</text>
+
+  <text x="400" y="458" text-anchor="middle" font-size="10" fill="#bbb">money-and-mode.com — Fun in the Life</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440" font-family="Georgia, serif">
+  <rect width="800" height="440" fill="#F9F7F4" rx="16"/>
+
+  <!-- Title -->
+  <text x="400" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a1a2e">Your Financial Independence Number</text>
+  <text x="400" y="56" text-anchor="middle" font-size="13" fill="#666" font-style="italic">Annual spending × 25 = the portfolio that makes you free. It's that simple.</text>
+
+  <!-- Formula box -->
+  <rect x="80" y="70" width="640" height="62" fill="#2D6A4F" rx="12"/>
+  <text x="400" y="96" text-anchor="middle" font-size="16" font-weight="bold" fill="white">Annual Spending  ×  25  =  Your Freedom Number</text>
+  <text x="400" y="118" text-anchor="middle" font-size="12" fill="#c8e6c9">Based on the 4% safe withdrawal rate (Trinity Study, 1998)</text>
+
+  <!-- Examples grid -->
+  <!-- Row headers -->
+  <rect x="40" y="148" width="720" height="32" fill="#1a1a2e" rx="8"/>
+  <text x="190" y="169" text-anchor="middle" font-size="12" font-weight="bold" fill="white">If you spend per year</text>
+  <text x="420" y="169" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Your freedom number is</text>
+  <text x="640" y="169" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Monthly income from portfolio</text>
+
+  <!-- Row 1 -->
+  <rect x="40" y="182" width="720" height="40" fill="#fff" rx="4"/>
+  <text x="190" y="207" text-anchor="middle" font-size="15" fill="#555">$40,000</text>
+  <text x="420" y="207" text-anchor="middle" font-size="18" font-weight="bold" fill="#2D6A4F">$1,000,000</text>
+  <text x="640" y="207" text-anchor="middle" font-size="14" fill="#888">~$3,333 / month</text>
+
+  <!-- Row 2 -->
+  <rect x="40" y="224" width="720" height="40" fill="#f7f7f7" rx="4"/>
+  <text x="190" y="249" text-anchor="middle" font-size="15" fill="#555">$60,000</text>
+  <text x="420" y="249" text-anchor="middle" font-size="18" font-weight="bold" fill="#2D6A4F">$1,500,000</text>
+  <text x="640" y="249" text-anchor="middle" font-size="14" fill="#888">~$5,000 / month</text>
+
+  <!-- Row 3 -->
+  <rect x="40" y="266" width="720" height="40" fill="#fff" rx="4"/>
+  <text x="190" y="291" text-anchor="middle" font-size="15" fill="#555">$80,000</text>
+  <text x="420" y="291" text-anchor="middle" font-size="18" font-weight="bold" fill="#457B9D">$2,000,000</text>
+  <text x="640" y="291" text-anchor="middle" font-size="14" fill="#888">~$6,667 / month</text>
+
+  <!-- Row 4 -->
+  <rect x="40" y="308" width="720" height="40" fill="#f7f7f7" rx="4"/>
+  <text x="190" y="333" text-anchor="middle" font-size="15" fill="#555">$100,000</text>
+  <text x="420" y="333" text-anchor="middle" font-size="18" font-weight="bold" fill="#457B9D">$2,500,000</text>
+  <text x="640" y="333" text-anchor="middle" font-size="14" fill="#888">~$8,333 / month</text>
+
+  <!-- Key insight callout -->
+  <rect x="40" y="360" width="340" height="64" fill="#fff8e1" rx="10" stroke="#f0c040" stroke-width="1.5"/>
+  <text x="210" y="381" text-anchor="middle" font-size="12" font-weight="bold" fill="#b7950b">The insight most people miss:</text>
+  <text x="210" y="399" text-anchor="middle" font-size="11.5" fill="#555">Every $1,000 less you spend per year</text>
+  <text x="210" y="416" text-anchor="middle" font-size="11.5" fill="#555">cuts your freedom number by <tspan font-weight="bold" fill="#2D6A4F">$25,000</tspan></text>
+
+  <rect x="420" y="360" width="340" height="64" fill="#e8f5e9" rx="10" stroke="#2D6A4F" stroke-width="1.5"/>
+  <text x="590" y="381" text-anchor="middle" font-size="12" font-weight="bold" fill="#2D6A4F">Withdrawal rate benchmarks:</text>
+  <text x="590" y="399" text-anchor="middle" font-size="11.5" fill="#555">Retire 60+: use <tspan font-weight="bold">4%</tspan> (25× spending)</text>
+  <text x="590" y="416" text-anchor="middle" font-size="11.5" fill="#555">Retire 40s: use <tspan font-weight="bold">3.5%</tspan> · Retire 30s: <tspan font-weight="bold">3.25%</tspan></text>
+
+  <text x="400" y="438" text-anchor="middle" font-size="10" fill="#bbb">money-and-mode.com — Fun in the Life</text>
+</svg>

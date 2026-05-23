@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" font-family="Georgia, serif">
+  <rect width="800" height="420" fill="#F9F7F4" rx="16"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a1a2e">One Person. Three Chapters.</text>
+  <text x="400" y="58" text-anchor="middle" font-size="13" fill="#666" font-style="italic">How financial freedom actually happens — and what comes after.</text>
+
+  <!-- Connector line -->
+  <line x1="120" y1="175" x2="680" y2="175" stroke="#ddd" stroke-width="3" stroke-dasharray="8,6"/>
+
+  <!-- Phase 1: Build -->
+  <circle cx="160" cy="175" r="42" fill="#2D6A4F"/>
+  <text x="160" y="168" text-anchor="middle" font-size="26" fill="white">🔨</text>
+  <text x="160" y="188" text-anchor="middle" font-size="11" font-weight="bold" fill="white">BUILD</text>
+  <text x="160" y="232" text-anchor="middle" font-size="13" font-weight="bold" fill="#2D6A4F">Ages 22–31</text>
+  <text x="160" y="252" text-anchor="middle" font-size="11.5" fill="#555">Built a SaaS company</text>
+  <text x="160" y="270" text-anchor="middle" font-size="11.5" fill="#555">in the US tech industry.</text>
+  <text x="160" y="290" text-anchor="middle" font-size="11.5" fill="#555">No salary certainty.</text>
+  <text x="160" y="308" text-anchor="middle" font-size="11.5" fill="#555">Just the work and the bet.</text>
+
+  <!-- Arrow 1 -->
+  <polygon points="262,168 290,175 262,182" fill="#2D6A4F" opacity="0.5"/>
+
+  <!-- Phase 2: Exit -->
+  <circle cx="330" cy="175" r="42" fill="#E76F51"/>
+  <text x="330" y="168" text-anchor="middle" font-size="26" fill="white">💰</text>
+  <text x="330" y="188" text-anchor="middle" font-size="11" font-weight="bold" fill="white">EXIT</text>
+  <text x="330" y="232" text-anchor="middle" font-size="13" font-weight="bold" fill="#E76F51">Age 31</text>
+  <text x="330" y="252" text-anchor="middle" font-size="11.5" fill="#555">Company acquired.</text>
+  <text x="330" y="270" text-anchor="middle" font-size="11.5" fill="#555">Wire transfer arrived.</text>
+  <text x="330" y="290" text-anchor="middle" font-size="11.5" fill="#555">The hum of financial</text>
+  <text x="330" y="308" text-anchor="middle" font-size="11.5" fill="#555">anxiety went silent.</text>
+
+  <!-- Arrow 2 -->
+  <polygon points="432,168 460,175 432,182" fill="#E76F51" opacity="0.5"/>
+
+  <!-- Phase 3: Build Again — Free -->
+  <circle cx="500" cy="175" r="42" fill="#457B9D"/>
+  <text x="500" y="168" text-anchor="middle" font-size="26" fill="white">🚀</text>
+  <text x="500" y="188" text-anchor="middle" font-size="11" font-weight="bold" fill="white">BUILD FREE</text>
+  <text x="500" y="232" text-anchor="middle" font-size="13" font-weight="bold" fill="#457B9D">32 onwards</text>
+  <text x="500" y="252" text-anchor="middle" font-size="11.5" fill="#555">Started a bigger company.</text>
+  <text x="500" y="270" text-anchor="middle" font-size="11.5" fill="#555">VC-funded. No fear.</text>
+  <text x="500" y="290" text-anchor="middle" font-size="11.5" fill="#555">Building from strength,</text>
+  <text x="500" y="308" text-anchor="middle" font-size="11.5" fill="#555">not from survival.</text>
+
+  <!-- Arrow 3 -->
+  <polygon points="602,168 630,175 602,182" fill="#457B9D" opacity="0.5"/>
+
+  <!-- Phase 4: Freedom -->
+  <circle cx="670" cy="175" r="42" fill="#1a1a2e"/>
+  <text x="670" y="168" text-anchor="middle" font-size="26" fill="white">☕</text>
+  <text x="670" y="188" text-anchor="middle" font-size="11" font-weight="bold" fill="white">OWN TIME</text>
+  <text x="670" y="232" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a1a2e">Now</text>
+  <text x="670" y="252" text-anchor="middle" font-size="11.5" fill="#555">Work when it excites.</text>
+  <text x="670" y="270" text-anchor="middle" font-size="11.5" fill="#555">Cancel meetings freely.</text>
+  <text x="670" y="290" text-anchor="middle" font-size="11.5" fill="#555">Family first. Always.</text>
+  <text x="670" y="308" text-anchor="middle" font-size="11.5" fill="#555">Calendar = yours.</text>
+
+  <!-- Key insight box -->
+  <rect x="30" y="345" width="740" height="56" fill="#2D6A4F" rx="10"/>
+  <text x="400" y="368" text-anchor="middle" font-size="13" font-weight="bold" fill="white">The insight most people miss: financial freedom didn't make him stop working.</text>
+  <text x="400" y="388" text-anchor="middle" font-size="12" fill="#c8e6c9">It changed why he worked — and that changed everything about how he worked.</text>
+
+  <text x="400" y="414" text-anchor="middle" font-size="10" fill="#bbb">money-and-mode.com — Fun in the Life</text>
+</svg>

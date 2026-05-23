@@ -3,7 +3,7 @@
 **Site:** https://money-and-mode.com  
 **Site Name:** Fun in the Life  
 **Tagline:** From Daily Growth to Wealth: A Life Well Lived  
-**Last Updated:** May 22, 2026 (Session 6 — Pen name Kabir Shah created; About page written & live; author identity set; 9 placeholder posts hidden; llms.txt live via AIOSEO; SEO/GEO audit done)  
+**Last Updated:** May 23, 2026 (Session 7 — Financial Freedom series launched: 5 articles written (FF-01 to FF-05), 5 custom SVG diagrams created and uploaded as PNGs, FF-01 and FF-03 published live, FF-02/04/05 as drafts)  
 **Pen Name:** Kabir Shah (technology entrepreneur, 25 years in software/AI, India) — used for all author attribution  
 
 ---
@@ -115,10 +115,19 @@
 | 8 | AI & Healthcare | how AI is changing healthcare | 📋 Draft (Post ID 97) — publish Jun 20 |
 | 9–24 | See content calendar | Various | 📝 Planned |
 
-### Financial Freedom Series
-| # | Title | Status |
-|---|-------|--------|
-| 1–8 | Pending Sandip's initial thoughts | ⏳ Awaiting input |
+### Financial Freedom Series (Kabir Shah voice — US audience — FIRE at 31)
+| # | Title | WP ID | Image ID | Status |
+|---|-------|-------|----------|--------|
+| 1 | I Sold My Company at 31. Here's What Financial Freedom Actually Felt Like. | 110 | 105 | ✅ Published |
+| 2 | The Only Number That Determines Your Financial Freedom (Savings Rate) | 111 | 106 | 📋 Draft |
+| 3 | If You Are Selling Your Time, You Will Never Be Free | 112 | 107 | ✅ Published |
+| 4 | Stop Selling Your Time. Build Leverage Instead. | 113 | 108 | 📋 Draft |
+| 5 | The 4% Rule Explained: What the Trinity Study Actually Said | 114 | 109 | 📋 Draft |
+| 6 | Why "Passive Income" Is Mostly a Lie | — | — | 📝 To write |
+| 7 | The Psychology of Money (Why Smart People Stay Broke) | — | — | 📝 To write |
+| 8 | Index Funds: The Boring Investment That Beats Almost Everyone | — | — | 📝 To write |
+
+**Series diagrams:** `/assets/images/ff-01-*.svg` through `ff-05-*.svg` — all 5 uploaded as 2× PNGs
 
 **All article files:** `/articles/`  
 **Content calendar + 10 ideas:** `/articles/10-article-ideas-content-calendar.md`
@@ -135,6 +144,11 @@
 | `assets/images/how-to-talk-to-ai.svg` | 90 (PNG) | Post 95 | Before/after: vague ask vs. clear ask (4 examples) |
 | `assets/images/ai-for-parents.svg` | 91 (PNG) | Post 96 | 5 ways AI helps children learn better |
 | `assets/images/ai-healthcare.svg` | 92 (PNG) | Post 97 | 5 ways AI is changing healthcare |
+| `assets/images/ff-01-three-phases.svg` | 105 (PNG) | Post 110 | 4-phase journey: Build → Exit → Build Free → Own Time |
+| `assets/images/ff-02-savings-rate.svg` | 106 (PNG) | Post 111 | Savings rate table (5%→75%) with years to freedom |
+| `assets/images/ff-03-calendar-contrast.svg` | 107 (PNG) | Post 112 | Before/after calendar: packed meetings vs owned time |
+| `assets/images/ff-04-three-income-modes.svg` | 108 (PNG) | Post 113 | Employee / Freelancer / Entrepreneur income modes |
+| `assets/images/ff-05-freedom-number.svg` | 109 (PNG) | Post 114 | Freedom number table + 25x formula + rate benchmarks |
 
 All diagrams are custom SVG (800px wide, Georgia serif font, brand colours), uploaded as PNG to WordPress and embedded in article content.
 
@@ -257,7 +271,7 @@ All diagrams are custom SVG (800px wide, Georgia serif font, brand colours), upl
 - [x] Create custom diagrams for articles 4–8 — 5 SVGs made, uploaded as PNGs (WP IDs 88–92)
 - [x] Publish articles 4–8 as WordPress drafts — Post IDs 93–97, diagrams embedded, AIOSEO meta set
 - [ ] Review & publish drafts 93–97 on schedule (Jun 6, 10, 13, 17, 20)
-- [ ] Get Sandip's financial freedom initial thoughts → write series
+- [x] Write Financial Freedom series (FF-01 to FF-05) — DONE. Published FF-01 & FF-03; drafts FF-02/04/05
 - [x] Pinterest account created — @sandip2787 (sdc67@yahoo.com) — Phase 3 begins
 - [x] Pinterest profile set up — name "Fun in the Life", bio, website money-and-mode.com all live
 - [x] Pinterest profile photo — uploaded by Sandip ✅
@@ -275,6 +289,17 @@ All diagrams are custom SVG (800px wide, Georgia serif font, brand colours), upl
 - [x] Contact page rebuilt — custom form live at /contact/, sends to admin email privately, Twitter DM backup
 - [ ] Review Privacy Policy page content
 - [x] Bing Webmaster Tools set up by Sandip ✅
+- [x] Create 5 FF series SVG diagrams — done (ff-01 through ff-05)
+- [x] Upload FF diagrams as PNGs to WordPress — IDs 105–109
+- [x] Publish FF-01 "I Sold My Company at 31" — live at /i-sold-my-company-at-31-financial-freedom/
+- [x] Publish FF-03 "If You Are Selling Your Time" — live at /selling-your-time-financial-freedom-time-ownership/
+- [ ] Publish FF-02 (Savings Rate draft, ID 111) — schedule for next publishing slot
+- [ ] Publish FF-04 (Build Leverage draft, ID 113) — schedule
+- [ ] Publish FF-05 (4% Rule draft, ID 114) — schedule
+- [ ] Write FF-06 (Passive Income myths), FF-07 (Money psychology), FF-08 (Index funds)
+- [ ] Configure Author schema in AIOSEO for Kabir Shah (E-E-A-T)
+- [ ] Add FAQ schema to FF published articles via AIOSEO
+- [ ] Review Privacy Policy page content
 
 ---
 

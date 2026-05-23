@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430" width="800" height="430" font-family="Georgia, serif">
+  <rect width="800" height="430" fill="#F9F7F4" rx="16"/>
+
+  <!-- Title -->
+  <text x="400" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a1a2e">Three Ways to Make Money</text>
+  <text x="400" y="56" text-anchor="middle" font-size="13" fill="#666" font-style="italic">Most people use only the first one their entire lives.</text>
+
+  <!-- COLUMN 1: Employee -->
+  <rect x="30" y="72" width="225" height="290" fill="#fff" rx="12" stroke="#e0e0e0" stroke-width="1.5"/>
+  <rect x="30" y="72" width="225" height="50" fill="#c0392b" rx="12"/>
+  <rect x="30" y="108" width="225" height="14" fill="#c0392b"/>
+  <text x="143" y="93" text-anchor="middle" font-size="22" fill="white">⏰</text>
+  <text x="143" y="110" text-anchor="middle" font-size="13" font-weight="bold" fill="white">EMPLOYEE</text>
+
+  <text x="143" y="142" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">You sell your time</text>
+
+  <line x1="50" y1="152" x2="235" y2="152" stroke="#f0f0f0" stroke-width="1"/>
+
+  <text x="143" y="172" text-anchor="middle" font-size="11.5" fill="#555">Stop working →</text>
+  <text x="143" y="190" text-anchor="middle" font-size="11.5" fill="#c0392b" font-weight="bold">income stops</text>
+
+  <text x="143" y="215" text-anchor="middle" font-size="11.5" fill="#555">Income = hours × rate</text>
+  <text x="143" y="233" text-anchor="middle" font-size="11.5" fill="#555">Hard ceiling on earnings</text>
+
+  <text x="143" y="258" text-anchor="middle" font-size="11.5" fill="#555">Salary is guaranteed</text>
+  <text x="143" y="276" text-anchor="middle" font-size="11.5" fill="#555">but capped. Forever.</text>
+
+  <!-- Income bar -->
+  <rect x="55" y="300" width="155" height="18" fill="#ffcdd2" rx="4"/>
+  <rect x="55" y="300" width="60" height="18" fill="#c0392b" rx="4"/>
+  <text x="143" y="332" text-anchor="middle" font-size="10" fill="#c0392b">Income ceiling: LOW</text>
+
+  <text x="143" y="352" text-anchor="middle" font-size="10.5" fill="#aaa" font-style="italic">Your time → Their money</text>
+
+  <!-- COLUMN 2: Freelancer -->
+  <rect x="288" y="72" width="225" height="290" fill="#fff" rx="12" stroke="#e0e0e0" stroke-width="1.5"/>
+  <rect x="288" y="72" width="225" height="50" fill="#d4ac0d" rx="12"/>
+  <rect x="288" y="108" width="225" height="14" fill="#d4ac0d"/>
+  <text x="400" y="93" text-anchor="middle" font-size="22" fill="white">💼</text>
+  <text x="400" y="110" text-anchor="middle" font-size="13" font-weight="bold" fill="white">FREELANCER</text>
+
+  <text x="400" y="142" text-anchor="middle" font-size="12" font-weight="bold" fill="#b7950b">You sell your time at higher rate</text>
+
+  <line x1="308" y1="152" x2="493" y2="152" stroke="#f0f0f0" stroke-width="1"/>
+
+  <text x="400" y="172" text-anchor="middle" font-size="11.5" fill="#555">Stop working →</text>
+  <text x="400" y="190" text-anchor="middle" font-size="11.5" fill="#d4ac0d" font-weight="bold">income still stops</text>
+
+  <text x="400" y="215" text-anchor="middle" font-size="11.5" fill="#555">Better rate per hour</text>
+  <text x="400" y="233" text-anchor="middle" font-size="11.5" fill="#555">Still capped by hours</text>
+
+  <text x="400" y="258" text-anchor="middle" font-size="11.5" fill="#555">More control, but</text>
+  <text x="400" y="276" text-anchor="middle" font-size="11.5" fill="#555">same trap underneath</text>
+
+  <!-- Income bar -->
+  <rect x="313" y="300" width="155" height="18" fill="#fef9c3" rx="4"/>
+  <rect x="313" y="300" width="100" height="18" fill="#d4ac0d" rx="4"/>
+  <text x="400" y="332" text-anchor="middle" font-size="10" fill="#b7950b">Income ceiling: MEDIUM</text>
+
+  <text x="400" y="352" text-anchor="middle" font-size="10.5" fill="#aaa" font-style="italic">More hours → More money. Still linear.</text>
+
+  <!-- COLUMN 3: Entrepreneur/Leverage -->
+  <rect x="546" y="72" width="225" height="290" fill="#fff" rx="12" stroke="#2D6A4F" stroke-width="2"/>
+  <rect x="546" y="72" width="225" height="50" fill="#2D6A4F" rx="12"/>
+  <rect x="546" y="108" width="225" height="14" fill="#2D6A4F"/>
+  <text x="658" y="93" text-anchor="middle" font-size="22" fill="white">🚀</text>
+  <text x="658" y="110" text-anchor="middle" font-size="13" font-weight="bold" fill="white">ENTREPRENEUR</text>
+
+  <text x="658" y="142" text-anchor="middle" font-size="12" font-weight="bold" fill="#2D6A4F">You build leverage</text>
+
+  <line x1="566" y1="152" x2="751" y2="152" stroke="#e8f5e9" stroke-width="1"/>
+
+  <text x="658" y="172" text-anchor="middle" font-size="11.5" fill="#555">Stop working →</text>
+  <text x="658" y="190" text-anchor="middle" font-size="11.5" fill="#2D6A4F" font-weight="bold">income continues</text>
+
+  <text x="658" y="215" text-anchor="middle" font-size="11.5" fill="#555">Business / Product / IP</text>
+  <text x="658" y="233" text-anchor="middle" font-size="11.5" fill="#555">works while you sleep</text>
+
+  <text x="658" y="258" text-anchor="middle" font-size="11.5" fill="#555">Portfolio compounds.</text>
+  <text x="658" y="276" text-anchor="middle" font-size="11.5" fill="#555">No ceiling on scale.</text>
+
+  <!-- Income bar - full -->
+  <rect x="566" y="300" width="155" height="18" fill="#2D6A4F" rx="4"/>
+  <text x="658" y="332" text-anchor="middle" font-size="10" fill="#2D6A4F">Income ceiling: UNLIMITED ✓</text>
+
+  <text x="658" y="352" text-anchor="middle" font-size="10.5" fill="#2D6A4F" font-style="italic">Build once → earn indefinitely</text>
+
+  <!-- Bottom insight -->
+  <rect x="30" y="374" width="740" height="44" fill="#2D6A4F" rx="10"/>
+  <text x="400" y="393" text-anchor="middle" font-size="13" font-weight="bold" fill="white">The only path to genuine financial freedom: income that doesn't stop when you stop.</text>
+  <text x="400" y="411" text-anchor="middle" font-size="12" fill="#c8e6c9">Build something that makes money while you're not working. That's leverage.</text>
+
+  <text x="400" y="427" text-anchor="middle" font-size="10" fill="#bbb">money-and-mode.com — Fun in the Life</text>
+</svg>
