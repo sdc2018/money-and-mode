@@ -65,11 +65,11 @@ This is not what entrepreneurship has to mean. And this limited definition is co
 
 Consider what a modest, unglamorous small business actually produces:
 
-A software consulting business with four good people and a handful of long-term clients. Annual revenue of ₹1.5 crore. Margins of 30% after salaries and costs. Owner's income: ₹45 lakhs per year, with the business running largely on its own systems and team.
+A software consulting business with four good people and a handful of long-term clients. Annual revenue of $800,000. Margins of 30% after salaries and costs. Owner's income: $240,000 per year, with the business running largely on its own systems and team.
 
-A product business — something that solves a specific, real problem for a specific, real set of customers. Revenue of ₹80 lakhs per year. Two employees. Owner actively involved two or three days per week.
+A product business — something that solves a specific, real problem for a specific, real set of customers. Revenue of $400,000 per year. Two employees. Owner actively involved two or three days per week.
 
-A content business — a newsletter, a YouTube channel, a community built around genuine expertise — generating ₹20 to ₹40 lakhs per year from a combination of advertising, memberships, and partnerships.
+A content business — a newsletter, a YouTube channel, a community built around genuine expertise — generating $100,000 to $200,000 per year from a combination of advertising, memberships, and partnerships.
 
 None of these are unicorns. None will be in the newspapers. None require VC funding or the willingness to bet everything on a single hand.
 
