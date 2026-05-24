@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480" font-family="Georgia, serif">
+  <rect width="800" height="480" fill="#F9F7F4" rx="16"/>
+
+  <!-- Title -->
+  <text x="400" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a1a2e">5 Money Psychology Bugs — And Their Fixes</text>
+  <text x="400" y="56" text-anchor="middle" font-size="13" fill="#666" font-style="italic">Intelligence doesn't protect you from these. Awareness does.</text>
+
+  <!-- Column headers -->
+  <rect x="30" y="68" width="740" height="30" fill="#1a1a2e" rx="8"/>
+  <text x="210" y="88" text-anchor="middle" font-size="12" font-weight="bold" fill="white">THE BUG</text>
+  <text x="490" y="88" text-anchor="middle" font-size="12" font-weight="bold" fill="white">WHAT IT COSTS YOU</text>
+  <text x="690" y="88" text-anchor="middle" font-size="12" font-weight="bold" fill="white">THE FIX</text>
+
+  <!-- Divider lines -->
+  <line x1="380" y1="68" x2="380" y2="428" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="590" y1="68" x2="590" y2="428" stroke="#e0e0e0" stroke-width="1"/>
+
+  <!-- Bug 1: Loss Aversion -->
+  <rect x="30" y="100" width="720" height="60" fill="#fff8f8" rx="4"/>
+  <rect x="30" y="100" width="6" height="60" fill="#c0392b" rx="2"/>
+  <text x="50" y="120" font-size="12" font-weight="bold" fill="#c0392b">Bug #1: Loss Aversion</text>
+  <text x="50" y="138" font-size="11" fill="#555">Losses feel 2× worse than</text>
+  <text x="50" y="153" font-size="11" fill="#555">equivalent gains feel good</text>
+  <text x="390" y="120" font-size="11" fill="#555">Cash hoarding, holding losers</text>
+  <text x="390" y="138" font-size="11" fill="#555">too long, avoiding markets</text>
+  <text x="390" y="153" font-size="11" fill="#c0392b" font-weight="bold">Slow guaranteed loss to inflation</text>
+  <text x="600" y="120" font-size="11" fill="#2D6A4F">Automate transfers.</text>
+  <text x="600" y="138" font-size="11" fill="#2D6A4F">Can't grieve money</text>
+  <text x="600" y="153" font-size="11" fill="#2D6A4F">you never see.</text>
+
+  <!-- Bug 2: Present Bias -->
+  <rect x="30" y="162" width="720" height="60" fill="#fff" rx="4"/>
+  <rect x="30" y="162" width="6" height="60" fill="#e67e22" rx="2"/>
+  <text x="50" y="182" font-size="12" font-weight="bold" fill="#e67e22">Bug #2: Present Bias</text>
+  <text x="50" y="200" font-size="11" fill="#555">Future money feels less real.</text>
+  <text x="50" y="215" font-size="11" fill="#555">$800 today &gt; $1,000 in a year</text>
+  <text x="390" y="182" font-size="11" fill="#555">Choosing spending today over</text>
+  <text x="390" y="200" font-size="11" fill="#555">investing for the future</text>
+  <text x="390" y="215" font-size="11" fill="#c0392b" font-weight="bold">Years of compound interest lost</text>
+  <text x="600" y="182" font-size="11" fill="#2D6A4F">Make the math vivid.</text>
+  <text x="600" y="200" font-size="11" fill="#2D6A4F">$15 lunch × 3/wk =</text>
+  <text x="600" y="215" font-size="11" fill="#2D6A4F">~$12,700 in 25 years.</text>
+
+  <!-- Bug 3: Social Comparison -->
+  <rect x="30" y="224" width="720" height="60" fill="#fff8f8" rx="4"/>
+  <rect x="30" y="224" width="6" height="60" fill="#d4ac0d" rx="2"/>
+  <text x="50" y="244" font-size="12" font-weight="bold" fill="#b7950b">Bug #3: Social Comparison</text>
+  <text x="50" y="262" font-size="11" fill="#555">Spending to signal status.</text>
+  <text x="50" y="277" font-size="11" fill="#555">You see highlight reels, not debt</text>
+  <text x="390" y="244" font-size="11" fill="#555">Lifestyle inflation matching peers</text>
+  <text x="390" y="262" font-size="11" fill="#555">who are likely also in debt</text>
+  <text x="390" y="277" font-size="11" fill="#c0392b" font-weight="bold">Spending for image, not joy</text>
+  <text x="600" y="244" font-size="11" fill="#2D6A4F">Unfollow comparison</text>
+  <text x="600" y="262" font-size="11" fill="#2D6A4F">triggers. Find people</text>
+  <text x="600" y="277" font-size="11" fill="#2D6A4F">who chase freedom.</text>
+
+  <!-- Bug 4: Money Scripts -->
+  <rect x="30" y="286" width="720" height="60" fill="#fff" rx="4"/>
+  <rect x="30" y="286" width="6" height="60" fill="#8e44ad" rx="2"/>
+  <text x="50" y="306" font-size="12" font-weight="bold" fill="#8e44ad">Bug #4: Money Scripts</text>
+  <text x="50" y="324" font-size="11" fill="#555">"I'm just not good with money."</text>
+  <text x="50" y="339" font-size="11" fill="#555">Beliefs absorbed in childhood</text>
+  <text x="390" y="306" font-size="11" fill="#555">Treating finances as a fixed</text>
+  <text x="390" y="324" font-size="11" fill="#555">personality trait, not a skill</text>
+  <text x="390" y="339" font-size="11" fill="#c0392b" font-weight="bold">Removing your own agency</text>
+  <text x="600" y="306" font-size="11" fill="#2D6A4F">Write your beliefs.</text>
+  <text x="600" y="324" font-size="11" fill="#2D6A4F">Ask: where did I learn</text>
+  <text x="600" y="339" font-size="11" fill="#2D6A4F">this? Is it true?</text>
+
+  <!-- Bug 5: Complexity Avoidance -->
+  <rect x="30" y="348" width="720" height="60" fill="#fff8f8" rx="4"/>
+  <rect x="30" y="348" width="6" height="60" fill="#457B9D" rx="2"/>
+  <text x="50" y="368" font-size="12" font-weight="bold" fill="#457B9D">Bug #5: Complexity Avoidance</text>
+  <text x="50" y="386" font-size="11" fill="#555">Forms feel too hard. Delay.</text>
+  <text x="50" y="401" font-size="11" fill="#555">No decision = lost years</text>
+  <text x="390" y="368" font-size="11" fill="#555">Unopened 401(k) forms, accounts</text>
+  <text x="390" y="386" font-size="11" fill="#555">never opened, matches unclaimed</text>
+  <text x="390" y="401" font-size="11" fill="#c0392b" font-weight="bold">Tens of thousands lost to inaction</text>
+  <text x="600" y="368" font-size="11" fill="#2D6A4F">Use the simplest</text>
+  <text x="600" y="386" font-size="11" fill="#2D6A4F">system. One fund.</text>
+  <text x="600" y="401" font-size="11" fill="#2D6A4F">Auto-transfer. Done.</text>
+
+  <!-- Bottom insight -->
+  <rect x="30" y="422" width="740" height="44" fill="#2D6A4F" rx="10"/>
+  <text x="400" y="441" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Your financial position is not a reflection of who you are.</text>
+  <text x="400" y="458" text-anchor="middle" font-size="12" fill="#c8e6c9">It's the accumulated result of choices — and choices can be changed.</text>
+
+  <text x="400" y="477" text-anchor="middle" font-size="10" fill="#bbb">money-and-mode.com — Fun in the Life</text>
+</svg>

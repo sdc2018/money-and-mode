@@ -3,7 +3,7 @@
 **Site:** https://money-and-mode.com  
 **Site Name:** Fun in the Life  
 **Tagline:** From Daily Growth to Wealth: A Life Well Lived  
-**Last Updated:** May 23, 2026 (Session 7 — FF series complete: all 8 articles written, 5 diagrams created + uploaded, FF-01 and FF-03 published live, FF-02/04/05 as WP drafts, FF-06/07/08 written locally; Author schema set to Person, user bio updated for E-E-A-T)  
+**Last Updated:** May 24, 2026 (Session 8 — Life & Motivation category created (ID 15); "Family Heaven" article published (Post 115); "Connection Starts at Home" draft created (Post 118, diagram ID 117); FF-06/07/08 SVGs created locally; previous FF articles category updated to Life & Motivation)  
 **Pen Name:** Kabir Shah (technology entrepreneur, 25 years in software/AI, India) — used for all author attribution  
 
 ---
@@ -123,11 +123,11 @@
 | 3 | If You Are Selling Your Time, You Will Never Be Free | 112 | 107 | ✅ Published |
 | 4 | Stop Selling Your Time. Build Leverage Instead. | 113 | 108 | 📋 Draft |
 | 5 | The 4% Rule Explained: What the Trinity Study Actually Said | 114 | 109 | 📋 Draft |
-| 6 | Why "Passive Income" Is Mostly a Lie | — | — | 📝 Written locally (ff-06-passive-income-truth.md) — needs WP upload |
-| 7 | The Psychology of Money — Why Smart People Stay Broke | — | — | 📝 Written locally (ff-07-money-psychology.md) — needs WP upload |
-| 8 | Index Funds — The Boring Investment That Beats Almost Everyone | — | — | 📝 Written locally (ff-08-index-funds.md) — needs WP upload |
+| 6 | Why "Passive Income" Is Mostly a Lie | — | — | 📝 Written + SVG created (ff-06-passive-income-truth) — needs WP upload |
+| 7 | The Psychology of Money — Why Smart People Stay Broke | — | — | 📝 Written + SVG created (ff-07-money-psychology) — needs WP upload |
+| 8 | Index Funds — The Boring Investment That Beats Almost Everyone | — | — | 📝 Written + SVG created (ff-08-index-funds) — needs WP upload |
 
-**Series diagrams:** `/assets/images/ff-01-*.svg` through `ff-05-*.svg` — all 5 uploaded as 2× PNGs
+**Series diagrams:** `/assets/images/ff-01-*.svg` through `ff-08-*.svg` — ff-01 to ff-05 uploaded as 2× PNGs (IDs 105–109); ff-06/07/08 SVGs created locally, pending upload
 
 **All article files:** `/articles/`  
 **Content calendar + 10 ideas:** `/articles/10-article-ideas-content-calendar.md`
@@ -149,6 +149,10 @@
 | `assets/images/ff-03-calendar-contrast.svg` | 107 (PNG) | Post 112 | Before/after calendar: packed meetings vs owned time |
 | `assets/images/ff-04-three-income-modes.svg` | 108 (PNG) | Post 113 | Employee / Freelancer / Entrepreneur income modes |
 | `assets/images/ff-05-freedom-number.svg` | 109 (PNG) | Post 114 | Freedom number table + 25x formula + rate benchmarks |
+| `assets/images/ff-06-passive-income-truth.svg` | — (pending upload) | — | Passive income myth vs reality — 3 that work vs 5 that aren't |
+| `assets/images/ff-07-money-psychology.svg` | — (pending upload) | — | 5 money psychology bugs table with fixes |
+| `assets/images/ff-08-index-funds.svg` | — (pending upload) | — | Index fund vs active fund side-by-side comparison |
+| `assets/images/lm-connection-starts-at-home.svg` | 117 (PNG) | Post 118 | Hub diagram — Home → Self/Spouse/Children/Community/Society |
 
 All diagrams are custom SVG (800px wide, Georgia serif font, brand colours), uploaded as PNG to WordPress and embedded in article content.
 
@@ -298,7 +302,11 @@ All diagrams are custom SVG (800px wide, Georgia serif font, brand colours), upl
 - [ ] Publish FF-05 (4% Rule draft, ID 114) — schedule
 - [x] Write FF-06/07/08 — all 3 articles written locally (passive income, money psychology, index funds)
 - [x] Configure Author schema in AIOSEO — site set to Person (Kabir Shah), user bio updated, experience topics saved
-- [ ] Create diagrams for FF-06/07/08 and upload to WordPress as drafts
+- [x] Create diagrams for FF-06/07/08 — 3 SVGs done locally — still need WP upload + draft posts
+- [ ] Upload FF-06/07/08 PNGs to WordPress media + create 3 draft posts
+- [x] Create "Life & Motivation" WordPress category — ID 15
+- [x] Write & publish "Family Heaven" article — live (Post 115)
+- [x] Write "Connection Starts at Home" — draft (Post 118, diagram ID 117)
 - [ ] Add FAQ schema to FF published articles via AIOSEO
 - [ ] Review Privacy Policy page content
 

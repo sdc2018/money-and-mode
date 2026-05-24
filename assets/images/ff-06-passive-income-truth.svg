@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460" font-family="Georgia, serif">
+  <rect width="800" height="460" fill="#F9F7F4" rx="16"/>
+
+  <!-- Title -->
+  <text x="400" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a1a2e">The Passive Income Reality Check</text>
+  <text x="400" y="56" text-anchor="middle" font-size="13" fill="#666" font-style="italic">All income is earned. The only question is when — and how honestly you're told.</text>
+
+  <!-- Section header: Three that work -->
+  <rect x="30" y="72" width="740" height="32" fill="#2D6A4F" rx="8"/>
+  <text x="400" y="93" text-anchor="middle" font-size="13" font-weight="bold" fill="white">THREE FORMS THAT ACTUALLY WORK</text>
+
+  <!-- Card 1: Investment Income -->
+  <rect x="30" y="108" width="228" height="148" fill="#fff" rx="10" stroke="#2D6A4F" stroke-width="1.5"/>
+  <rect x="30" y="108" width="228" height="38" fill="#2D6A4F" rx="10"/>
+  <rect x="30" y="132" width="228" height="14" fill="#2D6A4F"/>
+  <text x="144" y="130" text-anchor="middle" font-size="13" font-weight="bold" fill="white">📈 Investment Income</text>
+  <text x="144" y="158" text-anchor="middle" font-size="11" fill="#2D6A4F" font-weight="bold">MOST PASSIVE</text>
+  <text x="144" y="176" text-anchor="middle" font-size="11" fill="#555">Dividends, index fund</text>
+  <text x="144" y="192" text-anchor="middle" font-size="11" fill="#555">withdrawals, bond interest</text>
+  <text x="144" y="212" text-anchor="middle" font-size="11" fill="#888" font-style="italic">Upfront requirement:</text>
+  <text x="144" y="228" text-anchor="middle" font-size="11" fill="#c0392b" font-weight="bold">Years of saving + investing</text>
+  <text x="144" y="248" text-anchor="middle" font-size="10" fill="#2D6A4F">$1M portfolio → $40K/yr (4% rule)</text>
+
+  <!-- Card 2: Digital Products -->
+  <rect x="286" y="108" width="228" height="148" fill="#fff" rx="10" stroke="#457B9D" stroke-width="1.5"/>
+  <rect x="286" y="108" width="228" height="38" fill="#457B9D" rx="10"/>
+  <rect x="286" y="132" width="228" height="14" fill="#457B9D"/>
+  <text x="400" y="130" text-anchor="middle" font-size="13" font-weight="bold" fill="white">💻 Digital Products</text>
+  <text x="400" y="158" text-anchor="middle" font-size="11" fill="#457B9D" font-weight="bold">LOW-ACTIVE (year 3+)</text>
+  <text x="400" y="176" text-anchor="middle" font-size="11" fill="#555">Courses, books, templates,</text>
+  <text x="400" y="192" text-anchor="middle" font-size="11" fill="#555">software tools, content</text>
+  <text x="400" y="212" text-anchor="middle" font-size="11" fill="#888" font-style="italic">Upfront requirement:</text>
+  <text x="400" y="228" text-anchor="middle" font-size="11" fill="#c0392b" font-weight="bold">1–2 yrs building + marketing</text>
+  <text x="400" y="248" text-anchor="middle" font-size="10" fill="#555">Never fully zero-effort. Be honest.</text>
+
+  <!-- Card 3: Business Ownership -->
+  <rect x="542" y="108" width="228" height="148" fill="#fff" rx="10" stroke="#8e44ad" stroke-width="1.5"/>
+  <rect x="542" y="108" width="228" height="38" fill="#8e44ad" rx="10"/>
+  <rect x="542" y="132" width="228" height="14" fill="#8e44ad"/>
+  <text x="656" y="130" text-anchor="middle" font-size="13" font-weight="bold" fill="white">🏢 Business Ownership</text>
+  <text x="656" y="158" text-anchor="middle" font-size="11" fill="#8e44ad" font-weight="bold">PASSIVE WITH A REAL TEAM</text>
+  <text x="656" y="176" text-anchor="middle" font-size="11" fill="#555">Profits from a business that</text>
+  <text x="656" y="192" text-anchor="middle" font-size="11" fill="#555">runs without your daily work</text>
+  <text x="656" y="212" text-anchor="middle" font-size="11" fill="#888" font-style="italic">Upfront requirement:</text>
+  <text x="656" y="228" text-anchor="middle" font-size="11" fill="#c0392b" font-weight="bold">Years of building + hiring</text>
+  <text x="656" y="248" text-anchor="middle" font-size="10" fill="#555">Hardest to build. Real when done.</text>
+
+  <!-- Section header: What is NOT passive -->
+  <rect x="30" y="270" width="740" height="32" fill="#c0392b" rx="8"/>
+  <text x="400" y="291" text-anchor="middle" font-size="13" font-weight="bold" fill="white">THESE ARE NOT PASSIVE INCOME — THEY ARE JOBS WITH A FANCY NAME</text>
+
+  <!-- Not passive items in a row -->
+  <rect x="30" y="306" width="135" height="64" fill="#fff5f5" rx="8" stroke="#ffcdd2" stroke-width="1"/>
+  <text x="97" y="326" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">Dropshipping</text>
+  <text x="97" y="342" text-anchor="middle" font-size="10" fill="#888">Logistics +</text>
+  <text x="97" y="356" text-anchor="middle" font-size="10" fill="#888">customer service</text>
+
+  <rect x="173" y="306" width="135" height="64" fill="#fff5f5" rx="8" stroke="#ffcdd2" stroke-width="1"/>
+  <text x="240" y="326" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">Affiliate Sites</text>
+  <text x="240" y="342" text-anchor="middle" font-size="10" fill="#888">Constant SEO</text>
+  <text x="240" y="356" text-anchor="middle" font-size="10" fill="#888">+ content updates</text>
+
+  <rect x="316" y="306" width="135" height="64" fill="#fff5f5" rx="8" stroke="#ffcdd2" stroke-width="1"/>
+  <text x="383" y="326" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">MLM / Network</text>
+  <text x="383" y="342" text-anchor="middle" font-size="10" fill="#888">Recruiting +</text>
+  <text x="383" y="356" text-anchor="middle" font-size="10" fill="#888">motivating reps</text>
+
+  <rect x="459" y="306" width="135" height="64" fill="#fff5f5" rx="8" stroke="#ffcdd2" stroke-width="1"/>
+  <text x="526" y="326" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">Turo / AirBnB</text>
+  <text x="526" y="342" text-anchor="middle" font-size="10" fill="#888">Coordination +</text>
+  <text x="526" y="356" text-anchor="middle" font-size="10" fill="#888">damage claims</text>
+
+  <rect x="602" y="306" width="168" height="64" fill="#fff5f5" rx="8" stroke="#ffcdd2" stroke-width="1"/>
+  <text x="686" y="326" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">DIY Rentals</text>
+  <text x="686" y="342" text-anchor="middle" font-size="10" fill="#888">Tenants, repairs,</text>
+  <text x="686" y="356" text-anchor="middle" font-size="10" fill="#888">evictions = real job</text>
+
+  <!-- Bottom insight -->
+  <rect x="30" y="384" width="740" height="60" fill="#1a1a2e" rx="10"/>
+  <text x="400" y="406" text-anchor="middle" font-size="13" font-weight="bold" fill="white">The right question is not "How do I earn passive income?"</text>
+  <text x="400" y="424" text-anchor="middle" font-size="12" fill="#aaa">It's: "What am I willing to build for years before it pays off?"</text>
+  <text x="400" y="441" text-anchor="middle" font-size="11" fill="#c8e6c9">The passive income is a byproduct of the building — not a shortcut around it.</text>
+
+  <text x="400" y="457" text-anchor="middle" font-size="10" fill="#bbb">money-and-mode.com — Fun in the Life</text>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460" font-family="Georgia, serif">
+  <rect width="800" height="460" fill="#F9F7F4" rx="16"/>
+
+  <!-- Title -->
+  <text x="400" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a1a2e">Index Funds vs Active Management — The Honest Picture</text>
+  <text x="400" y="56" text-anchor="middle" font-size="13" fill="#666" font-style="italic">90%+ of active managers underperform a simple index fund over 15 years. (SPIVA, 2024)</text>
+
+  <!-- Left side: Index Fund -->
+  <rect x="30" y="72" width="350" height="260" fill="#fff" rx="12" stroke="#2D6A4F" stroke-width="2"/>
+  <rect x="30" y="72" width="350" height="46" fill="#2D6A4F" rx="12"/>
+  <rect x="30" y="104" width="350" height="14" fill="#2D6A4F"/>
+  <text x="205" y="96" text-anchor="middle" font-size="16" font-weight="bold" fill="white">📦 INDEX FUND</text>
+  <text x="205" y="112" text-anchor="middle" font-size="11" fill="#c8e6c9">(e.g. VTSAX, VTI, S&amp;P 500 fund)</text>
+
+  <text x="205" y="138" text-anchor="middle" font-size="12" font-weight="bold" fill="#2D6A4F">What it does:</text>
+  <text x="205" y="156" text-anchor="middle" font-size="11.5" fill="#555">Owns every stock in the market index.</text>
+  <text x="205" y="173" text-anchor="middle" font-size="11.5" fill="#555">No stock-picking. No manager decisions.</text>
+  <text x="205" y="190" text-anchor="middle" font-size="11.5" fill="#555">You get exactly what the market gives.</text>
+
+  <line x1="55" y1="202" x2="355" y2="202" stroke="#e8f5e9" stroke-width="1"/>
+
+  <text x="205" y="220" text-anchor="middle" font-size="12" font-weight="bold" fill="#2D6A4F">Annual fee (expense ratio):</text>
+  <text x="205" y="242" text-anchor="middle" font-size="22" font-weight="bold" fill="#2D6A4F">0.03% – 0.20%</text>
+  <text x="205" y="260" text-anchor="middle" font-size="11" fill="#888">VTSAX: 0.04% · VTI: 0.03%</text>
+
+  <line x1="55" y1="272" x2="355" y2="272" stroke="#e8f5e9" stroke-width="1"/>
+
+  <text x="205" y="292" text-anchor="middle" font-size="11.5" fill="#555">On $500K portfolio: fee = <tspan font-weight="bold" fill="#2D6A4F">$200/yr</tspan></text>
+  <text x="205" y="310" text-anchor="middle" font-size="11.5" fill="#555">No prediction required. No luck needed.</text>
+  <text x="205" y="326" text-anchor="middle" font-size="11" fill="#2D6A4F" font-weight="bold">✓ Beats 90%+ of active funds long-term</text>
+
+  <!-- Right side: Active Fund -->
+  <rect x="420" y="72" width="350" height="260" fill="#fff" rx="12" stroke="#c0392b" stroke-width="1.5"/>
+  <rect x="420" y="72" width="350" height="46" fill="#c0392b" rx="12"/>
+  <rect x="420" y="104" width="350" height="14" fill="#c0392b"/>
+  <text x="595" y="96" text-anchor="middle" font-size="16" font-weight="bold" fill="white">🎯 ACTIVELY MANAGED FUND</text>
+  <text x="595" y="112" text-anchor="middle" font-size="11" fill="#ffcdd2">(Harvard MBAs, analyst teams, billions in resources)</text>
+
+  <text x="595" y="138" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">What it does:</text>
+  <text x="595" y="156" text-anchor="middle" font-size="11.5" fill="#555">Tries to beat the market through</text>
+  <text x="595" y="173" text-anchor="middle" font-size="11.5" fill="#555">stock selection and market timing.</text>
+  <text x="595" y="190" text-anchor="middle" font-size="11.5" fill="#555">Requires skill, information edge, luck.</text>
+
+  <line x1="445" y1="202" x2="745" y2="202" stroke="#ffcdd2" stroke-width="1"/>
+
+  <text x="595" y="220" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">Annual fee (expense ratio):</text>
+  <text x="595" y="242" text-anchor="middle" font-size="22" font-weight="bold" fill="#c0392b">0.5% – 1.5%</text>
+  <text x="595" y="260" text-anchor="middle" font-size="11" fill="#888">Typical: ~1.0% per year</text>
+
+  <line x1="445" y1="272" x2="745" y2="272" stroke="#ffcdd2" stroke-width="1"/>
+
+  <text x="595" y="292" text-anchor="middle" font-size="11.5" fill="#555">On $500K portfolio: fee = <tspan font-weight="bold" fill="#c0392b">$5,000/yr</tspan></text>
+  <text x="595" y="310" text-anchor="middle" font-size="11.5" fill="#555">Past performance does NOT predict future.</text>
+  <text x="595" y="326" text-anchor="middle" font-size="11" fill="#c0392b" font-weight="bold">✗ Most underperform index over 15 yrs</text>
+
+  <!-- Fee gap callout -->
+  <rect x="30" y="346" width="740" height="44" fill="#fff8e1" rx="10" stroke="#f0c040" stroke-width="1.5"/>
+  <text x="400" y="366" text-anchor="middle" font-size="12" font-weight="bold" fill="#b7950b">The fee gap alone: $4,800/yr on a $500K portfolio. Over 30 years at 7% returns, that's ~$487,000 lost to fees.</text>
+  <text x="400" y="383" text-anchor="middle" font-size="11.5" fill="#555">Fees are guaranteed. Market returns are not. Fees compound against you just as reliably as returns compound for you.</text>
+
+  <!-- Bottom: The Bogle insight -->
+  <rect x="30" y="404" width="740" height="42" fill="#1a1a2e" rx="10"/>
+  <text x="400" y="423" text-anchor="middle" font-size="13" font-weight="bold" fill="white">"Don't look for the needle in the haystack. Buy the haystack." — Jack Bogle, founder of Vanguard</text>
+  <text x="400" y="440" text-anchor="middle" font-size="11.5" fill="#aaa">$500/month · index fund · 30 years · 7% real return = ~$567,000. You put in $180K. The market adds the rest.</text>
+
+  <text x="400" y="457" text-anchor="middle" font-size="10" fill="#bbb">money-and-mode.com — Fun in the Life</text>
+</svg>
