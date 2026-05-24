@@ -186,10 +186,10 @@ All diagrams are custom SVG (800px wide, Georgia serif font, brand colours), upl
 
 | Platform | Handle | Status |
 |----------|--------|--------|
-| Pinterest | @sandip2787 (sdc67@yahoo.com) | ✅ Live — profile, 3 boards, 3 pins |
-| Instagram | To be created | ⚪ Phase 3 |
+| Pinterest | @sandip2787 (sdc67@yahoo.com) | ✅ Live — profile, 3 boards, articles pinned |
+| Instagram | @fun_in_life71 | ✅ Live — https://www.instagram.com/fun_in_life71/ — profile needs photo + bio |
 | Facebook Page | To be created | ⚪ Phase 3 |
-| Twitter/X | @justIndia25 | ✅ Live — bio set, 3 article tweets posted |
+| Twitter/X | @justIndia25 | ✅ Live — bio set, articles tweeted |
 | YouTube | To be created | ⚪ Phase 3 |
 
 ---
@@ -307,6 +307,8 @@ All diagrams are custom SVG (800px wide, Georgia serif font, brand colours), upl
 - [x] Create "Life & Motivation" WordPress category — ID 15
 - [x] Write & publish "Family Heaven" article — live (Post 115)
 - [x] Write "Connection Starts at Home" — draft (Post 118, diagram ID 117)
+- [x] Add social media icons to homepage — X, Instagram, Pinterest icons live in "FOLLOW THE JOURNEY" section
+- [ ] Complete Instagram profile — add photo, bio, first posts
 - [ ] Add FAQ schema to FF published articles via AIOSEO
 - [ ] Review Privacy Policy page content
 
