@@ -1,0 +1,276 @@
+{
+  "_comment": "Social media posting queue for money-and-mode.com. Claude reads this file and posts pending items. After posting, moves entry from 'pending' to 'posted'. NEVER post without verifying active account handle first.",
+  "accounts": {
+    "instagram": "fun_in_life71",
+    "twitter": "justIndia25",
+    "pinterest": "sandip2787",
+    "verify_urls": {
+      "instagram": "https://www.instagram.com/accounts/edit/",
+      "twitter": "https://x.com/settings/profile",
+      "pinterest": "https://www.pinterest.com/settings/profile"
+    }
+  },
+  "pending": [
+    {
+      "id": "post-74-instagram",
+      "article_id": 74,
+      "article_title": "How AI Is Changing Everyday Life",
+      "article_url": "https://money-and-mode.com/how-ai-is-changing-everyday-life/",
+      "platform": "instagram",
+      "image_wp_id": 80,
+      "image_alt": "Wheel diagram — 8 ways AI is in daily life",
+      "caption": "You're already using AI. You just don't know it yet. 🤔\n\nHere's where it's quietly running in your life right now:\n\n• Your Netflix recommendations — AI, not humans\n• Google Maps routing around traffic — AI doing the math\n• The fraud alert from your bank — AI caught that, not a person\n• Your phone's face unlock — trained on millions of faces\n• That product you bought after searching once — AI predicted your interest\n\nThis isn't the future. This is Tuesday.\n\nThe wheel of AI in everyday life is bigger than most people realise — 8 areas, all running right now.\n\nRead the full breakdown at money-and-mode.com → Link in bio\n\n#AIExplained #ArtificialIntelligence #TechForEveryone #AIEverydayLife #FutureTech #TechSimplified #DigitalTransformation #LearnAI",
+      "status": "pending",
+      "added": "2026-05-24"
+    },
+    {
+      "id": "post-74-twitter-tweet",
+      "article_id": 74,
+      "article_title": "How AI Is Changing Everyday Life",
+      "article_url": "https://money-and-mode.com/how-ai-is-changing-everyday-life/",
+      "platform": "twitter",
+      "post_type": "tweet",
+      "caption": "You're already using AI every day. You just haven't noticed. Here's where it's quietly running in the background of your life 👇 https://money-and-mode.com/how-ai-is-changing-everyday-life/",
+      "status": "pending",
+      "added": "2026-05-24"
+    },
+    {
+      "id": "post-74-pinterest",
+      "article_id": 74,
+      "article_title": "How AI Is Changing Everyday Life",
+      "article_url": "https://money-and-mode.com/how-ai-is-changing-everyday-life/",
+      "platform": "pinterest",
+      "board": "AI Tips & Tools",
+      "image_wp_id": 80,
+      "pin_title": "How AI Is Changing Everyday Life — 8 Ways It's Already Happening Around You",
+      "caption": "How AI Is Changing Everyday Life — 8 Ways It's Already Happening Around You\n\nMost people think AI is something coming in the future. It's not. It's already here — quietly running in the background of your phone, your maps, your TV, your doctor's office.\n\nI've spent 25 years in the technology business. And the single biggest misconception I see is that AI is a sci-fi concept. It isn't. It's the thing that recommends your next Netflix show, predicts traffic on your commute, and flags unusual charges on your credit card.\n\nThis article walks through 8 areas of everyday life where AI is already at work — healthcare, finance, education, home, entertainment, travel, shopping, and work. No jargon. No hype. Just a clear look at what's already happening.\n\nYou're already using AI. It's time to understand it.\n\nFull article at money-and-mode.com\n\n#ArtificialIntelligence #AIEverydayLife #TechnologyForBeginners #AIExplained #FutureOfTech #DigitalLife #AIInYourLife #TechSimplified",
+      "status": "pending",
+      "added": "2026-05-24"
+    },
+    {
+      "id": "post-76-instagram",
+      "article_id": 76,
+      "article_title": "How to Use AI to Save 2 Hours Every Day",
+      "article_url": "https://money-and-mode.com/how-to-use-ai-to-save-2-hours-every-day/",
+      "platform": "instagram",
+      "image_wp_id": 81,
+      "image_alt": "Bar chart — time saved before/after AI across 4 tasks",
+      "caption": "What if you could get 2 hours of your day back? Every. Single. Day. ⏱️\n\nHere's what AI actually saves time on (and how much):\n\n• Email drafting: 30 min → 5 min. Give AI the context, it writes the first draft. You edit.\n• Research: 90 min → 20 min. Ask the right questions, get a structured summary in seconds.\n• Scheduling: the back-and-forth that kills afternoons — AI can draft it all.\n• Writing first drafts: hours of staring at a blank page → a starting point in minutes.\n\nThe bar chart doesn't lie. Before AI vs. after AI across these 4 tasks — the gap is significant.\n\nYou don't need to be technical. You just need to start asking.\n\nTools: ChatGPT, Claude, Gemini — all free to start.\n\n→ Full guide at money-and-mode.com. Link in bio.\n\n#AIProductivity #SaveTimeWithAI #WorkSmarterNotHarder #ChatGPT #ClaudeAI #AITools #TimeManagement #ProductivityTips #AIForWork",
+      "status": "pending",
+      "added": "2026-05-24"
+    },
+    {
+      "id": "post-76-twitter-tweet",
+      "article_id": 76,
+      "article_title": "How to Use AI to Save 2 Hours Every Day",
+      "article_url": "https://money-and-mode.com/how-to-use-ai-to-save-2-hours-every-day/",
+      "platform": "twitter",
+      "post_type": "tweet",
+      "caption": "2 hours back every day. That's not hype — that's what happens when you let AI handle emails, research, scheduling, and first drafts. Here's the practical guide 👇 https://money-and-mode.com/how-to-use-ai-to-save-2-hours-every-day/",
+      "status": "pending",
+      "added": "2026-05-24"
+    },
+    {
+      "id": "post-76-pinterest",
+      "article_id": 76,
+      "article_title": "How to Use AI to Save 2 Hours Every Day",
+      "article_url": "https://money-and-mode.com/how-to-use-ai-to-save-2-hours-every-day/",
+      "platform": "pinterest",
+      "board": "AI Tips & Tools",
+      "image_wp_id": 81,
+      "pin_title": "How to Use AI to Save 2 Hours Every Day — A Practical Guide",
+      "caption": "How to Use AI to Save 2 Hours Every Day — A Practical Guide for Real People\n\nTwo hours. Every single day. That's what AI can give back to you — if you know how to use it.\n\nEmail drafts that used to take 30 minutes now take 5. Research that took an afternoon takes 20 minutes. First drafts of articles? What once took hours now takes one focused session.\n\nThis article shows exactly how to use ChatGPT, Claude, and Gemini to cut time across four key tasks: writing emails, doing research, scheduling, and creating content. Each section has a simple before-and-after. No complicated setup. No paid tools required.\n\nIf your day feels too full, this is worth 10 minutes of your time.\n\nFull article at money-and-mode.com\n\n#SaveTimeWithAI #AIProductivity #ChatGPT #HowToUseAI #WorkSmarter #AITools #ProductivityHacks #TimeManagement",
+      "status": "pending",
+      "added": "2026-05-24"
+    },
+    {
+      "id": "post-77-instagram",
+      "article_id": 77,
+      "article_title": "Will AI Take My Job? Here's the Honest Answer Nobody Is Giving You",
+      "article_url": "https://money-and-mode.com/will-ai-take-my-job-heres-the-honest-answer-nobody-is-giving-you/",
+      "platform": "instagram",
+      "image_wp_id": 82,
+      "image_alt": "Two-column comparison — roles AI disrupts vs roles where humans thrive",
+      "caption": "\"Will AI take my job?\" — I get asked this a lot. Here's the honest answer. 👇\n\nThe truth is somewhere between the panic and the denial:\n\n• Repetitive, rule-based work IS being automated — fast\n• Jobs requiring judgment, creativity, and empathy are safer\n• The people at greatest risk are those who refuse to adapt\n• The people who learn to work with AI will outperform those who don't\n• Some jobs will disappear — new ones will appear alongside them\n\nThe two-column reality: disrupted roles vs. roles where humans thrive. The dividing line is almost always this — can a machine predict the next step? If yes, the role is at risk.\n\nThis doesn't have to be scary. But it does require honesty.\n\n→ Full article at money-and-mode.com. Link in bio.\n\n#AIAndJobs #FutureOfWork #WillAIReplaceMe #CareerInAIEra #WorkSmarter #AITruth #JobSecurity #FutureProofYourCareer",
+      "status": "pending",
+      "added": "2026-05-24"
+    },
+    {
+      "id": "post-77-twitter-tweet",
+      "article_id": 77,
+      "article_title": "Will AI Take My Job?",
+      "article_url": "https://money-and-mode.com/will-ai-take-my-job-heres-the-honest-answer-nobody-is-giving-you/",
+      "platform": "twitter",
+      "post_type": "tweet",
+      "caption": "Will AI take your job? Not the hype version — the honest answer. Some jobs are at real risk. Some are safer than ever. The difference comes down to one thing. 👇 https://money-and-mode.com/will-ai-take-my-job-heres-the-honest-answer-nobody-is-giving-you/",
+      "status": "pending",
+      "added": "2026-05-24"
+    },
+    {
+      "id": "post-77-pinterest",
+      "article_id": 77,
+      "article_title": "Will AI Take My Job?",
+      "article_url": "https://money-and-mode.com/will-ai-take-my-job-heres-the-honest-answer-nobody-is-giving-you/",
+      "platform": "pinterest",
+      "board": "AI Tips & Tools",
+      "image_wp_id": 82,
+      "pin_title": "Will AI Take My Job? The Calm, Honest Answer",
+      "caption": "Will AI Take My Job? Here's the Calm, Honest Answer Nobody Is Giving You\n\nThe internet is full of two kinds of AI job predictions. One says AI will replace everyone. The other says nothing will change. Both are wrong.\n\nI've worked in software and technology for 25 years. The jobs most at risk are highly repetitive ones. The jobs safest are built on human judgment, creative thinking, and genuine relationships.\n\nThis article breaks it down clearly — which roles are being disrupted, which are safer, and what you can do about it right now. No doom. No false comfort. Just an honest look at where we are and how to adapt.\n\nFull article at money-and-mode.com\n\n#WillAITakeMyJob #AIAndJobs #FutureOfWork #AIImpact #CareerAdvice #WorkInAIEra #AIExplained #JobSecurity",
+      "status": "pending",
+      "added": "2026-05-24"
+    },
+    {
+      "id": "post-110-instagram",
+      "article_id": 110,
+      "article_title": "I Sold My Company at 31. Here's What Financial Freedom Actually Felt Like.",
+      "article_url": "https://money-and-mode.com/i-sold-my-company-at-31-financial-freedom/",
+      "platform": "instagram",
+      "image_wp_id": 105,
+      "image_alt": "4-phase journey: Build → Exit → Build Free → Own Time",
+      "caption": "I sold my company at 31 and thought I'd finally feel free. Here's what I actually felt. 👇\n\nIt wasn't what I expected:\n\n• The money landed — and within a week, I was looking for what to do next\n• Freedom without purpose is just a different kind of empty\n• The real gift wasn't the exit price — it was waking up without an alarm\n• The four phases: Build → Exit → Build Free → Own Time\n• Phase 4 is the one that actually matters. Most people never reach it.\n\nFinancial freedom isn't a number. It's a calendar. It's the question: who owns your time today?\n\nThat shift in thinking — from \"how much?\" to \"what for?\" — changed everything.\n\n→ Full story at money-and-mode.com. Link in bio.\n\n#FinancialFreedom #FIRE #FinancialIndependence #TimeOwnership #WealthMindset #PersonalFinance #EntrepreneurLife #MoneyAndMode",
+      "status": "pending",
+      "added": "2026-05-24"
+    },
+    {
+      "id": "post-110-twitter-tweet",
+      "article_id": 110,
+      "article_title": "I Sold My Company at 31",
+      "article_url": "https://money-and-mode.com/i-sold-my-company-at-31-financial-freedom/",
+      "platform": "twitter",
+      "post_type": "tweet",
+      "caption": "I sold my company at 31. Within a week I was restless. Here's what financial freedom actually feels like — and why almost everyone gets it wrong. https://money-and-mode.com/i-sold-my-company-at-31-financial-freedom/",
+      "status": "pending",
+      "added": "2026-05-24"
+    },
+    {
+      "id": "post-110-pinterest",
+      "article_id": 110,
+      "article_title": "I Sold My Company at 31",
+      "article_url": "https://money-and-mode.com/i-sold-my-company-at-31-financial-freedom/",
+      "platform": "pinterest",
+      "board": "Money & Financial Freedom",
+      "image_wp_id": 105,
+      "pin_title": "I Sold My Company at 31 — What Financial Freedom Actually Felt Like",
+      "caption": "I Sold My Company at 31. Here's What Financial Freedom Actually Felt Like.\n\nEveryone talks about financial freedom like it's a finish line. A number in a bank account. A date on a calendar. It isn't any of those things.\n\nI built a company, sold it at 31, and spent the next year figuring out what freedom actually meant. The surprise? It had almost nothing to do with money. It had everything to do with time. Who was in charge of my calendar. Whether I woke up because I had to or because I wanted to.\n\nThis article is the honest account of that journey — the four phases from building to exiting to rebuilding on your own terms.\n\nFull article at money-and-mode.com\n\n#FinancialFreedom #WhatIsFinancialFreedom #FIRE #FinancialIndependence #PersonalFinance #WealthMindset #TimeOwnership #MoneyAndLife",
+      "status": "pending",
+      "added": "2026-05-24"
+    },
+    {
+      "id": "post-112-instagram",
+      "article_id": 112,
+      "article_title": "If You Are Selling Your Time, You Will Never Be Free",
+      "article_url": "https://money-and-mode.com/selling-your-time-financial-freedom-time-ownership/",
+      "platform": "instagram",
+      "image_wp_id": 107,
+      "image_alt": "Before/after calendar: red packed meetings vs green owned time",
+      "caption": "The most expensive thing you own is your time. And most of us sell it every day. Here's why that's the hidden trap. 👇\n\nThe brutal arithmetic of trading time for money:\n\n• Your income has a ceiling: your available hours\n• When you rest, the income stops — completely\n• A packed calendar full of meetings isn't a career — it's a rental agreement\n• Employees and freelancers both have the same core problem: they're billing hours\n• The only path out is income that works when you don't\n\nLook at two calendars side by side: one packed with red — other people's priorities. One with green — owned time, your projects, your choices.\n\nWhich one do you want to be looking at in 10 years?\n\nFinancial freedom isn't about earning more. It's about changing the structure of how you earn.\n\n→ Full article at money-and-mode.com. Link in bio.\n\n#TimeIsMoney #FinancialFreedom #FIRE #PassiveIncome #MoneyMindset #SellingTime #FinancialIndependence #WealthBuilding #OwnYourTime",
+      "status": "pending",
+      "added": "2026-05-24"
+    },
+    {
+      "id": "post-112-twitter-tweet",
+      "article_id": 112,
+      "article_title": "If You Are Selling Your Time, You Will Never Be Free",
+      "article_url": "https://money-and-mode.com/selling-your-time-financial-freedom-time-ownership/",
+      "platform": "twitter",
+      "post_type": "tweet",
+      "caption": "Every hour you sell, you'll never get back. And when you stop working, the income stops too. This is the core trap — and here's how people break out of it. https://money-and-mode.com/selling-your-time-financial-freedom-time-ownership/",
+      "status": "pending",
+      "added": "2026-05-24"
+    },
+    {
+      "id": "post-112-pinterest",
+      "article_id": 112,
+      "article_title": "If You Are Selling Your Time, You Will Never Be Free",
+      "article_url": "https://money-and-mode.com/selling-your-time-financial-freedom-time-ownership/",
+      "platform": "pinterest",
+      "board": "Money & Financial Freedom",
+      "image_wp_id": 107,
+      "pin_title": "If You Are Selling Your Time, You Will Never Be Free",
+      "caption": "If You Are Selling Your Time, You Will Never Be Free — The Hidden Trap of Employment\n\nThere's a simple mathematical truth that most people never examine: when you sell your time for money, the income stops the moment you stop working. That's not a career. That's a treadmill.\n\nAn employee's calendar is packed with other people's priorities. A freelancer's income disappears the moment they rest. Neither path leads to financial freedom — because both are selling hours.\n\nThe path out is income that doesn't depend on your presence. Systems, assets, businesses that work while you sleep.\n\nThis article has the before/after calendar contrast that makes it impossible to unsee.\n\nFull article at money-and-mode.com\n\n#SellingYourTime #FinancialFreedom #PassiveIncome #TimeOwnership #FIRE #FinancialIndependence #MoneyMindset #WealthBuilding",
+      "status": "pending",
+      "added": "2026-05-24"
+    },
+    {
+      "id": "post-115-instagram",
+      "article_id": 115,
+      "article_title": "The Family That Feels Like Heaven",
+      "article_url": "https://money-and-mode.com/family-emotional-connection-heaven-at-home/",
+      "platform": "instagram",
+      "image_wp_id": null,
+      "image_alt": "No diagram — use a warm text/quote card instead",
+      "caption": "Some families share a house. Others share a life. The difference is everything. 💙\n\nSigns of a family that's truly connected vs. one that's just coexisting:\n\n• Conversations go deeper than logistics\n• People feel genuinely seen — not just tolerated\n• Conflict gets resolved, not buried\n• You actually look forward to being home\n• Laughter happens without a reason\n\nThe controversial equation: 1 deeply connected year together > 10 average years side by side.\n\nBeing physically present but emotionally absent is one of the quiet tragedies of modern life. The fix isn't complicated. It starts with showing up — really showing up.\n\n→ Full article at money-and-mode.com. Link in bio.\n\n#FamilyFirst #EmotionalConnection #DeepRelationships #FamilyLife #QualityTime #MindfulParenting #HealthyFamily #LoveAndConnection #HomeIsWhere",
+      "status": "pending",
+      "added": "2026-05-24"
+    },
+    {
+      "id": "post-115-twitter-tweet",
+      "article_id": 115,
+      "article_title": "The Family That Feels Like Heaven",
+      "article_url": "https://money-and-mode.com/family-emotional-connection-heaven-at-home/",
+      "platform": "twitter",
+      "post_type": "tweet",
+      "caption": "A family can share a house for 20 years and barely know each other. Or share one real conversation and feel completely connected. The difference is emotional presence — not time. https://money-and-mode.com/family-emotional-connection-heaven-at-home/",
+      "status": "pending",
+      "added": "2026-05-24"
+    },
+    {
+      "id": "post-115-pinterest",
+      "article_id": 115,
+      "article_title": "The Family That Feels Like Heaven",
+      "article_url": "https://money-and-mode.com/family-emotional-connection-heaven-at-home/",
+      "platform": "pinterest",
+      "board": "Life, Growth & Daily Habits",
+      "image_wp_id": null,
+      "pin_title": "The Family That Feels Like Heaven — Why Emotional Connection Changes Everything",
+      "caption": "The Family That Feels Like Heaven — Why Emotional Connection Changes Everything\n\nSome families look fine from the outside. Comfortable home, decent income, everyone getting along. And yet something is missing — a quality of aliveness that makes you actually look forward to walking through the door.\n\nIn 11 years of journaling, the theme that comes up more than money, more than success — is connection. The moments where someone really sees you. Where you feel genuinely known.\n\nOne year of deep, emotionally connected family life is worth more than ten ordinary years lived side by side.\n\nThis article explores what makes a family feel like heaven — not perfect, just genuinely alive.\n\nFull article at money-and-mode.com\n\n#FamilyConnection #EmotionalConnection #FamilyLife #DeepRelationships #HealthyFamily #QualityTime #MindfulLiving #FamilyFirst",
+      "status": "pending",
+      "added": "2026-05-24"
+    }
+  ],
+  "posted": [],
+  "threads_pending": [
+    {
+      "id": "thread-74",
+      "article_id": 74,
+      "platform": "twitter",
+      "status": "pending",
+      "tweets": [
+        "Most people think AI is coming. It's not. It's already here — in your phone, your maps, your hospital, your TV. A thread on the 8 places AI is running in your life right now 🧵",
+        "Your Netflix queue isn't random. AI studies your watch history, time of day, what you paused, what you rewatched — and predicts the next show you won't be able to stop. That's AI doing the heavy lifting.",
+        "Google Maps rerouting you around an accident before you even knew about it? That's real-time AI processing millions of GPS signals at once. No human team could do that. AI can.",
+        "Your bank's fraud alert that fires 10 seconds after a suspicious charge? AI. It has a model of your spending habits — the moment something breaks the pattern, it flags it automatically.",
+        "Healthcare is next. AI is reading CT scans, flagging cancer earlier than radiologists, and scheduling your appointment. The hospital is already smarter than it was 3 years ago.",
+        "You don't have to be a tech person to understand AI. You just have to open your eyes to what's already around you. I wrote up all 8 areas — no jargon, no hype. https://money-and-mode.com/how-ai-is-changing-everyday-life/"
+      ]
+    },
+    {
+      "id": "thread-77",
+      "article_id": 77,
+      "platform": "twitter",
+      "status": "pending",
+      "tweets": [
+        "\"Will AI take my job?\" is the question everyone is afraid to ask directly. Here's the honest answer — not the panic version, not the false reassurance version. A thread 🧵",
+        "The jobs at most risk: data entry, basic customer service, content moderation, repetitive legal review, standard financial reporting. If the work is predictable and rule-based, AI can do it — or is already doing it.",
+        "The jobs that are safer: roles requiring nuanced judgment, human empathy, creative problem-solving, leadership, and trust. A great therapist, an exceptional teacher, a skilled negotiator — AI augments these, it doesn't replace them.",
+        "The uncomfortable middle: most jobs are a mix. The repetitive parts will be automated. What's left — and what grows — is the judgment layer. The question is whether you're developing that layer or ignoring it.",
+        "Adaptation is the real answer. Not 'my job is safe' — but 'I'm building skills that compound over time.' People who learn to use AI as a tool will dramatically outperform people who treat it as a threat.",
+        "I've written up the full breakdown — which roles are disrupted, which thrive, and what you can do about it right now. No doom, no hype. https://money-and-mode.com/will-ai-take-my-job-heres-the-honest-answer-nobody-is-giving-you/"
+      ]
+    },
+    {
+      "id": "thread-110",
+      "article_id": 110,
+      "platform": "twitter",
+      "status": "pending",
+      "tweets": [
+        "I sold my company at 31. The wire transfer hit. I thought I'd feel free. I didn't — not at first. Here's what financial freedom actually feels like, and what nobody tells you before you get there 🧵",
+        "Phase 1: Build. You're heads down, years passing, building something from nothing. You don't think about freedom because you're too busy surviving and growing. The exit feels like a distant dream.",
+        "Phase 2: Exit. The deal closes. Money lands. And then — a strange quiet. You've been optimising for the exit for years. Now what? This phase is disorienting for almost everyone who reaches it.",
+        "Phase 3: Build Free. You realise you don't want to stop building. You just want to choose what you build. New projects, new investments, on your own terms. This is where most people land — and it's genuinely good.",
+        "Phase 4: Own Time. This is the real destination. Not a net worth figure. Not a title. Just the answer to: who owns your calendar today? When the answer is consistently 'I do' — that's freedom.",
+        "The whole journey — the four phases, what surprised me, and what 'enough' actually means. The honest account: https://money-and-mode.com/i-sold-my-company-at-31-financial-freedom/"
+      ]
+    }
+  ]
+}
