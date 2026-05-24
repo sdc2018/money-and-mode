@@ -149,11 +149,79 @@ Save articles in `/articles/` as `article-N-slug.md` with this header:
 
 ---
 
-## Social Media (Phase 3 — Not Started)
+## Social Media Accounts
 
-Platforms to create: Pinterest, Instagram, Facebook Page, Twitter/X, YouTube  
-Pinterest is highest priority for lifestyle blog traffic.  
-All handles to be created by Sandip — Claude will manage content posting after setup.
+| Platform | Handle | URL |
+|----------|--------|-----|
+| Twitter/X | @justIndia25 | https://x.com/justIndia25 |
+| Instagram | @fun_in_life71 | https://www.instagram.com/fun_in_life71/ |
+| Pinterest | @sandip2787 | https://www.pinterest.com/sandip2787/ |
+| Facebook Page | TBD | Not yet created |
+| YouTube | TBD | Not yet created |
+
+### ⚠️ CRITICAL SAFETY RULE — Social Media Posting
+
+**Sandip has personal accounts on Instagram and X that are always logged in.**  
+Before posting on ANY social platform, Claude MUST:
+1. **Verify the active account/handle** — navigate to the profile page and confirm the username
+2. **For Instagram:** go to `https://www.instagram.com/accounts/edit/` — confirm username shows `fun_in_life71`
+3. **For X/Twitter:** confirm handle shows `@justIndia25` before tweeting
+4. **For Pinterest:** confirm account shows `sandip2787`
+5. **STOP and ask Sandip** if the wrong account is active — never switch accounts without instruction
+6. **Never post from a personal handle** — always confirm first, post second
+
+---
+
+## Standard Article Publishing Workflow
+
+Every article must go through ALL of these steps in order:
+
+### Step 1 — Write
+- Follow Article Writing Rules (keyword in title, meta description, H2s, etc.)
+- Save as `/articles/[slug].md`
+
+### Step 2 — Create Diagram
+- Design SVG diagram (800px wide, Georgia serif, brand colours: #2D6A4F green, #1a1a2e dark, #F9F7F4 background)
+- Save to `/assets/images/[slug].svg`
+- Convert to 2× PNG via browser canvas and upload to WordPress media library
+- Note the WordPress Media ID
+
+### Step 3 — WordPress
+- Create post via REST API with: title, content (HTML), slug, category, featured_media ID, excerpt/meta description
+- Status: `draft` by default — only `publish` if Sandip explicitly confirms
+- Set AIOSEO meta description in the post meta
+
+### Step 4 — SEO (AIOSEO)
+- Meta description: max 155 chars, keyword included
+- Target keyword set in AIOSEO if possible via REST API
+- Ensure H1 = title, at least one H2 with keyword variation
+
+### Step 5 — Social Media (post for every published article)
+
+**⚠️ Always verify active account handle FIRST before posting.**
+
+#### Pinterest
+- Create a Pin on the most relevant board
+- Use the diagram/featured image
+- Title: article title (max 100 chars)
+- Description: 2–3 sentences with keyword + money-and-mode.com link
+- Boards: "AI Tips & Tools" / "Money & Financial Freedom" / "Life, Growth & Daily Habits"
+
+#### Instagram
+- Verify handle is `fun_in_life71` before posting
+- Post the diagram as the image
+- Caption: hook line → 3–4 key insights → CTA ("Link in bio") → 5–8 hashtags
+- Hashtags: mix broad + niche (e.g. #financialfreedom #moneymindset #indexfunds #personalfinance)
+
+#### X / Twitter
+- Verify handle is `@justIndia25` before posting
+- Tweet: punchy 1–2 sentence hook + article link
+- Optional thread: 3–5 key points from the article
+
+### Step 6 — Update & Commit
+- Update `STATUS.md` with WP post ID, image ID, social posts confirmed
+- Git commit with message: `content: publish [article title]`
+- Push to GitHub
 
 ---
 
@@ -191,7 +259,9 @@ Always update STATUS.md after any significant session and commit.
 - Don't write generic AI content — always add Sandip's personal perspective
 - Don't create content that sounds like it's written by a robot
 - Don't publish to WordPress without Sandip confirming
+- **Never post on social media without first verifying the active account handle**
+- Never post from Sandip's personal social accounts — always confirm it's the blog handle
 
 ---
 
-*Last updated: May 21, 2026*
+*Last updated: May 24, 2026*

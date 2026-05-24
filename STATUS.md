@@ -187,7 +187,7 @@ All diagrams are custom SVG (800px wide, Georgia serif font, brand colours), upl
 | Platform | Handle | Status |
 |----------|--------|--------|
 | Pinterest | @sandip2787 (sdc67@yahoo.com) | ✅ Live — profile, 3 boards, articles pinned |
-| Instagram | @fun_in_life71 | ✅ Live — https://www.instagram.com/fun_in_life71/ — profile needs photo + bio |
+| Instagram | @fun_in_life71 | ✅ Live — https://www.instagram.com/fun_in_life71/ — bio set ✅, profile photo needed |
 | Facebook Page | To be created | ⚪ Phase 3 |
 | Twitter/X | @justIndia25 | ✅ Live — bio set, articles tweeted |
 | YouTube | To be created | ⚪ Phase 3 |
@@ -308,7 +308,10 @@ All diagrams are custom SVG (800px wide, Georgia serif font, brand colours), upl
 - [x] Write & publish "Family Heaven" article — live (Post 115)
 - [x] Write "Connection Starts at Home" — draft (Post 118, diagram ID 117)
 - [x] Add social media icons to homepage — X, Instagram, Pinterest icons live in "FOLLOW THE JOURNEY" section
-- [ ] Complete Instagram profile — add photo, bio, first posts
+- [x] Instagram bio set — "AI · Money · Life. Simple ideas for a better everyday. 🌱 money-and-mode.com"
+- [ ] Instagram profile photo — add (Sandip to do on mobile, website link also needs mobile app)
+- [ ] Instagram first posts — share article diagrams with captions (per new publishing workflow)
+- [x] CLAUDE.md updated — full publishing workflow added (write → diagram → WordPress → SEO → social → commit)
 - [ ] Add FAQ schema to FF published articles via AIOSEO
 - [ ] Review Privacy Policy page content
 
