@@ -3,7 +3,7 @@
 **Site:** https://money-and-mode.com  
 **Site Name:** Fun in the Life  
 **Tagline:** From Daily Growth to Wealth: A Life Well Lived  
-**Last Updated:** May 24, 2026 (Session 8 — Life & Motivation category created (ID 15); "Family Heaven" article published (Post 115); "Connection Starts at Home" draft created (Post 118, diagram ID 117); FF-06/07/08 SVGs created locally; previous FF articles category updated to Life & Motivation)  
+**Last Updated:** May 24, 2026 (Session 9 — Growth automation scripts built: pinterest_growth.py (18 pin variations across 6 articles via Pinterest API v5) + twitter_growth.py (conversation finder for engagement-based Twitter growth); .env.example + SETUP.md created; all 6 Pinterest portrait pins posted manually; queue.json updated)  
 **Pen Name:** Kabir Shah (technology entrepreneur, 25 years in software/AI, India) — used for all author attribution  
 
 ---
@@ -314,6 +314,16 @@ All diagrams are custom SVG (800px wide, Georgia serif font, brand colours), upl
 - [x] CLAUDE.md updated — full publishing workflow added (write → diagram → WordPress → SEO → social → commit)
 - [ ] Add FAQ schema to FF published articles via AIOSEO
 - [ ] Review Privacy Policy page content
+- [x] Build Pinterest growth automation script — social-media/scripts/pinterest_growth.py — 3 pin variations × 6 articles = 18 pins ready to post via Pinterest API v5
+- [x] Build Twitter growth automation script — social-media/scripts/twitter_growth.py — finds high-engagement conversations to reply to; loads target account list + topic search queries
+- [x] Create .env.example — credential template for Pinterest, Twitter, Instagram, WordPress API keys
+- [x] Create social-media/scripts/SETUP.md — step-by-step instructions for getting each API token
+- [x] Update .gitignore — .env protected from git commits
+- [ ] **GET PINTEREST ACCESS TOKEN** — https://developers.pinterest.com/apps/ → Create App → Generate Token (scopes: boards:read, pins:write) → add to .env
+- [ ] **GET TWITTER BEARER TOKEN** — https://developer.twitter.com/en/portal/dashboard → Create Project → Get Bearer Token → add to .env
+- [ ] Run `python pinterest_growth.py --boards` to verify Pinterest API connection
+- [ ] Run `python pinterest_growth.py --all` to post all 18 pin variations (run once, big reach boost)
+- [ ] Run `python twitter_growth.py --find` daily for reply opportunities (free tier)
 
 ---
 
