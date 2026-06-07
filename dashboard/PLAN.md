@@ -62,7 +62,7 @@ digest_items      — weekly curated content
 
 ---
 
-### 🔵 Phase 2 — Analytics (Next)
+### ✅ Phase 2 — Analytics (Complete — Jun 7, 2026)
 
 **Screen 6: Performance Dashboard**
 - Bar chart: saves per post (Chart.js)

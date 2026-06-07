@@ -56,6 +56,18 @@ class TrafficEntry(BaseModel):
     new_articles: Optional[int] = None
     notes: Optional[str] = None
 
+class KeywordCreate(BaseModel):
+    keyword: str
+    article_id: Optional[int] = None
+    target_url: Optional[str] = None
+    monthly_searches_est: Optional[int] = None
+    competition: Optional[str] = "unknown"
+    notes: Optional[str] = None
+
+class RankEntry(BaseModel):
+    rank: Optional[int] = None   # None = not ranking
+    notes: Optional[str] = None
+
 
 # ══════════════════════════════════════════════════════════════════════════════
 #  Overview
@@ -357,26 +369,123 @@ def add_traffic(entry: TrafficEntry):
 def get_performance():
     with get_conn() as conn:
         rows = conn.execute("""
-            SELECT a.title, a.series, sp.platform, sp.posted_date,
-                   m.likes, m.comments, m.saves, m.reach, m.link_clicks
-            FROM metrics m
-            JOIN social_posts sp ON sp.id = m.social_post_id
+            SELECT sp.id post_id, a.title, a.series, sp.platform, sp.posted_date,
+                   m.likes, m.comments, m.saves, m.shares, m.reach, m.link_clicks
+            FROM social_posts sp
             JOIN articles a      ON a.id  = sp.article_id
+            LEFT JOIN metrics m  ON m.social_post_id = sp.id
+            WHERE sp.status = 'posted'
             ORDER BY sp.posted_date DESC
         """).fetchall()
-        # Top performers by saves
         top_saves = conn.execute("""
-            SELECT a.title, SUM(m.saves) total_saves, SUM(m.reach) total_reach
+            SELECT a.title, SUM(COALESCE(m.saves,0)) total_saves,
+                   SUM(COALESCE(m.reach,0)) total_reach,
+                   SUM(COALESCE(m.comments,0)) total_comments
             FROM metrics m
             JOIN social_posts sp ON sp.id = m.social_post_id
             JOIN articles a      ON a.id  = sp.article_id
             WHERE m.saves IS NOT NULL
             GROUP BY a.id ORDER BY total_saves DESC LIMIT 5
         """).fetchall()
+        platform_stats = conn.execute("""
+            SELECT sp.platform,
+                   COUNT(*)                          total_posts,
+                   SUM(COALESCE(m.saves,0))          total_saves,
+                   SUM(COALESCE(m.comments,0))       total_comments,
+                   SUM(COALESCE(m.reach,0))          total_reach,
+                   AVG(CASE WHEN m.reach>0 THEN CAST(m.saves AS FLOAT)/m.reach*100 END) avg_save_rate
+            FROM social_posts sp
+            LEFT JOIN metrics m ON m.social_post_id = sp.id
+            WHERE sp.status='posted'
+            GROUP BY sp.platform
+        """).fetchall()
+        has_data = conn.execute("SELECT COUNT(*) cnt FROM metrics").fetchone()["cnt"] > 0
     return {
-        "posts":      [dict(r) for r in rows],
-        "top_saves":  [dict(r) for r in top_saves],
+        "posts":          [dict(r) for r in rows],
+        "top_saves":      [dict(r) for r in top_saves],
+        "platform_stats": [dict(r) for r in platform_stats],
+        "has_data":       has_data,
     }
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+#  Content Calendar
+# ══════════════════════════════════════════════════════════════════════════════
+
+@app.get("/api/calendar/{year}/{month}")
+def get_calendar(year: int, month: int):
+    import calendar
+    month_str = f"{year}-{month:02d}"
+    days_in_month = calendar.monthrange(year, month)[1]
+    with get_conn() as conn:
+        articles = conn.execute("""
+            SELECT id, title, slug, status, publish_date, series, wp_url
+            FROM articles
+            WHERE publish_date LIKE ?
+            ORDER BY publish_date
+        """, (f"{month_str}%",)).fetchall()
+
+    day_map = {}
+    for a in articles:
+        d = a["publish_date"][-2:]   # last 2 chars = day
+        day_map.setdefault(d, []).append(dict(a))
+
+    return {
+        "year": year, "month": month, "days_in_month": days_in_month,
+        "first_weekday": calendar.monthrange(year, month)[0],   # 0=Mon
+        "articles_by_day": day_map,
+    }
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+#  Keywords
+# ══════════════════════════════════════════════════════════════════════════════
+
+@app.get("/api/keywords")
+def get_keywords():
+    with get_conn() as conn:
+        kws = conn.execute("""
+            SELECT k.*,
+                   a.title article_title, a.wp_url,
+                   (SELECT rank FROM keyword_rankings WHERE keyword_id=k.id
+                    ORDER BY recorded_date DESC LIMIT 1) current_rank,
+                   (SELECT rank FROM keyword_rankings WHERE keyword_id=k.id
+                    ORDER BY recorded_date DESC LIMIT 1 OFFSET 1) prev_rank,
+                   (SELECT recorded_date FROM keyword_rankings WHERE keyword_id=k.id
+                    ORDER BY recorded_date DESC LIMIT 1) last_checked
+            FROM keywords k
+            LEFT JOIN articles a ON a.id = k.article_id
+            ORDER BY k.created_at DESC
+        """).fetchall()
+    return [dict(r) for r in kws]
+
+@app.post("/api/keywords")
+def create_keyword(kw: KeywordCreate):
+    with get_conn() as conn:
+        cur = conn.execute("""
+            INSERT INTO keywords (keyword, article_id, target_url, monthly_searches_est, competition, notes)
+            VALUES (?,?,?,?,?,?)
+        """, (kw.keyword, kw.article_id, kw.target_url, kw.monthly_searches_est, kw.competition, kw.notes))
+        conn.commit()
+        return {"id": cur.lastrowid, **kw.dict()}
+
+@app.post("/api/keywords/{kw_id}/rank")
+def add_rank(kw_id: int, entry: RankEntry):
+    with get_conn() as conn:
+        conn.execute(
+            "INSERT INTO keyword_rankings (keyword_id, rank, notes) VALUES (?,?,?)",
+            (kw_id, entry.rank, entry.notes)
+        )
+        conn.commit()
+    return {"ok": True}
+
+@app.delete("/api/keywords/{kw_id}")
+def delete_keyword(kw_id: int):
+    with get_conn() as conn:
+        conn.execute("DELETE FROM keyword_rankings WHERE keyword_id=?", (kw_id,))
+        conn.execute("DELETE FROM keywords WHERE id=?", (kw_id,))
+        conn.commit()
+    return {"ok": True}
 
 
 # ══════════════════════════════════════════════════════════════════════════════

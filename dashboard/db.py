@@ -109,9 +109,31 @@ def init_db():
         );
 
         -- ─── Indexes ─────────────────────────────────────────────────────────────
+        -- ─── Keywords ────────────────────────────────────────────────────────────
+        CREATE TABLE IF NOT EXISTS keywords (
+            id                   INTEGER PRIMARY KEY AUTOINCREMENT,
+            keyword              TEXT NOT NULL,
+            article_id           INTEGER REFERENCES articles(id),
+            target_url           TEXT,
+            monthly_searches_est INTEGER,
+            competition          TEXT DEFAULT 'unknown',  -- low | medium | high | unknown
+            notes                TEXT,
+            created_at           TEXT DEFAULT (datetime('now'))
+        );
+
+        CREATE TABLE IF NOT EXISTS keyword_rankings (
+            id            INTEGER PRIMARY KEY AUTOINCREMENT,
+            keyword_id    INTEGER REFERENCES keywords(id),
+            rank          INTEGER,          -- Google position (null = not ranking yet)
+            recorded_date TEXT DEFAULT (date('now')),
+            notes         TEXT
+        );
+
+        -- ─── Indexes ─────────────────────────────────────────────────────────────
         CREATE INDEX IF NOT EXISTS idx_articles_status      ON articles(status);
         CREATE INDEX IF NOT EXISTS idx_social_posts_status  ON social_posts(status);
         CREATE INDEX IF NOT EXISTS idx_todos_status         ON todos(status);
         CREATE INDEX IF NOT EXISTS idx_traffic_month        ON traffic(month);
+        CREATE INDEX IF NOT EXISTS idx_kw_rankings_kw       ON keyword_rankings(keyword_id);
         """)
     print(f"✅ Database ready: {DB_PATH}")

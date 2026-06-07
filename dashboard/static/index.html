@@ -5,189 +5,187 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fun in the Life — Dashboard</title>
 <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script>
   tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          brand: { DEFAULT:'#2D6A4F', light:'#52B788', dark:'#1B4332' },
-          ink:   { DEFAULT:'#1a1a2e', light:'#374151' },
-          sand:  { DEFAULT:'#F9F7F4', warm:'#F3EFE8' },
-        }
-      }
-    }
+    theme: { extend: { colors: {
+      brand: { DEFAULT:'#2D6A4F', light:'#52B788', dark:'#1B4332' },
+      ink:   '#1a1a2e', sand: '#F9F7F4'
+    }}}
   }
 </script>
 <style>
   body { background:#F9F7F4; font-family:'Segoe UI',system-ui,sans-serif; }
-  .card { background:white; border-radius:12px; box-shadow:0 1px 3px rgba(0,0,0,.08); }
-  .stat-card { background:white; border-radius:12px; box-shadow:0 1px 3px rgba(0,0,0,.08); padding:20px; }
-  .badge-posted   { background:#D1FAE5; color:#065F46; }
-  .badge-pending  { background:#FEF3C7; color:#92400E; }
-  .badge-overdue  { background:#FEE2E2; color:#991B1B; }
-  .badge-draft    { background:#EDE9FE; color:#5B21B6; }
-  .badge-published{ background:#D1FAE5; color:#065F46; }
-  .badge-written  { background:#DBEAFE; color:#1E40AF; }
-  .badge-planned  { background:#F3F4F6; color:#374151; }
-  .badge-none     { background:#F9FAFB; color:#9CA3AF; }
-  .badge-skipped  { background:#F3F4F6; color:#9CA3AF; }
-  .plat-icon { width:22px; height:22px; border-radius:4px; display:inline-flex; align-items:center; justify-content:center; font-size:12px; }
-  .dot { width:10px; height:10px; border-radius:50%; display:inline-block; }
-  .dot-posted  { background:#10B981; }
-  .dot-pending { background:#F59E0B; }
-  .dot-none    { background:#E5E7EB; }
-  .dot-skipped { background:#D1D5DB; }
-  .dot-overdue { background:#EF4444; }
-  .nav-tab { padding:8px 16px; border-radius:8px; cursor:pointer; font-size:14px; font-weight:500; color:#6B7280; transition:all .15s; }
-  .nav-tab:hover { background:#F3F4F6; color:#111827; }
-  .nav-tab.active { background:#2D6A4F; color:white; }
-  .progress-bar { height:8px; border-radius:4px; background:#E5E7EB; overflow:hidden; }
-  .progress-fill { height:100%; border-radius:4px; background:linear-gradient(90deg,#2D6A4F,#52B788); transition:width .5s; }
-  .priority-high   { border-left:3px solid #EF4444; }
-  .priority-medium { border-left:3px solid #F59E0B; }
-  .priority-low    { border-left:3px solid #D1D5DB; }
-  [x-cloak] { display:none; }
+  .card { background:white; border-radius:12px; box-shadow:0 1px 4px rgba(0,0,0,.08); }
+  .stat-num { font-size:1.75rem; font-weight:700; line-height:1; }
+  /* badges */
+  .b-posted    {background:#D1FAE5;color:#065F46}
+  .b-pending   {background:#FEF3C7;color:#92400E}
+  .b-overdue   {background:#FEE2E2;color:#991B1B}
+  .b-draft     {background:#EDE9FE;color:#5B21B6}
+  .b-published {background:#D1FAE5;color:#065F46}
+  .b-written   {background:#DBEAFE;color:#1E40AF}
+  .b-planned   {background:#F3F4F6;color:#374151}
+  .b-none      {background:#F9FAFB;color:#D1D5DB}
+  .b-skipped   {background:#F3F4F6;color:#9CA3AF}
+  .b-low       {background:#D1FAE5;color:#065F46}
+  .b-medium    {background:#FEF3C7;color:#92400E}
+  .b-high      {background:#FEE2E2;color:#991B1B}
+  .b-unknown   {background:#F3F4F6;color:#374151}
+  /* dots */
+  .dot { width:10px;height:10px;border-radius:50%;display:inline-block;flex-shrink:0 }
+  .dot-posted   {background:#10B981}
+  .dot-pending  {background:#F59E0B}
+  .dot-none     {background:#E5E7EB}
+  .dot-skipped  {background:#D1D5DB}
+  /* priority bar */
+  .pri-high   {border-left:3px solid #EF4444}
+  .pri-medium {border-left:3px solid #F59E0B}
+  .pri-low    {border-left:3px solid #D1D5DB}
+  /* progress */
+  .prog-bar {height:8px;border-radius:4px;background:#E5E7EB;overflow:hidden}
+  .prog-fill {height:100%;border-radius:4px;background:linear-gradient(90deg,#2D6A4F,#52B788);transition:width .6s}
+  /* calendar */
+  .cal-day {min-height:64px;border-radius:8px;padding:4px 6px;font-size:11px;cursor:default;transition:background .15s}
+  .cal-day:hover {background:#F0FDF4}
+  .cal-published {background:#D1FAE5;border:1.5px solid #34D399}
+  .cal-draft     {background:#EDE9FE;border:1.5px solid #A78BFA}
+  .cal-overdue   {background:#FEE2E2;border:1.5px solid #FCA5A5}
+  .cal-today     {ring:2px solid #2D6A4F}
+  .cal-empty     {background:#F9FAFB;border:1px solid #F3F4F6}
+  /* rank arrow */
+  .rank-up   {color:#10B981}
+  .rank-down {color:#EF4444}
+  .rank-same {color:#9CA3AF}
+  [x-cloak]  {display:none}
+  /* nav tab */
+  .ntab {padding:6px 14px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:500;color:rgba(255,255,255,.75);transition:all .15s}
+  .ntab:hover {background:rgba(255,255,255,.15);color:white}
+  .ntab.on    {background:rgba(255,255,255,.25);color:white}
 </style>
 <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 </head>
-<body x-data="dashboard()" x-init="init()" class="min-h-screen">
+<body x-data="app()" x-init="init()" class="min-h-screen">
 
-<!-- ── Top Nav ───────────────────────────────────────────────────────────── -->
-<nav class="bg-brand text-white shadow-md sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-    <div class="flex items-center gap-3">
+<!-- ── Nav ─────────────────────────────────────────────────────────────────── -->
+<nav class="bg-brand sticky top-0 z-50 shadow-lg">
+  <div class="max-w-7xl mx-auto px-4 py-2.5 flex items-center gap-2 flex-wrap">
+    <div class="flex items-center gap-2 mr-4">
       <span class="text-xl">🌿</span>
       <div>
-        <div class="font-bold text-sm">Fun in the Life</div>
-        <div class="text-xs opacity-70">money-and-mode.com</div>
+        <div class="font-bold text-white text-sm leading-tight">Fun in the Life</div>
+        <div class="text-white/60 text-xs">money-and-mode.com</div>
       </div>
     </div>
-    <div class="flex gap-1">
-      <button @click="tab='overview'"  :class="tab==='overview'  ? 'bg-white/20':''" class="nav-tab text-white hover:bg-white/10">Overview</button>
-      <button @click="tab='pipeline'"  :class="tab==='pipeline'  ? 'bg-white/20':''" class="nav-tab text-white hover:bg-white/10">Pipeline</button>
-      <button @click="tab='social'"    :class="tab==='social'    ? 'bg-white/20':''" class="nav-tab text-white hover:bg-white/10">Social</button>
-      <button @click="tab='todos'"     :class="tab==='todos'     ? 'bg-white/20':''" class="nav-tab text-white hover:bg-white/10">Todos</button>
-      <button @click="tab='traffic'"   :class="tab==='traffic'   ? 'bg-white/20':''" class="nav-tab text-white hover:bg-white/10">Traffic</button>
-    </div>
-    <div class="text-xs opacity-70" x-text="today"></div>
+    <template x-for="t in tabs" :key="t.id">
+      <button @click="tab=t.id" :class="tab===t.id?'on':''" class="ntab" x-text="t.label"></button>
+    </template>
+    <div class="ml-auto text-white/60 text-xs" x-text="today"></div>
   </div>
 </nav>
 
-<main class="max-w-7xl mx-auto px-4 py-6 space-y-6">
+<main class="max-w-7xl mx-auto px-4 py-5 space-y-5">
 
-<!-- ════════════════════════════════════════════════════════════════════════
-     OVERVIEW TAB
-════════════════════════════════════════════════════════════════════════ -->
+<!-- ══════════════════ OVERVIEW ══════════════════ -->
 <div x-show="tab==='overview'" x-cloak>
-
-  <!-- Stat cards -->
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-    <div class="stat-card">
-      <div class="text-2xl font-bold text-brand" x-text="ov.articles?.published ?? '…'"></div>
-      <div class="text-sm text-gray-500 mt-1">Articles Published</div>
-      <div class="text-xs text-gray-400 mt-1" x-text="(ov.articles?.draft??0) + ' drafts · ' + (ov.articles?.written??0) + ' written'"></div>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-5">
+    <div class="card p-4">
+      <div class="stat-num text-brand" x-text="ov.articles?.published??'…'"></div>
+      <div class="text-sm text-gray-500 mt-1">Published</div>
+      <div class="text-xs text-gray-400 mt-0.5" x-text="(ov.articles?.draft??0)+' drafts · '+(ov.articles?.written??0)+' written'"></div>
     </div>
-    <div class="stat-card">
-      <div class="text-2xl font-bold text-amber-500" x-text="ov.social?.pending ?? '…'"></div>
+    <div class="card p-4">
+      <div class="stat-num text-amber-500" x-text="ov.social?.pending??'…'"></div>
       <div class="text-sm text-gray-500 mt-1">Posts Pending</div>
-      <div class="text-xs text-gray-400 mt-1" x-text="(ov.social?.posted??0) + ' already posted'"></div>
+      <div class="text-xs text-gray-400 mt-0.5" x-text="(ov.social?.posted??0)+' posted'"></div>
     </div>
-    <div class="stat-card" :class="(ov.articles?.overdue??0) > 0 ? 'border-l-4 border-red-400' : ''">
-      <div class="text-2xl font-bold" :class="(ov.articles?.overdue??0)>0?'text-red-500':'text-gray-400'" x-text="ov.articles?.overdue ?? '0'"></div>
-      <div class="text-sm text-gray-500 mt-1">Overdue Drafts</div>
-      <div class="text-xs text-gray-400 mt-1">Past publish date</div>
+    <div class="card p-4" :class="(ov.articles?.overdue??0)>0?'border-l-4 border-red-400':''">
+      <div class="stat-num" :class="(ov.articles?.overdue??0)>0?'text-red-500':'text-gray-300'" x-text="ov.articles?.overdue??0"></div>
+      <div class="text-sm text-gray-500 mt-1">Overdue</div>
+      <div class="text-xs text-gray-400 mt-0.5">Past publish date</div>
     </div>
-    <div class="stat-card" :class="(ov.todos?.high??0) > 0 ? 'border-l-4 border-red-400' : ''">
-      <div class="text-2xl font-bold text-gray-700" x-text="ov.todos?.pending ?? '…'"></div>
+    <div class="card p-4" :class="(ov.todos?.high??0)>0?'border-l-4 border-red-400':''">
+      <div class="stat-num text-gray-700" x-text="ov.todos?.pending??'…'"></div>
       <div class="text-sm text-gray-500 mt-1">Open Todos</div>
-      <div class="text-xs text-red-400 mt-1" x-show="(ov.todos?.high??0)>0" x-text="(ov.todos?.high??0) + ' high priority'"></div>
+      <div class="text-xs text-red-400 mt-0.5" x-show="(ov.todos?.high??0)>0" x-text="(ov.todos?.high??0)+' high priority'"></div>
     </div>
   </div>
 
-  <!-- AdSense Progress -->
-  <div class="card p-5 mb-6">
+  <!-- AdSense bar -->
+  <div class="card p-5 mb-5">
     <div class="flex items-center justify-between mb-3">
       <div>
         <div class="font-semibold text-ink">🎯 Road to Google AdSense</div>
-        <div class="text-sm text-gray-500">Target: 5,000 real human visitors/month</div>
+        <div class="text-sm text-gray-500">5,000 real human visitors/month</div>
       </div>
       <div class="text-right">
         <div class="text-lg font-bold text-brand" x-text="(ov.adsense_progress?.current??0).toLocaleString()"></div>
-        <div class="text-xs text-gray-400">/ 5,000 visitors</div>
+        <div class="text-xs text-gray-400">/ 5,000</div>
       </div>
     </div>
-    <div class="progress-bar">
-      <div class="progress-fill" :style="'width:' + Math.min(ov.adsense_progress?.percent??0, 100) + '%'"></div>
+    <div class="prog-bar">
+      <div class="prog-fill" :style="'width:'+Math.min(ov.adsense_progress?.percent??0,100)+'%'"></div>
     </div>
-    <div class="flex justify-between text-xs text-gray-400 mt-1">
-      <span x-text="(ov.adsense_progress?.percent??0) + '% there'"></span>
-      <span>Apply for Ezoic at 1,000 · AdSense at 5,000</span>
+    <div class="flex justify-between text-xs text-gray-400 mt-1.5">
+      <span x-text="(ov.adsense_progress?.percent??0)+'% there'"></span>
+      <span>Ezoic @ 1,000 · AdSense @ 5,000</span>
     </div>
   </div>
 
-  <div class="grid md:grid-cols-2 gap-6">
-
-    <!-- Due Soon -->
+  <div class="grid md:grid-cols-2 gap-5">
     <div class="card p-5">
-      <h3 class="font-semibold text-ink mb-3">📅 Due Soon</h3>
-      <div x-show="ov.due_soon?.length === 0" class="text-sm text-gray-400">Nothing due this week ✅</div>
+      <h3 class="font-semibold text-ink mb-3">📅 Due This Week</h3>
+      <div x-show="!ov.due_soon?.length" class="text-sm text-gray-400">Nothing due this week ✅</div>
       <div class="space-y-2">
-        <template x-for="a in ov.due_soon" :key="a.title">
-          <div class="flex items-center justify-between text-sm py-2 border-b border-gray-50">
-            <span class="text-gray-700 font-medium" x-text="a.title"></span>
-            <div class="flex items-center gap-2">
+        <template x-for="a in ov.due_soon||[]" :key="a.title">
+          <div class="flex items-center justify-between text-sm py-1.5 border-b border-gray-50 last:border-0">
+            <span class="text-gray-700 font-medium leading-tight" x-text="a.title.substring(0,45)+'…'"></span>
+            <div class="flex items-center gap-2 flex-shrink-0">
               <span class="text-xs text-gray-400" x-text="a.publish_date"></span>
-              <span class="text-xs px-2 py-0.5 rounded-full" :class="'badge-'+a.status" x-text="a.status"></span>
+              <span class="text-xs px-2 py-0.5 rounded-full" :class="'b-'+a.status" x-text="a.status"></span>
             </div>
           </div>
         </template>
       </div>
     </div>
-
-    <!-- Recent Posts -->
     <div class="card p-5">
       <h3 class="font-semibold text-ink mb-3">✅ Recently Posted</h3>
-      <div x-show="ov.recent_posts?.length === 0" class="text-sm text-gray-400">No posts this week yet</div>
+      <div x-show="!ov.recent_posts?.length" class="text-sm text-gray-400">No posts this week yet</div>
       <div class="space-y-2">
-        <template x-for="p in ov.recent_posts" :key="p.platform+p.title">
-          <div class="flex items-center justify-between text-sm py-2 border-b border-gray-50">
+        <template x-for="p in ov.recent_posts||[]" :key="p.platform+p.title">
+          <div class="flex items-center justify-between text-sm py-1.5 border-b border-gray-50 last:border-0">
             <div class="flex items-center gap-2">
-              <span x-text="platIcon(p.platform)" class="text-base"></span>
-              <span class="text-gray-700" x-text="p.title.substring(0,40)+'…'"></span>
+              <span x-text="pi(p.platform)"></span>
+              <span class="text-gray-700" x-text="p.title.substring(0,38)+'…'"></span>
             </div>
-            <span class="text-xs text-gray-400" x-text="p.posted_date"></span>
+            <span class="text-xs text-gray-400 flex-shrink-0" x-text="p.posted_date"></span>
           </div>
         </template>
       </div>
     </div>
-
   </div>
 </div>
 
 
-<!-- ════════════════════════════════════════════════════════════════════════
-     PIPELINE TAB  (kanban)
-════════════════════════════════════════════════════════════════════════ -->
+<!-- ══════════════════ PIPELINE ══════════════════ -->
 <div x-show="tab==='pipeline'" x-cloak>
-  <div class="flex gap-4 overflow-x-auto pb-4">
+  <div class="flex gap-4 overflow-x-auto pb-2">
     <template x-for="col in ['planned','written','draft','published']" :key="col">
-      <div class="min-w-64 flex-shrink-0">
+      <div class="min-w-60 flex-shrink-0">
         <div class="flex items-center gap-2 mb-3">
-          <span x-text="colIcon(col)" class="text-lg"></span>
+          <span x-text="{planned:'📝',written:'✍️',draft:'🔧',published:'✅'}[col]"></span>
           <span class="font-semibold text-sm capitalize text-gray-700" x-text="col"></span>
-          <span class="text-xs bg-gray-200 text-gray-600 rounded-full px-2" x-text="(pipeline[col]||[]).length"></span>
+          <span class="text-xs bg-gray-200 text-gray-600 rounded-full px-2 py-0.5" x-text="(pipeline[col]||[]).length"></span>
         </div>
         <div class="space-y-2">
-          <template x-for="a in (pipeline[col]||[])" :key="a.id">
-            <div class="card p-3 text-sm hover:shadow-md transition-shadow cursor-default">
-              <div class="font-medium text-gray-800 mb-1 leading-tight" x-text="a.title"></div>
-              <div class="flex flex-wrap gap-1 mt-2">
+          <template x-for="a in pipeline[col]||[]" :key="a.id">
+            <div class="card p-3 hover:shadow-md transition-shadow">
+              <div class="font-medium text-gray-800 text-sm leading-tight mb-2" x-text="a.title"></div>
+              <div class="flex flex-wrap gap-1">
                 <span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-500" x-text="a.series"></span>
                 <span x-show="a.publish_date" class="text-xs px-2 py-0.5 rounded-full bg-blue-50 text-blue-600" x-text="a.publish_date"></span>
               </div>
-              <div x-show="a.wp_url" class="mt-2">
-                <a :href="a.wp_url" target="_blank" class="text-xs text-brand hover:underline">View live →</a>
-              </div>
+              <a x-show="a.wp_url" :href="a.wp_url" target="_blank" class="text-xs text-brand hover:underline mt-2 block">View live →</a>
             </div>
           </template>
         </div>
@@ -197,197 +195,421 @@
 </div>
 
 
-<!-- ════════════════════════════════════════════════════════════════════════
-     SOCIAL TAB  (matrix view)
-════════════════════════════════════════════════════════════════════════ -->
+<!-- ══════════════════ SOCIAL MATRIX ══════════════════ -->
 <div x-show="tab==='social'" x-cloak>
-
-  <!-- Legend -->
-  <div class="flex items-center gap-4 mb-4 text-sm text-gray-600">
-    <span><span class="dot dot-posted mr-1"></span>Posted</span>
-    <span><span class="dot dot-pending mr-1"></span>Pending</span>
-    <span><span class="dot dot-none mr-1"></span>N/A</span>
-    <span><span class="dot dot-skipped mr-1"></span>Skipped</span>
-    <span><span class="dot dot-overdue mr-1"></span>Overdue</span>
+  <div class="flex items-center gap-5 mb-4 text-sm text-gray-500">
+    <span><span class="dot dot-posted mr-1.5"></span>Posted</span>
+    <span><span class="dot dot-pending mr-1.5"></span>Pending</span>
+    <span><span class="dot dot-none mr-1.5"></span>N/A</span>
   </div>
-
-  <div class="card overflow-hidden">
+  <div class="card overflow-hidden mb-4">
     <table class="w-full text-sm">
-      <thead>
-        <tr class="bg-gray-50 border-b border-gray-100">
-          <th class="text-left p-3 font-semibold text-gray-600 w-1/3">Article</th>
-          <th class="text-center p-3 font-semibold text-gray-600">📸 IG</th>
-          <th class="text-center p-3 font-semibold text-gray-600">🐦 X</th>
-          <th class="text-center p-3 font-semibold text-gray-600">👥 FB</th>
-          <th class="text-center p-3 font-semibold text-gray-600">📌 Pin</th>
-          <th class="text-center p-3 font-semibold text-gray-600">Article</th>
-        </tr>
-      </thead>
+      <thead><tr class="bg-gray-50 border-b border-gray-100">
+        <th class="text-left p-3 font-semibold text-gray-600 w-2/5">Article</th>
+        <th class="text-center p-3 font-semibold text-gray-600">📸 IG</th>
+        <th class="text-center p-3 font-semibold text-gray-600">🐦 X</th>
+        <th class="text-center p-3 font-semibold text-gray-600">👥 FB</th>
+        <th class="text-center p-3 font-semibold text-gray-600">📌 Pin</th>
+        <th class="text-center p-3 font-semibold text-gray-600">Status</th>
+      </tr></thead>
       <tbody>
         <template x-for="row in matrix" :key="row.article_id">
-          <tr class="border-b border-gray-50 hover:bg-gray-50/50 transition-colors">
+          <tr class="border-b border-gray-50 hover:bg-gray-50/60 transition-colors">
             <td class="p-3">
-              <div class="font-medium text-gray-800 text-sm leading-tight" x-text="row.title.substring(0,50)+(row.title.length>50?'…':'')"></div>
+              <div class="font-medium text-gray-800 text-sm leading-tight" x-text="row.title.substring(0,48)+(row.title.length>48?'…':'')"></div>
               <div class="text-xs text-gray-400 mt-0.5" x-text="row.series"></div>
             </td>
             <td class="p-3 text-center"><span class="dot" :class="'dot-'+(row.instagram?.status||'none')"></span></td>
             <td class="p-3 text-center"><span class="dot" :class="'dot-'+(row.twitter?.status||'none')"></span></td>
             <td class="p-3 text-center"><span class="dot" :class="'dot-'+(row.facebook?.status||'none')"></span></td>
             <td class="p-3 text-center"><span class="dot" :class="'dot-'+(row.pinterest?.status||'none')"></span></td>
+            <td class="p-3 text-center"><span class="text-xs px-2 py-0.5 rounded-full" :class="'b-'+row.art_status" x-text="row.art_status"></span></td>
+          </tr>
+        </template>
+      </tbody>
+    </table>
+  </div>
+  <div class="grid grid-cols-4 gap-4">
+    <template x-for="plat in ['instagram','twitter','facebook','pinterest']" :key="plat">
+      <div class="card p-4 text-center">
+        <div class="text-2xl mb-1" x-text="pi(plat)"></div>
+        <div class="text-lg font-bold text-brand" x-text="matrix.filter(r=>r[plat]?.status==='posted').length"></div>
+        <div class="text-xs text-gray-400">posted</div>
+        <div class="text-xs text-amber-500 mt-0.5" x-text="matrix.filter(r=>r[plat]?.status==='pending').length+' pending'"></div>
+      </div>
+    </template>
+  </div>
+</div>
+
+
+<!-- ══════════════════ TODOS ══════════════════ -->
+<div x-show="tab==='todos'" x-cloak>
+  <div class="card p-4 mb-4">
+    <div class="flex flex-wrap gap-2">
+      <input x-model="nt.title" @keydown.enter="addTodo()" placeholder="Add a task… (Enter to save)"
+             class="flex-1 min-w-48 border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand/30">
+      <select x-model="nt.category" class="border border-gray-200 rounded-lg px-2 py-2 text-sm text-gray-600 focus:outline-none">
+        <option value="general">General</option><option value="content">Content</option>
+        <option value="social">Social</option><option value="seo">SEO</option><option value="technical">Technical</option>
+      </select>
+      <select x-model="nt.priority" class="border border-gray-200 rounded-lg px-2 py-2 text-sm text-gray-600 focus:outline-none">
+        <option value="high">🔴 High</option><option value="medium">🟡 Medium</option><option value="low">⚪ Low</option>
+      </select>
+      <button @click="addTodo()" class="bg-brand text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-brand-dark">Add</button>
+    </div>
+  </div>
+  <div class="flex gap-2 mb-4">
+    <button @click="tFilter='pending'" :class="tFilter==='pending'?'bg-brand text-white':'bg-white text-gray-600'" class="px-3 py-1.5 rounded-lg text-sm font-medium">
+      Pending <span class="ml-1 opacity-70" x-text="todos.filter(t=>t.status!=='done').length"></span>
+    </button>
+    <button @click="tFilter='all'"     :class="tFilter==='all'?'bg-brand text-white':'bg-white text-gray-600'" class="px-3 py-1.5 rounded-lg text-sm font-medium">All</button>
+    <button @click="tFilter='done'"    :class="tFilter==='done'?'bg-brand text-white':'bg-white text-gray-600'" class="px-3 py-1.5 rounded-lg text-sm font-medium">Done</button>
+  </div>
+  <div class="space-y-2">
+    <template x-for="t in filteredTodos" :key="t.id">
+      <div class="card p-3 flex items-center gap-3" :class="'pri-'+t.priority">
+        <input type="checkbox" :checked="t.status==='done'" @change="toggleTodo(t)"
+               class="w-4 h-4 rounded accent-brand cursor-pointer flex-shrink-0">
+        <div class="flex-1 min-w-0">
+          <div class="text-sm font-medium leading-tight" :class="t.status==='done'?'line-through text-gray-400':'text-gray-800'" x-text="t.title"></div>
+          <div class="flex items-center gap-2 mt-1 flex-wrap">
+            <span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-500" x-text="t.category"></span>
+            <span x-show="t.due_date" class="text-xs text-blue-500" x-text="'Due: '+t.due_date"></span>
+          </div>
+        </div>
+        <div class="flex items-center gap-1 flex-shrink-0">
+          <span x-text="t.priority==='high'?'🔴':t.priority==='medium'?'🟡':'⚪'" class="text-sm"></span>
+          <button @click="deleteTodo(t.id)" class="text-gray-300 hover:text-red-400 ml-1 text-xl leading-none transition-colors">×</button>
+        </div>
+      </div>
+    </template>
+    <div x-show="!filteredTodos.length" class="text-center text-gray-400 py-10 text-sm" x-text="tFilter==='done'?'No completed tasks yet':'All clear! ✅'"></div>
+  </div>
+</div>
+
+
+<!-- ══════════════════ PERFORMANCE ══════════════════ -->
+<div x-show="tab==='performance'" x-cloak x-init="tab==='performance'&&loadPerf()">
+
+  <!-- No data state -->
+  <div x-show="!perf.has_data" class="card p-8 text-center">
+    <div class="text-4xl mb-3">📊</div>
+    <h3 class="font-semibold text-gray-700 mb-2">No metrics yet</h3>
+    <p class="text-sm text-gray-500 mb-4">Go to Instagram Insights, check each post, and enter the numbers below.</p>
+    <p class="text-xs text-gray-400">Most important: <strong>Saves</strong> (Instagram weights saves highest), then Comments, then Reach.</p>
+  </div>
+
+  <!-- Has data: charts -->
+  <div x-show="perf.has_data">
+    <div class="grid md:grid-cols-3 gap-4 mb-5">
+      <template x-for="ps in perf.platform_stats||[]" :key="ps.platform">
+        <div class="card p-4">
+          <div class="flex items-center gap-2 mb-3">
+            <span x-text="pi(ps.platform)" class="text-xl"></span>
+            <span class="font-semibold text-gray-700 capitalize" x-text="ps.platform"></span>
+          </div>
+          <div class="grid grid-cols-3 gap-2 text-center">
+            <div><div class="font-bold text-brand text-lg" x-text="ps.total_saves||0"></div><div class="text-xs text-gray-400">Saves</div></div>
+            <div><div class="font-bold text-gray-700 text-lg" x-text="ps.total_comments||0"></div><div class="text-xs text-gray-400">Comments</div></div>
+            <div><div class="font-bold text-gray-500 text-lg" x-text="(ps.total_reach||0).toLocaleString()"></div><div class="text-xs text-gray-400">Reach</div></div>
+          </div>
+          <div class="mt-2 pt-2 border-t border-gray-50 text-xs text-gray-400 text-center">
+            Save rate: <span class="font-semibold" :class="(ps.avg_save_rate||0)>=3?'text-green-500':'text-amber-500'"
+              x-text="ps.avg_save_rate?ps.avg_save_rate.toFixed(1)+'%':'—'"></span>
+            <span class="ml-1 text-gray-300">(target >3%)</span>
+          </div>
+        </div>
+      </template>
+    </div>
+
+    <!-- Saves chart -->
+    <div class="grid md:grid-cols-2 gap-5 mb-5">
+      <div class="card p-5">
+        <h3 class="font-semibold text-ink mb-4">💾 Saves per Post</h3>
+        <canvas id="savesChart" height="220"></canvas>
+      </div>
+      <div class="card p-5">
+        <h3 class="font-semibold text-ink mb-4">🏆 Top Posts by Saves</h3>
+        <div class="space-y-3">
+          <template x-for="(p,i) in perf.top_saves||[]" :key="p.title">
+            <div>
+              <div class="flex justify-between text-sm mb-1">
+                <span class="text-gray-700 font-medium" x-text="(i+1)+'. '+p.title.substring(0,35)+'…'"></span>
+                <span class="font-bold text-brand flex-shrink-0 ml-2" x-text="(p.total_saves||0)+' saves'"></span>
+              </div>
+              <div class="prog-bar">
+                <div class="prog-fill" :style="'width:'+Math.min(((p.total_saves||0)/Math.max(...(perf.top_saves||[{total_saves:1}]).map(x=>x.total_saves||1)))*100,100)+'%'"></div>
+              </div>
+            </div>
+          </template>
+          <div x-show="!perf.top_saves?.length" class="text-sm text-gray-400 py-4 text-center">No data yet</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Metrics entry table -->
+  <div class="card overflow-hidden">
+    <div class="p-4 border-b border-gray-100 flex items-center justify-between">
+      <h3 class="font-semibold text-ink">Enter Metrics (check Instagram Insights 5–7 days after posting)</h3>
+    </div>
+    <table class="w-full text-sm">
+      <thead><tr class="bg-gray-50 border-b border-gray-100 text-xs">
+        <th class="text-left p-3 font-semibold text-gray-600">Post</th>
+        <th class="text-center p-3 font-semibold text-gray-600">Platform</th>
+        <th class="text-center p-3 font-semibold text-gray-600">Date</th>
+        <th class="text-center p-3 font-semibold text-gray-600">💾 Saves</th>
+        <th class="text-center p-3 font-semibold text-gray-600">💬 Comments</th>
+        <th class="text-center p-3 font-semibold text-gray-600">👁 Reach</th>
+        <th class="text-center p-3 font-semibold text-gray-600">❤️ Likes</th>
+        <th class="p-3"></th>
+      </tr></thead>
+      <tbody>
+        <template x-for="p in perf.posts||[]" :key="p.post_id">
+          <tr class="border-b border-gray-50 hover:bg-gray-50/50">
+            <td class="p-3 text-gray-700 font-medium" x-text="p.title.substring(0,30)+'…'"></td>
+            <td class="p-3 text-center" x-text="pi(p.platform)"></td>
+            <td class="p-3 text-center text-gray-400 text-xs" x-text="p.posted_date||'—'"></td>
             <td class="p-3 text-center">
-              <span class="text-xs px-2 py-0.5 rounded-full" :class="'badge-'+row.art_status" x-text="row.art_status"></span>
+              <input :id="'saves-'+p.post_id" type="number" :value="p.saves||''" placeholder="—"
+                     class="w-16 border border-gray-200 rounded px-2 py-1 text-center text-sm focus:outline-none focus:ring-1 focus:ring-brand/40">
+            </td>
+            <td class="p-3 text-center">
+              <input :id="'comments-'+p.post_id" type="number" :value="p.comments||''" placeholder="—"
+                     class="w-16 border border-gray-200 rounded px-2 py-1 text-center text-sm focus:outline-none focus:ring-1 focus:ring-brand/40">
+            </td>
+            <td class="p-3 text-center">
+              <input :id="'reach-'+p.post_id" type="number" :value="p.reach||''" placeholder="—"
+                     class="w-20 border border-gray-200 rounded px-2 py-1 text-center text-sm focus:outline-none focus:ring-1 focus:ring-brand/40">
+            </td>
+            <td class="p-3 text-center">
+              <input :id="'likes-'+p.post_id" type="number" :value="p.likes||''" placeholder="—"
+                     class="w-16 border border-gray-200 rounded px-2 py-1 text-center text-sm focus:outline-none focus:ring-1 focus:ring-brand/40">
+            </td>
+            <td class="p-3 text-center">
+              <button @click="saveMetrics(p.post_id)"
+                      class="text-xs bg-brand text-white px-3 py-1.5 rounded-lg hover:bg-brand-dark transition-colors">Save</button>
             </td>
           </tr>
         </template>
       </tbody>
     </table>
   </div>
-
-  <!-- Quick stats -->
-  <div class="grid grid-cols-4 gap-4 mt-4">
-    <template x-for="plat in ['instagram','twitter','facebook','pinterest']" :key="plat">
-      <div class="card p-4 text-center">
-        <div class="text-xl mb-1" x-text="platIcon(plat)"></div>
-        <div class="text-lg font-bold text-brand" x-text="countPosted(plat)"></div>
-        <div class="text-xs text-gray-400">posted</div>
-        <div class="text-xs text-amber-500 mt-0.5" x-text="countPending(plat) + ' pending'"></div>
-      </div>
-    </template>
-  </div>
 </div>
 
 
-<!-- ════════════════════════════════════════════════════════════════════════
-     TODOS TAB
-════════════════════════════════════════════════════════════════════════ -->
-<div x-show="tab==='todos'" x-cloak>
+<!-- ══════════════════ CALENDAR ══════════════════ -->
+<div x-show="tab==='calendar'" x-cloak x-init="tab==='calendar'&&loadCalendar()">
+  <div class="flex items-center justify-between mb-5">
+    <button @click="calPrev()" class="bg-white border border-gray-200 rounded-lg px-3 py-2 text-sm hover:bg-gray-50">← Prev</button>
+    <h2 class="font-bold text-xl text-ink" x-text="calMonthLabel"></h2>
+    <button @click="calNext()" class="bg-white border border-gray-200 rounded-lg px-3 py-2 text-sm hover:bg-gray-50">Next →</button>
+  </div>
 
-  <!-- Add todo -->
-  <div class="card p-4 mb-4">
-    <div class="flex gap-2">
-      <input x-model="newTodo.title" @keydown.enter="addTodo()"
-             placeholder="Add a task… (press Enter)"
-             class="flex-1 border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand/40">
-      <select x-model="newTodo.category" class="border border-gray-200 rounded-lg px-2 py-2 text-sm text-gray-600 focus:outline-none">
-        <option value="general">General</option>
-        <option value="content">Content</option>
-        <option value="social">Social</option>
-        <option value="seo">SEO</option>
-        <option value="technical">Technical</option>
-      </select>
-      <select x-model="newTodo.priority" class="border border-gray-200 rounded-lg px-2 py-2 text-sm text-gray-600 focus:outline-none">
-        <option value="high">🔴 High</option>
-        <option value="medium">🟡 Medium</option>
-        <option value="low">⚪ Low</option>
-      </select>
-      <button @click="addTodo()" class="bg-brand text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-brand-dark transition-colors">Add</button>
+  <!-- Legend -->
+  <div class="flex gap-4 mb-4 text-xs text-gray-600">
+    <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-green-100 border border-green-300 inline-block"></span>Published</span>
+    <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-purple-100 border border-purple-300 inline-block"></span>Draft scheduled</span>
+    <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-red-100 border border-red-300 inline-block"></span>Overdue</span>
+    <span class="flex items-center gap-1.5"><span class="text-lg leading-none">🌟</span>Today</span>
+  </div>
+
+  <div class="card p-4">
+    <!-- Weekday headers -->
+    <div class="grid grid-cols-7 gap-1 mb-1">
+      <template x-for="d in ['Mon','Tue','Wed','Thu','Fri','Sat','Sun']" :key="d">
+        <div class="text-center text-xs font-semibold text-gray-400 py-1" x-text="d"></div>
+      </template>
     </div>
-  </div>
-
-  <!-- Filter tabs -->
-  <div class="flex gap-2 mb-4">
-    <button @click="todoFilter='pending'"  :class="todoFilter==='pending'  ?'bg-brand text-white':'bg-white text-gray-600'" class="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors">
-      Pending <span class="ml-1 text-xs opacity-70" x-text="todos.filter(t=>t.status==='pending').length"></span>
-    </button>
-    <button @click="todoFilter='all'"      :class="todoFilter==='all'      ?'bg-brand text-white':'bg-white text-gray-600'" class="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors">All</button>
-    <button @click="todoFilter='done'"     :class="todoFilter==='done'     ?'bg-brand text-white':'bg-white text-gray-600'" class="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors">Done</button>
-  </div>
-
-  <!-- Todo list -->
-  <div class="space-y-2">
-    <template x-for="todo in filteredTodos" :key="todo.id">
-      <div class="card p-3 flex items-center gap-3" :class="'priority-'+todo.priority">
-        <input type="checkbox" :checked="todo.status==='done'"
-               @change="toggleTodo(todo)"
-               class="w-4 h-4 rounded accent-brand cursor-pointer flex-shrink-0">
-        <div class="flex-1 min-w-0">
-          <div class="text-sm font-medium text-gray-800 leading-tight"
-               :class="todo.status==='done'?'line-through text-gray-400':''"
-               x-text="todo.title"></div>
-          <div class="flex items-center gap-2 mt-1">
-            <span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-500" x-text="todo.category"></span>
-            <span x-show="todo.due_date" class="text-xs text-blue-500" x-text="'Due: '+todo.due_date"></span>
+    <!-- Calendar grid -->
+    <div class="grid grid-cols-7 gap-1">
+      <!-- Empty cells before first day -->
+      <template x-for="i in calData.first_weekday||0" :key="'e'+i">
+        <div class="cal-day cal-empty"></div>
+      </template>
+      <!-- Day cells -->
+      <template x-for="day in calData.days_in_month||0" :key="day">
+        <div class="cal-day"
+             :class="calDayClass(day)"
+             :title="calDayArticles(day).map(a=>a.title).join(', ')">
+          <div class="font-semibold text-gray-500 text-xs mb-1">
+            <span x-text="day"></span>
+            <span x-show="isToday(day)" class="ml-0.5">🌟</span>
           </div>
+          <template x-for="a in calDayArticles(day)" :key="a.id">
+            <div class="text-xs leading-tight truncate" :class="a.status==='published'?'text-green-700':'a.status===\'draft\'?\'text-purple-700\':\'text-red-700\'">
+              <span x-text="a.title.substring(0,18)+'…'"></span>
+            </div>
+          </template>
         </div>
-        <div class="flex items-center gap-1 flex-shrink-0">
-          <span class="text-xs" x-text="todo.priority==='high'?'🔴':todo.priority==='medium'?'🟡':'⚪'"></span>
-          <button @click="deleteTodo(todo.id)" class="text-gray-300 hover:text-red-400 transition-colors ml-2 text-lg leading-none">×</button>
-        </div>
-      </div>
-    </template>
-    <div x-show="filteredTodos.length===0" class="text-center text-gray-400 py-8 text-sm">
-      <div x-text="todoFilter==='done'?'No completed tasks yet':'All clear! ✅'"></div>
+      </template>
     </div>
   </div>
 </div>
 
 
-<!-- ════════════════════════════════════════════════════════════════════════
-     TRAFFIC TAB
-════════════════════════════════════════════════════════════════════════ -->
-<div x-show="tab==='traffic'" x-cloak>
+<!-- ══════════════════ KEYWORDS ══════════════════ -->
+<div x-show="tab==='keywords'" x-cloak>
+  <!-- Add keyword form -->
+  <div class="card p-4 mb-4">
+    <h3 class="font-semibold text-sm text-gray-700 mb-3">Track a new keyword</h3>
+    <div class="flex flex-wrap gap-2 items-end">
+      <div>
+        <label class="text-xs text-gray-500">Keyword</label>
+        <input x-model="nkw.keyword" placeholder="how to save money India" class="block border border-gray-200 rounded-lg px-3 py-2 text-sm w-64 focus:outline-none focus:ring-2 focus:ring-brand/30">
+      </div>
+      <div>
+        <label class="text-xs text-gray-500">Est. monthly searches</label>
+        <input x-model="nkw.searches" type="number" placeholder="1500" class="block border border-gray-200 rounded-lg px-3 py-2 text-sm w-32 focus:outline-none focus:ring-2 focus:ring-brand/30">
+      </div>
+      <div>
+        <label class="text-xs text-gray-500">Competition</label>
+        <select x-model="nkw.competition" class="block border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none">
+          <option value="low">Low</option><option value="medium">Medium</option><option value="high">High</option>
+        </select>
+      </div>
+      <button @click="addKeyword()" class="bg-brand text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-brand-dark">Add</button>
+    </div>
+  </div>
 
-  <!-- Add month -->
+  <!-- Legend -->
+  <div class="flex gap-4 mb-4 text-xs text-gray-500">
+    <span>Rank: <strong class="text-green-600">1–3</strong> = Page 1 top</span>
+    <span><strong class="text-blue-600">4–10</strong> = Page 1</span>
+    <span><strong class="text-amber-600">11–20</strong> = Page 2</span>
+    <span><strong class="text-gray-400">21+</strong> = Deep pages</span>
+    <span>↑ improved · ↓ dropped</span>
+  </div>
+
+  <div class="card overflow-hidden">
+    <table class="w-full text-sm">
+      <thead><tr class="bg-gray-50 border-b border-gray-100">
+        <th class="text-left p-3 font-semibold text-gray-600">Keyword</th>
+        <th class="text-left p-3 font-semibold text-gray-600">Article</th>
+        <th class="text-center p-3 font-semibold text-gray-600">Vol/mo</th>
+        <th class="text-center p-3 font-semibold text-gray-600">Competition</th>
+        <th class="text-center p-3 font-semibold text-gray-600">Current Rank</th>
+        <th class="text-center p-3 font-semibold text-gray-600">Change</th>
+        <th class="text-center p-3 font-semibold text-gray-600">Update Rank</th>
+        <th class="p-3"></th>
+      </tr></thead>
+      <tbody>
+        <template x-for="kw in keywords" :key="kw.id">
+          <tr class="border-b border-gray-50 hover:bg-gray-50/50">
+            <td class="p-3">
+              <div class="font-medium text-gray-800" x-text="kw.keyword"></div>
+              <div x-show="kw.last_checked" class="text-xs text-gray-400 mt-0.5" x-text="'Last checked: '+kw.last_checked"></div>
+            </td>
+            <td class="p-3">
+              <a x-show="kw.wp_url" :href="kw.wp_url" target="_blank" class="text-xs text-brand hover:underline" x-text="(kw.article_title||'').substring(0,30)+'…'"></a>
+              <span x-show="!kw.wp_url" class="text-xs text-gray-400" x-text="(kw.article_title||'—').substring(0,30)"></span>
+            </td>
+            <td class="p-3 text-center text-gray-600" x-text="(kw.monthly_searches_est||0).toLocaleString()"></td>
+            <td class="p-3 text-center"><span class="text-xs px-2 py-0.5 rounded-full" :class="'b-'+kw.competition" x-text="kw.competition"></span></td>
+            <td class="p-3 text-center">
+              <span x-show="kw.current_rank" class="font-bold text-lg" :class="rankColor(kw.current_rank)" x-text="'#'+kw.current_rank"></span>
+              <span x-show="!kw.current_rank" class="text-gray-300 text-sm">not ranking</span>
+            </td>
+            <td class="p-3 text-center text-base">
+              <span x-show="kw.current_rank && kw.prev_rank">
+                <span x-show="kw.current_rank < kw.prev_rank" class="rank-up font-bold">↑ <span x-text="kw.prev_rank - kw.current_rank"></span></span>
+                <span x-show="kw.current_rank > kw.prev_rank" class="rank-down font-bold">↓ <span x-text="kw.current_rank - kw.prev_rank"></span></span>
+                <span x-show="kw.current_rank === kw.prev_rank" class="rank-same">→</span>
+              </span>
+              <span x-show="!kw.current_rank || !kw.prev_rank" class="text-gray-300">—</span>
+            </td>
+            <td class="p-3 text-center">
+              <div class="flex items-center gap-1 justify-center">
+                <input :id="'rank-'+kw.id" type="number" placeholder="#" min="1" max="200"
+                       class="w-16 border border-gray-200 rounded px-2 py-1 text-center text-sm focus:outline-none focus:ring-1 focus:ring-brand/40">
+                <button @click="saveRank(kw.id)"
+                        class="text-xs bg-gray-100 text-gray-700 px-2 py-1.5 rounded hover:bg-gray-200 transition-colors">✓</button>
+              </div>
+            </td>
+            <td class="p-3 text-center">
+              <button @click="deleteKeyword(kw.id)" class="text-gray-300 hover:text-red-400 text-xl leading-none transition-colors">×</button>
+            </td>
+          </tr>
+        </template>
+        <tr x-show="!keywords.length">
+          <td colspan="8" class="p-8 text-center text-gray-400 text-sm">No keywords tracked yet. Add one above.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Opportunities callout -->
+  <div x-show="keywords.some(k=>k.current_rank>=11&&k.current_rank<=20)" class="card p-4 mt-4 border-l-4 border-amber-400">
+    <h4 class="font-semibold text-amber-700 mb-2">⚡ Page 2 Opportunities</h4>
+    <p class="text-sm text-gray-600 mb-3">These keywords are ranking on page 2 (positions 11–20). A focused push can get them to page 1:</p>
+    <div class="space-y-1">
+      <template x-for="kw in keywords.filter(k=>k.current_rank>=11&&k.current_rank<=20)" :key="kw.id">
+        <div class="text-sm"><strong x-text="'#'+kw.current_rank"></strong> → <span x-text="kw.keyword" class="text-gray-700"></span> <span class="text-xs text-gray-400">(add internal links, improve H2s, get 1 backlink)</span></div>
+      </template>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════ TRAFFIC ══════════════════ -->
+<div x-show="tab==='traffic'" x-cloak>
   <div class="card p-4 mb-4">
     <h3 class="font-semibold text-sm text-gray-700 mb-3">Add Monthly Traffic Data</h3>
     <div class="flex flex-wrap gap-2 items-end">
       <div>
-        <label class="text-xs text-gray-500">Month (YYYY-MM)</label>
-        <input x-model="newTraffic.month" placeholder="2026-07" class="block border border-gray-200 rounded-lg px-3 py-2 text-sm w-32 focus:outline-none focus:ring-2 focus:ring-brand/40">
+        <label class="text-xs text-gray-500">Month</label>
+        <input x-model="ntraf.month" placeholder="2026-07" class="block border border-gray-200 rounded-lg px-3 py-2 text-sm w-28 focus:outline-none focus:ring-2 focus:ring-brand/30">
       </div>
       <div>
         <label class="text-xs text-gray-500">Total visitors</label>
-        <input x-model="newTraffic.total" type="number" placeholder="2500" class="block border border-gray-200 rounded-lg px-3 py-2 text-sm w-32 focus:outline-none focus:ring-2 focus:ring-brand/40">
+        <input x-model="ntraf.total" type="number" placeholder="3000" class="block border border-gray-200 rounded-lg px-3 py-2 text-sm w-28 focus:outline-none focus:ring-2 focus:ring-brand/30">
       </div>
       <div>
-        <label class="text-xs text-gray-500">Est. real humans</label>
-        <input x-model="newTraffic.humans" type="number" placeholder="400" class="block border border-gray-200 rounded-lg px-3 py-2 text-sm w-32 focus:outline-none focus:ring-2 focus:ring-brand/40">
+        <label class="text-xs text-gray-500">Real humans</label>
+        <input x-model="ntraf.humans" type="number" placeholder="500" class="block border border-gray-200 rounded-lg px-3 py-2 text-sm w-28 focus:outline-none focus:ring-2 focus:ring-brand/30">
       </div>
       <div>
         <label class="text-xs text-gray-500">Top source</label>
-        <input x-model="newTraffic.source" placeholder="Pinterest" class="block border border-gray-200 rounded-lg px-3 py-2 text-sm w-36 focus:outline-none focus:ring-2 focus:ring-brand/40">
+        <input x-model="ntraf.source" placeholder="Pinterest" class="block border border-gray-200 rounded-lg px-3 py-2 text-sm w-32 focus:outline-none focus:ring-2 focus:ring-brand/30">
       </div>
-      <button @click="addTraffic()" class="bg-brand text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-brand-dark transition-colors">Save</button>
+      <button @click="addTraffic()" class="bg-brand text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-brand-dark">Save</button>
     </div>
   </div>
-
-  <!-- Milestones -->
-  <div class="grid grid-cols-3 gap-4 mb-4">
+  <div class="grid grid-cols-3 gap-4 mb-5">
     <div class="card p-4 text-center">
       <div class="text-2xl mb-1">📊</div>
-      <div class="font-bold text-brand text-lg" x-text="latestTraffic?.real_humans_est?.toLocaleString() ?? '—'"></div>
-      <div class="text-xs text-gray-500">Real humans/month</div>
+      <div class="font-bold text-brand text-xl" x-text="(traffic[0]?.real_humans_est||0).toLocaleString()"></div>
+      <div class="text-xs text-gray-500 mt-0.5">Real humans/month</div>
     </div>
     <div class="card p-4 text-center">
       <div class="text-2xl mb-1">🎯</div>
-      <div class="font-bold text-amber-500 text-lg">1,000</div>
-      <div class="text-xs text-gray-500">Ezoic threshold</div>
-      <div class="text-xs mt-1" :class="(latestTraffic?.real_humans_est??0)>=1000?'text-green-500':'text-gray-400'"
-           x-text="(latestTraffic?.real_humans_est??0)>=1000?'✅ Ready to apply':''+Math.round((1000-(latestTraffic?.real_humans_est??0))/1000*100)+'% to go'">
-      </div>
+      <div class="font-bold text-amber-500 text-xl">1,000</div>
+      <div class="text-xs text-gray-500 mt-0.5">Ezoic threshold</div>
+      <div class="mt-1 prog-bar"><div class="prog-fill" :style="'width:'+Math.min(((traffic[0]?.real_humans_est||0)/1000)*100,100)+'%'"></div></div>
     </div>
     <div class="card p-4 text-center">
       <div class="text-2xl mb-1">💰</div>
-      <div class="font-bold text-gray-700 text-lg">5,000</div>
-      <div class="text-xs text-gray-500">AdSense threshold</div>
-      <div class="text-xs mt-1" :class="(latestTraffic?.real_humans_est??0)>=5000?'text-green-500':'text-gray-400'"
-           x-text="(latestTraffic?.real_humans_est??0)>=5000?'✅ Apply now!':((5000-(latestTraffic?.real_humans_est??0)).toLocaleString())+' more needed'">
-      </div>
+      <div class="font-bold text-gray-700 text-xl">5,000</div>
+      <div class="text-xs text-gray-500 mt-0.5">AdSense threshold</div>
+      <div class="mt-1 prog-bar"><div class="prog-fill" :style="'width:'+Math.min(((traffic[0]?.real_humans_est||0)/5000)*100,100)+'%'"></div></div>
     </div>
   </div>
 
-  <!-- Traffic table -->
+  <!-- Traffic chart -->
+  <div class="card p-5 mb-5" x-show="traffic.length > 1">
+    <h3 class="font-semibold text-ink mb-4">📈 Real Human Visitors — Month by Month</h3>
+    <canvas id="trafficChart" height="150"></canvas>
+  </div>
+
   <div class="card overflow-hidden">
     <table class="w-full text-sm">
-      <thead>
-        <tr class="bg-gray-50 border-b border-gray-100">
-          <th class="text-left p-3 font-semibold text-gray-600">Month</th>
-          <th class="text-right p-3 font-semibold text-gray-600">Total Visitors</th>
-          <th class="text-right p-3 font-semibold text-gray-600">Real Humans</th>
-          <th class="text-center p-3 font-semibold text-gray-600">Top Source</th>
-          <th class="text-right p-3 font-semibold text-gray-600">AdSense Progress</th>
-        </tr>
-      </thead>
+      <thead><tr class="bg-gray-50 border-b border-gray-100">
+        <th class="text-left p-3 font-semibold text-gray-600">Month</th>
+        <th class="text-right p-3 font-semibold text-gray-600">Total</th>
+        <th class="text-right p-3 font-semibold text-gray-600">Real Humans</th>
+        <th class="text-center p-3 font-semibold text-gray-600">Top Source</th>
+        <th class="text-right p-3 font-semibold text-gray-600">AdSense Progress</th>
+      </tr></thead>
       <tbody>
         <template x-for="t in traffic" :key="t.month">
           <tr class="border-b border-gray-50 hover:bg-gray-50/50">
@@ -397,17 +619,13 @@
             <td class="p-3 text-center text-gray-500 text-xs" x-text="t.top_source||'—'"></td>
             <td class="p-3 text-right">
               <div class="flex items-center justify-end gap-2">
-                <div class="progress-bar w-20">
-                  <div class="progress-fill" :style="'width:'+Math.min(((t.real_humans_est||0)/5000)*100,100)+'%'"></div>
-                </div>
-                <span class="text-xs text-gray-400" x-text="Math.round(((t.real_humans_est||0)/5000)*100)+'%'"></span>
+                <div class="prog-bar w-24"><div class="prog-fill" :style="'width:'+Math.min(((t.real_humans_est||0)/5000)*100,100)+'%'"></div></div>
+                <span class="text-xs text-gray-400 w-10 text-right" x-text="Math.round(((t.real_humans_est||0)/5000)*100)+'%'"></span>
               </div>
             </td>
           </tr>
         </template>
-        <tr x-show="traffic.length===0">
-          <td colspan="5" class="p-6 text-center text-gray-400 text-sm">No traffic data yet. Add your first month above.</td>
-        </tr>
+        <tr x-show="!traffic.length"><td colspan="5" class="p-8 text-center text-gray-400 text-sm">Add your first month above.</td></tr>
       </tbody>
     </table>
   </div>
@@ -415,126 +633,199 @@
 
 </main>
 
-<!-- ── Toast ─────────────────────────────────────────────────────────────── -->
+<!-- Toast -->
 <div x-show="toast" x-cloak x-transition
-     class="fixed bottom-6 right-6 bg-ink text-white text-sm px-4 py-3 rounded-xl shadow-lg z-50"
-     x-text="toast"></div>
+     class="fixed bottom-6 right-6 bg-ink text-white text-sm px-4 py-3 rounded-xl shadow-xl z-50" x-text="toast"></div>
 
-
-<!-- ══════════════════════════════════════════════════════════════════════════
-     Alpine.js App
-══════════════════════════════════════════════════════════════════════════ -->
+<!-- ══════════════════ Alpine App ══════════════════ -->
 <script>
-function dashboard() {
+function app() {
   return {
     tab: 'overview',
-    ov: {},
-    pipeline: {},
-    matrix: [],
-    todos: [],
-    traffic: [],
-    todoFilter: 'pending',
-    toast: '',
-    today: new Date().toLocaleDateString('en-IN', {weekday:'long', year:'numeric', month:'long', day:'numeric'}),
-    newTodo: { title:'', category:'general', priority:'medium' },
-    newTraffic: { month:'', total:'', humans:'', source:'' },
+    tabs: [
+      {id:'overview',   label:'Overview'},
+      {id:'pipeline',   label:'Pipeline'},
+      {id:'social',     label:'Social'},
+      {id:'todos',      label:'Todos'},
+      {id:'performance',label:'Performance'},
+      {id:'calendar',   label:'Calendar'},
+      {id:'keywords',   label:'Keywords'},
+      {id:'traffic',    label:'Traffic'},
+    ],
+    today: new Date().toLocaleDateString('en-IN',{weekday:'short',year:'numeric',month:'short',day:'numeric'}),
+    ov:{}, pipeline:{}, matrix:[], todos:[], traffic:[], perf:{}, keywords:[],
+    calData:{}, calYear: new Date().getFullYear(), calMonth: new Date().getMonth()+1,
+    tFilter:'pending', toast:'',
+    nt:{title:'',category:'general',priority:'medium'},
+    ntraf:{month:'',total:'',humans:'',source:''},
+    nkw:{keyword:'',searches:'',competition:'low'},
+    savesChartInst: null, trafficChartInst: null,
 
     async init() {
       await Promise.all([this.loadOverview(), this.loadMatrix(), this.loadPipeline(), this.loadTodos(), this.loadTraffic()])
+      this.$watch('tab', async (val) => {
+        if(val==='performance') await this.loadPerf()
+        if(val==='calendar')    await this.loadCalendar()
+        if(val==='keywords')    await this.loadKeywords()
+      })
     },
 
-    async loadOverview() {
-      this.ov = await fetch('/api/overview').then(r=>r.json())
-    },
-    async loadPipeline() {
-      this.pipeline = await fetch('/api/articles/pipeline').then(r=>r.json())
-    },
-    async loadMatrix() {
-      this.matrix = await fetch('/api/posts/matrix').then(r=>r.json())
-    },
-    async loadTodos() {
-      this.todos = await fetch('/api/todos').then(r=>r.json())
-    },
-    async loadTraffic() {
+    async loadOverview()  { this.ov       = await fetch('/api/overview').then(r=>r.json()) },
+    async loadPipeline()  { this.pipeline = await fetch('/api/articles/pipeline').then(r=>r.json()) },
+    async loadMatrix()    { this.matrix   = await fetch('/api/posts/matrix').then(r=>r.json()) },
+    async loadTodos()     { this.todos    = await fetch('/api/todos').then(r=>r.json()) },
+    async loadTraffic()   {
       this.traffic = await fetch('/api/traffic').then(r=>r.json())
+      this.$nextTick(()=>this.buildTrafficChart())
+    },
+    async loadPerf()      {
+      this.perf = await fetch('/api/performance').then(r=>r.json())
+      this.$nextTick(()=>this.buildSavesChart())
+    },
+    async loadCalendar()  {
+      this.calData = await fetch(`/api/calendar/${this.calYear}/${this.calMonth}`).then(r=>r.json())
+    },
+    async loadKeywords()  { this.keywords = await fetch('/api/keywords').then(r=>r.json()) },
+
+    get calMonthLabel() {
+      return new Date(this.calYear, this.calMonth-1, 1).toLocaleDateString('en-IN',{month:'long',year:'numeric'})
+    },
+    async calPrev() {
+      this.calMonth--; if(this.calMonth<1){this.calMonth=12;this.calYear--}
+      await this.loadCalendar()
+    },
+    async calNext() {
+      this.calMonth++; if(this.calMonth>12){this.calMonth=1;this.calYear++}
+      await this.loadCalendar()
+    },
+    calDayArticles(day) {
+      const d = String(day).padStart(2,'0')
+      return (this.calData.articles_by_day||{})[d] || []
+    },
+    calDayClass(day) {
+      const arts = this.calDayArticles(day)
+      const today = new Date(); const isToday = (today.getFullYear()===this.calYear && today.getMonth()+1===this.calMonth && today.getDate()===day)
+      if(!arts.length) return isToday ? 'cal-empty ring-2 ring-brand' : 'cal-empty'
+      const status = arts[0].status
+      const today2 = today.toISOString().slice(0,10)
+      const overdue = arts.some(a=>a.publish_date<today2 && a.status!=='published')
+      if(overdue) return 'cal-overdue'
+      if(status==='published') return 'cal-published'
+      return 'cal-draft'
+    },
+    isToday(day) {
+      const t=new Date(); return t.getFullYear()===this.calYear && t.getMonth()+1===this.calMonth && t.getDate()===day
     },
 
     get filteredTodos() {
-      if (this.todoFilter === 'done')    return this.todos.filter(t=>t.status==='done')
-      if (this.todoFilter === 'pending') return this.todos.filter(t=>t.status!=='done')
+      if(this.tFilter==='done')    return this.todos.filter(t=>t.status==='done')
+      if(this.tFilter==='pending') return this.todos.filter(t=>t.status!=='done')
       return this.todos
     },
 
-    get latestTraffic() {
-      return this.traffic[0] || null
-    },
-
     async addTodo() {
-      if (!this.newTodo.title.trim()) return
-      await fetch('/api/todos', {
-        method: 'POST',
-        headers: {'Content-Type':'application/json'},
-        body: JSON.stringify(this.newTodo)
-      })
-      this.newTodo.title = ''
-      await this.loadTodos()
-      this.showToast('Todo added ✅')
+      if(!this.nt.title.trim()) return
+      await fetch('/api/todos',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(this.nt)})
+      this.nt.title=''; await this.loadTodos(); await this.loadOverview(); this.showToast('Added ✅')
     },
-
-    async toggleTodo(todo) {
-      const newStatus = todo.status === 'done' ? 'pending' : 'done'
-      await fetch(`/api/todos/${todo.id}`, {
-        method: 'PUT',
-        headers: {'Content-Type':'application/json'},
-        body: JSON.stringify({status: newStatus})
-      })
-      await this.loadTodos()
-      await this.loadOverview()
-      if (newStatus === 'done') this.showToast('Done! ✅')
+    async toggleTodo(t) {
+      const s = t.status==='done'?'pending':'done'
+      await fetch(`/api/todos/${t.id}`,{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({status:s})})
+      await this.loadTodos(); await this.loadOverview()
+      if(s==='done') this.showToast('Done! ✅')
     },
-
     async deleteTodo(id) {
-      await fetch(`/api/todos/${id}`, {method:'DELETE'})
-      await this.loadTodos()
+      await fetch(`/api/todos/${id}`,{method:'DELETE'}); await this.loadTodos()
+    },
+
+    async saveMetrics(postId) {
+      const body = {
+        saves:    parseInt(document.getElementById('saves-'+postId)?.value)||null,
+        comments: parseInt(document.getElementById('comments-'+postId)?.value)||null,
+        reach:    parseInt(document.getElementById('reach-'+postId)?.value)||null,
+        likes:    parseInt(document.getElementById('likes-'+postId)?.value)||null,
+      }
+      await fetch(`/api/posts/${postId}/metrics`,{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})
+      await this.loadPerf(); this.showToast('Metrics saved ✅')
     },
 
     async addTraffic() {
-      if (!this.newTraffic.month || !this.newTraffic.total) return
-      await fetch('/api/traffic', {
-        method: 'POST',
-        headers: {'Content-Type':'application/json'},
-        body: JSON.stringify({
-          month: this.newTraffic.month,
-          total_visitors: parseInt(this.newTraffic.total),
-          real_humans_est: parseInt(this.newTraffic.humans)||null,
-          top_source: this.newTraffic.source,
-          new_articles: 0
-        })
+      if(!this.ntraf.month||!this.ntraf.total) return
+      await fetch('/api/traffic',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
+        month:this.ntraf.month, total_visitors:parseInt(this.ntraf.total),
+        real_humans_est:parseInt(this.ntraf.humans)||null,
+        top_source:this.ntraf.source, new_articles:0
+      })})
+      this.ntraf={month:'',total:'',humans:'',source:''}
+      await this.loadTraffic(); await this.loadOverview(); this.showToast('Saved ✅')
+    },
+
+    async addKeyword() {
+      if(!this.nkw.keyword.trim()) return
+      await fetch('/api/keywords',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
+        keyword:this.nkw.keyword, monthly_searches_est:parseInt(this.nkw.searches)||null, competition:this.nkw.competition
+      })})
+      this.nkw={keyword:'',searches:'',competition:'low'}
+      await this.loadKeywords(); this.showToast('Keyword added ✅')
+    },
+    async saveRank(kwId) {
+      const val = document.getElementById('rank-'+kwId)?.value
+      const rank = parseInt(val)||null
+      await fetch(`/api/keywords/${kwId}/rank`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({rank})})
+      await this.loadKeywords(); this.showToast('Rank updated ✅')
+    },
+    async deleteKeyword(id) {
+      await fetch(`/api/keywords/${id}`,{method:'DELETE'}); await this.loadKeywords()
+    },
+
+    rankColor(r) {
+      if(!r) return 'text-gray-300'
+      if(r<=3)  return 'text-green-600'
+      if(r<=10) return 'text-blue-600'
+      if(r<=20) return 'text-amber-500'
+      return 'text-gray-400'
+    },
+
+    buildSavesChart() {
+      const ctx = document.getElementById('savesChart')
+      if(!ctx || !this.perf.has_data) return
+      if(this.savesChartInst) this.savesChartInst.destroy()
+      const posts = (this.perf.posts||[]).filter(p=>p.saves).slice(0,10)
+      this.savesChartInst = new Chart(ctx, {
+        type:'bar',
+        data:{
+          labels: posts.map(p=>p.title.substring(0,20)+'…'),
+          datasets:[{
+            label:'Saves', data:posts.map(p=>p.saves||0),
+            backgroundColor:'rgba(45,106,79,.75)', borderRadius:6,
+          }]
+        },
+        options:{responsive:true,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}}
       })
-      this.newTraffic = {month:'',total:'',humans:'',source:''}
-      await this.loadTraffic()
-      await this.loadOverview()
-      this.showToast('Traffic data saved ✅')
     },
 
-    countPosted(plat) {
-      return this.matrix.filter(r => r[plat]?.status === 'posted').length
-    },
-    countPending(plat) {
-      return this.matrix.filter(r => r[plat]?.status === 'pending').length
+    buildTrafficChart() {
+      const ctx = document.getElementById('trafficChart')
+      if(!ctx || this.traffic.length<=1) return
+      if(this.trafficChartInst) this.trafficChartInst.destroy()
+      const rows = [...this.traffic].reverse()
+      this.trafficChartInst = new Chart(ctx, {
+        type:'line',
+        data:{
+          labels: rows.map(t=>t.month),
+          datasets:[{
+            label:'Real humans', data:rows.map(t=>t.real_humans_est||0),
+            borderColor:'#2D6A4F', backgroundColor:'rgba(45,106,79,.1)',
+            fill:true, tension:.4, pointRadius:4, pointBackgroundColor:'#2D6A4F',
+          }]
+        },
+        options:{responsive:true,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}}
+      })
     },
 
-    platIcon(p) {
-      return {instagram:'📸', twitter:'🐦', facebook:'👥', pinterest:'📌', x:'🐦'}[p] || '📱'
-    },
-    colIcon(c) {
-      return {planned:'📝', written:'✍️', draft:'🔧', published:'✅'}[c] || '📄'
-    },
+    pi(p) { return {instagram:'📸',twitter:'🐦',facebook:'👥',pinterest:'📌',x:'🐦'}[p]||'📱' },
 
-    showToast(msg) {
-      this.toast = msg
-      setTimeout(() => this.toast = '', 2500)
-    }
+    showToast(m) { this.toast=m; setTimeout(()=>this.toast='',2500) }
   }
 }
 </script>
