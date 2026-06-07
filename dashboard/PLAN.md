@@ -85,19 +85,25 @@ digest_items      — weekly curated content
 
 ---
 
-### 🟡 Phase 3 — Curation & Digest
+### 🔵 Phase 3 — Curation & Digest (Next)
 
-**Screen 9: Weekly Digest**
-- Show this week's curated picks from content_curator.py output
-- Edit "Kabir's take" for each in the browser
-- One-click generate WordPress HTML
-- Status: draft / reviewed / published
+**Screen 9: Digest Editor**
+- Show this week's curated picks from content_curator.py output (`social-media/digests/digest-YYYY-WNN.json`)
+- Week selector: ◀ Week 23 ▶
+- Items grouped by topic: AI Technology | Financial Freedom | Life & Motivation
+- Edit "Kabir's take" inline for each item
+- Toggle each item: Include / Skip
+- One-click generate WordPress HTML for the digest post
+- Mark digest as: draft → reviewed → published
+- [ Run Fetch Now ] button triggers `content_curator.py --fetch` as subprocess
 
 **Screen 10: Sources Manager**
-- List all 32 RSS sources from sources.json
-- Toggle active/inactive
-- Add new sources with one form
-- Last-fetched date, article count per source
+- List all 32 RSS sources from `marketing/sources.json`
+- Toggle active/inactive per source
+- Add new source: Name | RSS URL | Topic | Type (blog/youtube) | Authority (1–5)
+- Shows: last-fetched date, article count per source this week
+- Delete source
+- Changes write back to sources.json directly (no DB — content_curator.py reads that file)
 
 ---
 

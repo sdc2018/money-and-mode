@@ -444,38 +444,38 @@ MIGRATIONS = {
 
 Do these in sequence — each phase takes 1–2 sessions:
 
-| Order | Task | Why first |
-|-------|------|-----------|
-| 1 | **Infra 2 — DB Migrations** | Needed before adding any new tables |
-| 2 | **Infra 1 — Settings Screen** | Removes hardcoded values, needed for AI Writer later |
-| 3 | **Infra 3 — Article Quick-Add** | Daily frustration — needed to update pipeline without editing seed.py |
-| 4 | **Screen 9 — Digest Viewer** | Most business value now — content_curator.py already exists |
-| 5 | **Screen 10 — Sources Manager** | Natural companion to Digest Viewer |
-| 6 | **Screen 13 — Social Queue** | Next biggest daily time-saver |
-| 7 | **Screen 11 — Revenue Tracker** | Needed once AdSense starts |
-| 8 | **Screen 12 — SEO Dashboard (Mode A)** | GSC data paste mode — quick to build |
-| 9 | **Screen 15 — Alerts** | Good quality-of-life once everything else is live |
-| 10 | **Screen 14 — AI Writer** | Last — most complex, needs API key + good prompts |
-| 11 | **Infra 4 — Export/Backup** | Nice to have, do last |
+| Order | Phase | Task | Est. Time | Why first |
+|-------|-------|------|-----------|-----------|
+| 1 | Infra | **DB Migrations** | 1h | Needed before adding any new tables |
+| 2 | Infra | **Settings Screen** | 2h | Removes hardcoded values; needed for AI Writer later |
+| 3 | Infra | **Article Quick-Add form** | 2h | Stop editing seed.py just to add a planned article |
+| 4 | **Phase 3** | **Screen 9 — Digest Editor** | 4h | content_curator.py already exists — just needs a UI |
+| 5 | **Phase 3** | **Screen 10 — Sources Manager** | 3h | Natural companion to Digest Editor |
+| 6 | Phase 5 | **Screen 13 — Social Queue** | 5h | Biggest daily time-saver after Phase 3 |
+| 7 | Phase 4 | **Screen 11 — Revenue Tracker** | 3h | Needed once AdSense starts |
+| 8 | Phase 4 | **Screen 12 — SEO Dashboard** | 4h | GSC paste mode — drives organic growth decisions |
+| 9 | Phase 5 | **Screen 15 — Alerts** | 3h | Never miss a deadline or keyword milestone |
+| 10 | Phase 5 | **Screen 14 — AI Writer** | 6h | Most complex — needs Claude API key + prompt tuning |
+| 11 | Infra | **Export / Backup** | 1h | Nice to have, do last |
 
 ---
 
 ## Effort Summary
 
-| Task | Estimated Hours |
-|------|----------------|
-| Infra 2 — DB Migrations | 1h |
-| Infra 1 — Settings Screen | 2h |
-| Infra 3 — Article Quick-Add | 2h |
-| Screen 9 — Digest Viewer | 4h |
-| Screen 10 — Sources Manager | 3h |
-| Screen 13 — Social Queue | 5h |
-| Screen 11 — Revenue Tracker | 3h |
-| Screen 12 — SEO Dashboard | 4h |
-| Screen 15 — Alerts | 3h |
-| Screen 14 — AI Writer | 6h |
-| Infra 4 — Export/Backup | 1h |
-| **Total** | **~34 hours** |
+| Phase | Task | Est. Hours |
+|-------|------|-----------|
+| Infra | DB Migrations | 1h |
+| Infra | Settings Screen | 2h |
+| Infra | Article Quick-Add form | 2h |
+| **Phase 3** | **Screen 9 — Digest Editor** | **4h** |
+| **Phase 3** | **Screen 10 — Sources Manager** | **3h** |
+| Phase 5 | Screen 13 — Social Queue | 5h |
+| Phase 4 | Screen 11 — Revenue Tracker | 3h |
+| Phase 4 | Screen 12 — SEO Dashboard | 4h |
+| Phase 5 | Screen 15 — Alerts | 3h |
+| Phase 5 | Screen 14 — AI Writer | 6h |
+| Infra | Export / Backup | 1h |
+| | **Total** | **~34h** |
 
 At 2–3 hours per session: ~12–17 sessions to complete everything.
 
