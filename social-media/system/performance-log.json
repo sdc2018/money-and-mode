@@ -1,6 +1,7 @@
 {
   "_comment": "Track Instagram post performance. Sandip fills this in weekly — takes 2 minutes. Claude reads it monthly to find patterns and improve strategy.",
-  "_how_to_update": "After each post, come back in 3-5 days and add the numbers. Instagram shows saves/comments/likes/reach in Insights.",
+  "_how_to_update": "After each post, come back in 5-7 days and add the numbers. Instagram: Insights tab. Facebook: post → View Insights. X/Twitter: Analytics. Pinterest: pin → see stats.",
+  "_platforms": ["instagram", "x_twitter", "facebook", "pinterest"],
   "posts": [
     {
       "id": "post-74-instagram",
@@ -9,94 +10,82 @@
       "posted_date": "2026-06-07",
       "caption_version": "v2-improved",
       "metrics": {
-        "likes": null,
-        "comments": null,
-        "saves": null,
-        "shares": null,
-        "reach": null,
-        "impressions": null
+        "instagram": { "likes": null, "comments": null, "saves": null, "reach": null },
+        "x_twitter": { "impressions": null, "link_clicks": null, "retweets": null },
+        "facebook": { "reach": null, "link_clicks": null, "comments": null, "shares": null },
+        "pinterest": { "impressions": null, "outbound_clicks": null, "saves": null }
       },
-      "notes": "First post — caption was posted without text initially, edited to add caption"
+      "notes": "Instagram: caption was missing on first post, edited to add. X+Facebook: post these platforms next."
     },
     {
-      "id": "post-76-instagram",
+      "id": "post-76-all-platforms",
       "article": "How to Use AI to Save 2 Hours Every Day",
       "topic": "ai-productivity",
       "posted_date": "2026-06-07",
       "caption_version": "v2-improved",
       "metrics": {
-        "likes": null,
-        "comments": null,
-        "saves": null,
-        "shares": null,
-        "reach": null,
-        "impressions": null
+        "instagram": { "likes": null, "comments": null, "saves": null, "reach": null },
+        "x_twitter": { "impressions": null, "link_clicks": null, "retweets": null },
+        "facebook": { "reach": null, "link_clicks": null, "comments": null, "shares": null },
+        "pinterest": { "impressions": null, "outbound_clicks": null, "saves": null }
       },
-      "notes": ""
+      "notes": "Instagram posted. X+Facebook pending."
     },
     {
-      "id": "post-77-instagram",
+      "id": "post-77-all-platforms",
       "article": "Will AI Take My Job?",
       "topic": "ai-jobs",
       "posted_date": "2026-06-07",
       "caption_version": "v2-improved",
       "metrics": {
-        "likes": null,
-        "comments": null,
-        "saves": null,
-        "shares": null,
-        "reach": null,
-        "impressions": null
+        "instagram": { "likes": null, "comments": null, "saves": null, "reach": null },
+        "x_twitter": { "impressions": null, "link_clicks": null, "retweets": null },
+        "facebook": { "reach": null, "link_clicks": null, "comments": null, "shares": null },
+        "pinterest": { "impressions": null, "outbound_clicks": null, "saves": null }
       },
-      "notes": ""
+      "notes": "Instagram posted. X+Facebook pending."
     },
     {
-      "id": "post-110-instagram",
+      "id": "post-110-all-platforms",
       "article": "I Sold My Company at 31",
       "topic": "financial-freedom-story",
       "posted_date": "2026-06-07",
       "caption_version": "v2-improved",
       "metrics": {
-        "likes": null,
-        "comments": null,
-        "saves": null,
-        "shares": null,
-        "reach": null,
-        "impressions": null
+        "instagram": { "likes": null, "comments": null, "saves": null, "reach": null },
+        "x_twitter": { "impressions": null, "link_clicks": null, "retweets": null },
+        "facebook": { "reach": null, "link_clicks": null, "comments": null, "shares": null },
+        "pinterest": { "impressions": null, "outbound_clicks": null, "saves": null }
       },
-      "notes": ""
+      "notes": "Instagram posted. X+Facebook pending."
     },
     {
-      "id": "post-112-instagram",
+      "id": "post-112-all-platforms",
       "article": "If You Are Selling Your Time",
       "topic": "financial-freedom-time",
       "posted_date": "2026-06-07",
       "caption_version": "v2-improved",
       "metrics": {
-        "likes": null,
-        "comments": null,
-        "saves": null,
-        "shares": null,
-        "reach": null,
-        "impressions": null
+        "instagram": { "likes": null, "comments": null, "saves": null, "reach": null },
+        "x_twitter": { "impressions": null, "link_clicks": null, "retweets": null },
+        "facebook": { "reach": null, "link_clicks": null, "comments": null, "shares": null },
+        "pinterest": { "impressions": null, "outbound_clicks": null, "saves": null }
       },
-      "notes": ""
+      "notes": "Instagram posted. X+Facebook pending."
     },
     {
-      "id": "post-115-instagram",
+      "id": "post-115-all-platforms",
       "article": "The Family That Feels Like Heaven",
       "topic": "family-connection",
       "posted_date": "2026-06-07",
       "caption_version": "v2-improved",
       "metrics": {
-        "likes": null,
-        "comments": null,
-        "saves": null,
-        "shares": null,
-        "reach": null,
-        "impressions": null
+        "instagram": { "likes": null, "comments": null, "saves": null, "reach": null },
+        "x_twitter": { "impressions": null, "link_clicks": null, "retweets": null },
+        "facebook": { "reach": null, "link_clicks": null, "comments": null, "shares": null },
+        "pinterest": { "impressions": null, "outbound_clicks": null, "saves": null }
       },
-      "notes": ""
+      "notes": "Instagram posted. X+Facebook pending."
     }
   ],
   "monthly_summary": [],
