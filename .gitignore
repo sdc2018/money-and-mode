@@ -5,3 +5,4 @@
 # API credentials — never commit
 .env
 !.env.example
+dashboard/data/
