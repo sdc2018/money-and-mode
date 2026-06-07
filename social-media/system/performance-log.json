@@ -1,0 +1,104 @@
+{
+  "_comment": "Track Instagram post performance. Sandip fills this in weekly — takes 2 minutes. Claude reads it monthly to find patterns and improve strategy.",
+  "_how_to_update": "After each post, come back in 3-5 days and add the numbers. Instagram shows saves/comments/likes/reach in Insights.",
+  "posts": [
+    {
+      "id": "post-74-instagram",
+      "article": "How AI Is Changing Everyday Life",
+      "topic": "ai-everyday",
+      "posted_date": "2026-06-07",
+      "caption_version": "v2-improved",
+      "metrics": {
+        "likes": null,
+        "comments": null,
+        "saves": null,
+        "shares": null,
+        "reach": null,
+        "impressions": null
+      },
+      "notes": "First post — caption was posted without text initially, edited to add caption"
+    },
+    {
+      "id": "post-76-instagram",
+      "article": "How to Use AI to Save 2 Hours Every Day",
+      "topic": "ai-productivity",
+      "posted_date": "2026-06-07",
+      "caption_version": "v2-improved",
+      "metrics": {
+        "likes": null,
+        "comments": null,
+        "saves": null,
+        "shares": null,
+        "reach": null,
+        "impressions": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "post-77-instagram",
+      "article": "Will AI Take My Job?",
+      "topic": "ai-jobs",
+      "posted_date": "2026-06-07",
+      "caption_version": "v2-improved",
+      "metrics": {
+        "likes": null,
+        "comments": null,
+        "saves": null,
+        "shares": null,
+        "reach": null,
+        "impressions": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "post-110-instagram",
+      "article": "I Sold My Company at 31",
+      "topic": "financial-freedom-story",
+      "posted_date": "2026-06-07",
+      "caption_version": "v2-improved",
+      "metrics": {
+        "likes": null,
+        "comments": null,
+        "saves": null,
+        "shares": null,
+        "reach": null,
+        "impressions": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "post-112-instagram",
+      "article": "If You Are Selling Your Time",
+      "topic": "financial-freedom-time",
+      "posted_date": "2026-06-07",
+      "caption_version": "v2-improved",
+      "metrics": {
+        "likes": null,
+        "comments": null,
+        "saves": null,
+        "shares": null,
+        "reach": null,
+        "impressions": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "post-115-instagram",
+      "article": "The Family That Feels Like Heaven",
+      "topic": "family-connection",
+      "posted_date": "2026-06-07",
+      "caption_version": "v2-improved",
+      "metrics": {
+        "likes": null,
+        "comments": null,
+        "saves": null,
+        "shares": null,
+        "reach": null,
+        "impressions": null
+      },
+      "notes": ""
+    }
+  ],
+  "monthly_summary": [],
+  "learnings": []
+}
