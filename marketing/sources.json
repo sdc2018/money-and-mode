@@ -1,0 +1,254 @@
+{
+  "_comment": "Curated sources for content aggregation. Claude reads these RSS feeds weekly, scores articles by relevance, and drafts the weekly digest. Add new sources any time.",
+  "_scoring": "authority (1-5) × recency × keyword_match = final score",
+
+  "topics": {
+    "ai_technology": {
+      "keywords": ["artificial intelligence", "AI", "ChatGPT", "machine learning", "automation", "GPT", "Claude", "LLM", "generative AI", "AI tools", "deep learning", "robotics", "AI safety"],
+      "sources": [
+        {
+          "name": "MIT Technology Review — AI",
+          "rss": "https://www.technologyreview.com/feed/",
+          "authority": 5,
+          "type": "blog",
+          "notes": "Deep, trusted AI journalism"
+        },
+        {
+          "name": "The Verge — AI",
+          "rss": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+          "authority": 4,
+          "type": "news",
+          "notes": "Fast, consumer-friendly AI news"
+        },
+        {
+          "name": "VentureBeat — AI",
+          "rss": "https://venturebeat.com/category/ai/feed/",
+          "authority": 4,
+          "type": "news",
+          "notes": "Enterprise + consumer AI"
+        },
+        {
+          "name": "TechCrunch — AI",
+          "rss": "https://techcrunch.com/category/artificial-intelligence/feed/",
+          "authority": 4,
+          "type": "news",
+          "notes": "Startup + big tech AI news"
+        },
+        {
+          "name": "OpenAI Blog",
+          "rss": "https://openai.com/news/rss.xml",
+          "authority": 5,
+          "type": "official",
+          "notes": "Direct from OpenAI — ChatGPT news"
+        },
+        {
+          "name": "Google AI Blog",
+          "rss": "https://blog.google/technology/ai/rss/",
+          "authority": 5,
+          "type": "official",
+          "notes": "Google's AI announcements"
+        },
+        {
+          "name": "Harvard Business Review — Technology",
+          "rss": "https://hbr.org/topic/technology/rss",
+          "authority": 5,
+          "type": "analysis",
+          "notes": "How AI affects business and work"
+        },
+        {
+          "name": "Wired — AI",
+          "rss": "https://www.wired.com/feed/tag/ai/rss",
+          "authority": 4,
+          "type": "magazine",
+          "notes": "Long-form AI stories"
+        },
+        {
+          "name": "BBC Technology",
+          "rss": "http://feeds.bbci.co.uk/news/technology/rss.xml",
+          "authority": 5,
+          "type": "news",
+          "notes": "Mainstream AI coverage — good for our audience"
+        }
+      ],
+      "youtube_channels": [
+        {
+          "name": "AI Explained",
+          "channel_id": "UCNJ1Ymd5yFuUPtn21xtRbbw",
+          "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCNJ1Ymd5yFuUPtn21xtRbbw",
+          "authority": 4,
+          "notes": "Best plain-language AI explanations"
+        },
+        {
+          "name": "Two Minute Papers",
+          "channel_id": "UCbfYPyITQ-7l4upoX8nvctg",
+          "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCbfYPyITQ-7l4upoX8nvctg",
+          "authority": 4,
+          "notes": "AI research simplified"
+        },
+        {
+          "name": "Fireship",
+          "channel_id": "UCsBjURrPoezykLs9EqgamOA",
+          "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA",
+          "authority": 3,
+          "notes": "Fast, fun tech/AI breakdowns"
+        }
+      ]
+    },
+
+    "financial_freedom": {
+      "keywords": ["financial independence", "FIRE", "passive income", "early retirement", "savings rate", "index funds", "investing", "wealth", "financial freedom", "retirement", "net worth", "frugal", "financial planning", "mutual funds", "SIP", "Zerodha", "Nifty"],
+      "sources": [
+        {
+          "name": "Mr. Money Mustache",
+          "rss": "https://www.mrmoneymustache.com/feed/",
+          "authority": 5,
+          "type": "blog",
+          "notes": "The FIRE movement bible"
+        },
+        {
+          "name": "The Simple Path to Wealth (JL Collins)",
+          "rss": "https://jlcollinsnh.com/feed/",
+          "authority": 5,
+          "type": "blog",
+          "notes": "Index funds, simple investing philosophy"
+        },
+        {
+          "name": "Financial Samurai",
+          "rss": "https://www.financialsamurai.com/feed/",
+          "authority": 4,
+          "type": "blog",
+          "notes": "High-income FIRE, practical finance"
+        },
+        {
+          "name": "CNBC Make It",
+          "rss": "https://www.cnbc.com/id/49196785/device/rss/rss.html",
+          "authority": 4,
+          "type": "news",
+          "notes": "Personal finance stories, real examples"
+        },
+        {
+          "name": "Economic Times — Personal Finance",
+          "rss": "https://economictimes.indiatimes.com/wealth/rssfeeds/837555174.cms",
+          "authority": 4,
+          "type": "news",
+          "notes": "India-specific finance — very relevant"
+        },
+        {
+          "name": "Moneycontrol Personal Finance",
+          "rss": "https://www.moneycontrol.com/rss/personalfinance.xml",
+          "authority": 4,
+          "type": "news",
+          "notes": "India finance news"
+        },
+        {
+          "name": "NerdWallet Blog",
+          "rss": "https://www.nerdwallet.com/blog/feed/",
+          "authority": 4,
+          "type": "advice",
+          "notes": "Practical money guides"
+        },
+        {
+          "name": "Investopedia — Financial Advisor",
+          "rss": "https://www.investopedia.com/feeds/news.aspx",
+          "authority": 4,
+          "type": "education",
+          "notes": "Financial education, explained clearly"
+        }
+      ],
+      "youtube_channels": [
+        {
+          "name": "Graham Stephan",
+          "channel_id": "UCV6KDgJskWaEckne5aPA0aQ",
+          "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCV6KDgJskWaEckne5aPA0aQ",
+          "authority": 4,
+          "notes": "Real estate, investing, FIRE"
+        },
+        {
+          "name": "Andrei Jikh",
+          "channel_id": "UCGy7SkBjcIAgTiwkXEtPnYg",
+          "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCGy7SkBjcIAgTiwkXEtPnYg",
+          "authority": 4,
+          "notes": "Investing explained simply"
+        },
+        {
+          "name": "Warikoo",
+          "channel_id": "UCFBLmRHhEFDJjXfYWvKvhPg",
+          "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCFBLmRHhEFDJjXfYWvKvhPg",
+          "authority": 4,
+          "notes": "India — money + life + entrepreneurship"
+        },
+        {
+          "name": "Akshat Shrivastava",
+          "channel_id": "UCqW8jxi5oiXlWb2dOWPBI3w",
+          "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCqW8jxi5oiXlWb2dOWPBI3w",
+          "authority": 4,
+          "notes": "India investing, FIRE, wealth"
+        }
+      ]
+    },
+
+    "life_motivation": {
+      "keywords": ["habits", "morning routine", "mindfulness", "productivity", "mental health", "relationships", "family", "personal growth", "motivation", "self-improvement", "happiness", "work-life balance", "journaling", "meditation", "simplicity"],
+      "sources": [
+        {
+          "name": "James Clear (Atomic Habits)",
+          "rss": "https://jamesclear.com/feed",
+          "authority": 5,
+          "type": "blog",
+          "notes": "Best habits writer alive"
+        },
+        {
+          "name": "Mark Manson",
+          "rss": "https://markmanson.net/feed",
+          "authority": 4,
+          "type": "blog",
+          "notes": "Honest, no-BS personal growth"
+        },
+        {
+          "name": "Psychology Today",
+          "rss": "https://www.psychologytoday.com/intl/front-page/feed",
+          "authority": 5,
+          "type": "academic",
+          "notes": "Science-backed life/relationships content"
+        },
+        {
+          "name": "Harvard Business Review — Leadership",
+          "rss": "https://hbr.org/topic/leadership/rss",
+          "authority": 5,
+          "type": "analysis",
+          "notes": "Work, leadership, life balance"
+        },
+        {
+          "name": "Tim Ferriss Blog",
+          "rss": "https://tim.blog/feed/",
+          "authority": 4,
+          "type": "blog",
+          "notes": "Lifestyle design, top performers"
+        },
+        {
+          "name": "Zen Habits (Leo Babauta)",
+          "rss": "https://zenhabits.net/feed/",
+          "authority": 4,
+          "type": "blog",
+          "notes": "Simplicity, mindfulness, habits"
+        }
+      ],
+      "youtube_channels": [
+        {
+          "name": "Matt D'Avella",
+          "channel_id": "UCJ24N4O0bP7LGLBDvye7oCA",
+          "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCJ24N4O0bP7LGLBDvye7oCA",
+          "authority": 4,
+          "notes": "Minimalism, habits, intentional living"
+        },
+        {
+          "name": "Thomas Frank",
+          "channel_id": "UCG-KntY7aVnIGXYEBQvmBAQ",
+          "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCG-KntY7aVnIGXYEBQvmBAQ",
+          "authority": 3,
+          "notes": "Productivity, habits, studying"
+        }
+      ]
+    }
+  }
+}
