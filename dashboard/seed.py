@@ -49,6 +49,20 @@ TRAFFIC = [
     dict(month="2026-05", total_visitors=2344, real_humans_est=200, top_source="Direct/bots", new_articles=5, notes="Starting point"),
 ]
 
+SETTINGS = [
+    # (key, value, label, category)
+    ("blog_url",          "https://money-and-mode.com", "Blog URL",               "general"),
+    ("site_name",         "Fun in the Life",             "Site Name",              "general"),
+    ("author_name",       "Kabir Shah",                  "Author / Pen Name",      "general"),
+    ("adsense_target",    "5000",                        "AdSense Visitor Target", "traffic"),
+    ("ezoic_target",      "1000",                        "Ezoic Visitor Target",   "traffic"),
+    ("pub_days",          "Tuesday,Friday",              "Publish Days",           "content"),
+    ("ig_handle",         "fun_in_life71",               "Instagram Handle",       "social"),
+    ("twitter_handle",    "@justIndia25",                "Twitter / X Handle",     "social"),
+    ("pinterest_handle",  "sandip2787",                  "Pinterest Handle",       "social"),
+    ("wp_api_url",        "https://money-and-mode.com/wp-json/wp/v2", "WordPress API URL", "wordpress"),
+]
+
 KEYWORDS = [
     dict(keyword="how AI is changing everyday life",    article_title="How AI Is Changing Everyday Life",           monthly_searches_est=1900, competition="low"),
     dict(keyword="how to use AI to save time",           article_title="How to Use AI to Save 2 Hours Every Day",    monthly_searches_est=2400, competition="low"),
@@ -134,6 +148,14 @@ def seed():
             aid = title_to_id.get(kw["article_title"])
             conn.execute("INSERT OR IGNORE INTO keywords (keyword,article_id,monthly_searches_est,competition) VALUES (?,?,?,?)",
                 (kw["keyword"], aid, kw["monthly_searches_est"], kw["competition"]))
+
+        # Settings
+        print("Seeding settings...")
+        for key, value, label, category in SETTINGS:
+            conn.execute("""
+                INSERT OR IGNORE INTO settings (key, value, label, category)
+                VALUES (?, ?, ?, ?)
+            """, (key, value, label, category))
 
         conn.commit()
     print("✅ Seed complete.")

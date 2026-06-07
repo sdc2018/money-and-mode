@@ -7,16 +7,22 @@ from fastapi import FastAPI, HTTPException
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse, FileResponse
 from pydantic import BaseModel
-from typing import Optional
+from typing import Optional, List
 from datetime import datetime, date
 from pathlib import Path
+import json
+import subprocess
 import uvicorn
 
 from db import get_conn, init_db
 
 app = FastAPI(title="money-and-mode Dashboard", version="1.0")
 
-STATIC = Path(__file__).parent / "static"
+STATIC       = Path(__file__).parent / "static"
+BASE         = Path(__file__).parent.parent
+DIGESTS_DIR  = BASE / "social-media" / "digests"
+SOURCES_FILE = BASE / "marketing" / "sources.json"
+CURATOR_PY   = BASE / "social-media" / "scripts" / "content_curator.py"
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -67,6 +73,47 @@ class KeywordCreate(BaseModel):
 class RankEntry(BaseModel):
     rank: Optional[int] = None   # None = not ranking
     notes: Optional[str] = None
+
+class ArticleCreate(BaseModel):
+    title: str
+    keyword: Optional[str] = None
+    series: Optional[str] = "ai-everyday"
+    category: Optional[str] = "AI & Everyday Life"
+    status: Optional[str] = "planned"
+    publish_date: Optional[str] = None
+    wp_post_id: Optional[int] = None
+    wp_url: Optional[str] = None
+    slug: Optional[str] = None
+    notes: Optional[str] = None
+
+class ArticleUpdate(BaseModel):
+    title: Optional[str] = None
+    status: Optional[str] = None
+    publish_date: Optional[str] = None
+    keyword: Optional[str] = None
+    wp_url: Optional[str] = None
+    notes: Optional[str] = None
+
+class DigestItemEdit(BaseModel):
+    url: str
+    kabirs_take: Optional[str] = None
+    status: Optional[str] = "include"   # include | skip
+
+class SourceUpdate(BaseModel):
+    active: Optional[bool] = None
+    authority: Optional[int] = None
+    notes: Optional[str] = None
+
+class SourceCreate(BaseModel):
+    name: str
+    rss: str
+    topic: str           # ai_technology | financial_freedom | life_motivation
+    source_type: str = "blog"    # blog | news | youtube | official | analysis
+    authority: int = 3
+    notes: Optional[str] = None
+
+class SettingsUpdate(BaseModel):
+    settings: dict   # {key: value, ...}
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -485,6 +532,344 @@ def delete_keyword(kw_id: int):
         conn.execute("DELETE FROM keyword_rankings WHERE keyword_id=?", (kw_id,))
         conn.execute("DELETE FROM keywords WHERE id=?", (kw_id,))
         conn.commit()
+    return {"ok": True}
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+#  Articles — CRUD (create, update, delete)
+# ══════════════════════════════════════════════════════════════════════════════
+
+@app.post("/api/articles")
+def create_article(a: ArticleCreate):
+    with get_conn() as conn:
+        cur = conn.execute("""
+            INSERT INTO articles (title, keyword, series, category, status,
+                                  publish_date, wp_post_id, wp_url, slug, notes)
+            VALUES (?,?,?,?,?,?,?,?,?,?)
+        """, (a.title, a.keyword, a.series, a.category, a.status,
+              a.publish_date, a.wp_post_id, a.wp_url, a.slug, a.notes))
+        conn.commit()
+        return {"id": cur.lastrowid, **a.dict()}
+
+
+@app.put("/api/articles/{article_id}")
+def update_article(article_id: int, a: ArticleUpdate):
+    updates, params = [], []
+    if a.title:        updates.append("title=?");        params.append(a.title)
+    if a.status:       updates.append("status=?");       params.append(a.status)
+    if a.publish_date: updates.append("publish_date=?"); params.append(a.publish_date)
+    if a.keyword:      updates.append("keyword=?");      params.append(a.keyword)
+    if a.wp_url:       updates.append("wp_url=?");       params.append(a.wp_url)
+    if a.notes:        updates.append("notes=?");        params.append(a.notes)
+    if not updates:
+        return {"ok": True}
+    with get_conn() as conn:
+        conn.execute(f"UPDATE articles SET {', '.join(updates)} WHERE id=?", params + [article_id])
+        conn.commit()
+    return {"ok": True}
+
+
+@app.delete("/api/articles/{article_id}")
+def delete_article(article_id: int):
+    with get_conn() as conn:
+        conn.execute("DELETE FROM articles WHERE id=?", (article_id,))
+        conn.commit()
+    return {"ok": True}
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+#  Settings
+# ══════════════════════════════════════════════════════════════════════════════
+
+@app.get("/api/settings")
+def get_settings():
+    with get_conn() as conn:
+        rows = conn.execute(
+            "SELECT key, value, label, category FROM settings ORDER BY category, key"
+        ).fetchall()
+    # Return as dict for easy lookup, plus ordered list for display
+    result = {}
+    for r in rows:
+        result[r["key"]] = {"value": r["value"], "label": r["label"], "category": r["category"]}
+    return result
+
+
+@app.put("/api/settings")
+def update_settings(body: SettingsUpdate):
+    with get_conn() as conn:
+        for key, value in body.settings.items():
+            conn.execute("""
+                UPDATE settings SET value=?, updated_at=datetime('now') WHERE key=?
+            """, (str(value), key))
+        conn.commit()
+    return {"ok": True}
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+#  Digest — read curator output, edit Kabir's take, generate WP HTML
+# ══════════════════════════════════════════════════════════════════════════════
+
+def _load_digest_edits(conn, week):
+    rows = conn.execute(
+        "SELECT url, kabirs_take, status FROM digest_edits WHERE week=?", (week,)
+    ).fetchall()
+    return {r["url"]: {"kabirs_take": r["kabirs_take"], "status": r["status"]} for r in rows}
+
+
+@app.get("/api/digest/weeks")
+def get_digest_weeks():
+    """List all available digest JSON files."""
+    DIGESTS_DIR.mkdir(parents=True, exist_ok=True)
+    files = sorted(DIGESTS_DIR.glob("digest-*.json"), reverse=True)
+    weeks = []
+    for f in files:
+        try:
+            data = json.loads(f.read_text())
+            weeks.append({"week": data.get("week", f.stem.replace("digest-","")),
+                          "label": data.get("label", f.stem),
+                          "file":  f.name})
+        except Exception:
+            pass
+    return weeks
+
+
+@app.get("/api/digest/{week}")
+def get_digest(week: str):
+    """Return digest items for a week, merged with any saved edits."""
+    digest_file = DIGESTS_DIR / f"digest-{week}.json"
+    if not digest_file.exists():
+        raise HTTPException(404, f"No digest found for week {week}")
+    data = json.loads(digest_file.read_text())
+    results = data.get("results", {})
+
+    with get_conn() as conn:
+        edits = _load_digest_edits(conn, week)
+
+    topic_labels = {
+        "ai_technology":    "AI & Technology",
+        "financial_freedom": "Financial Freedom",
+        "life_motivation":  "Life & Motivation",
+    }
+
+    items = []
+    for topic, articles in results.items():
+        for a in articles[:3]:  # top 3 per topic
+            url = a.get("url", "")
+            edit = edits.get(url, {})
+            items.append({
+                "topic":       topic,
+                "topic_label": topic_labels.get(topic, topic),
+                "title":       a.get("title", ""),
+                "url":         url,
+                "source":      a.get("source", ""),
+                "summary":     a.get("summary", ""),
+                "score":       a.get("score", 0),
+                "published":   a.get("published", ""),
+                "kabirs_take": edit.get("kabirs_take", ""),
+                "status":      edit.get("status", "include"),
+            })
+
+    return {"week": week, "label": data.get("label",""), "items": items}
+
+
+@app.put("/api/digest/{week}/item")
+def save_digest_item(week: str, body: DigestItemEdit):
+    """Save Kabir's take + include/skip for one item."""
+    with get_conn() as conn:
+        conn.execute("""
+            INSERT INTO digest_edits (week, url, kabirs_take, status)
+            VALUES (?, ?, ?, ?)
+            ON CONFLICT(week, url) DO UPDATE SET
+                kabirs_take=excluded.kabirs_take,
+                status=excluded.status,
+                updated_at=datetime('now')
+        """, (week, body.url, body.kabirs_take, body.status))
+        conn.commit()
+    return {"ok": True}
+
+
+@app.post("/api/digest/{week}/generate")
+def generate_digest_html(week: str):
+    """Generate WordPress-ready HTML from the included items."""
+    digest_file = DIGESTS_DIR / f"digest-{week}.json"
+    if not digest_file.exists():
+        raise HTTPException(404, "Digest not found")
+
+    data = json.loads(digest_file.read_text())
+    results = data.get("results", {})
+
+    with get_conn() as conn:
+        edits = _load_digest_edits(conn, week)
+
+    topic_labels = {
+        "ai_technology":    "AI & Technology",
+        "financial_freedom": "Financial Freedom",
+        "life_motivation":  "Life & Motivation",
+    }
+
+    html_parts = [
+        f"<!-- Weekly Digest — {data.get('label',week)} -->",
+        f"<p>Every week I read across AI, money, and life — so you don't have to. "
+        f"Here are the pieces that made me think this week.</p>",
+        "",
+    ]
+
+    for topic, articles in results.items():
+        topic_html = [f"<h2>{topic_labels.get(topic, topic)}</h2>", ""]
+        has_items = False
+        for a in articles[:3]:
+            url  = a.get("url","")
+            edit = edits.get(url, {})
+            if edit.get("status") == "skip":
+                continue
+            has_items = True
+            take = edit.get("kabirs_take","").strip()
+            topic_html.append(f'<h3><a href="{url}" target="_blank" rel="noopener">{a.get("title","")}</a></h3>')
+            topic_html.append(f'<p><em>Source: {a.get("source","")}</em></p>')
+            if a.get("summary"):
+                topic_html.append(f'<p>{a.get("summary","")}…</p>')
+            if take:
+                topic_html.append(f'<blockquote><strong>Kabir&rsquo;s take:</strong> {take}</blockquote>')
+            topic_html.append(f'<p><a href="{url}" target="_blank" rel="noopener">Read the full article →</a></p>')
+            topic_html.append("")
+        if has_items:
+            html_parts.extend(topic_html)
+
+    html_parts += [
+        "<hr>",
+        "<h2>Why I Curate This</h2>",
+        "<p>The internet has too much content. Most of it isn't worth your time. "
+        "Every week I read across AI, money, and life so you don't have to. "
+        "These are the pieces that made me think, taught me something, or changed how I see something.</p>",
+        "<p>If something here was useful, share it with one person who'd benefit.</p>",
+        "<p><em>→ Want this in your inbox every week? Subscribe below.</em></p>",
+        "",
+        "<p><strong>Tags:</strong> weekly-digest, AI, financial-freedom, personal-growth, curated</p>",
+    ]
+
+    html = "\n".join(html_parts)
+
+    # Save to digests folder as well
+    out_file = DIGESTS_DIR / f"wp-html-{week}.html"
+    out_file.write_text(html)
+
+    return {"html": html, "saved_to": str(out_file)}
+
+
+@app.post("/api/digest/fetch")
+def fetch_digest():
+    """Trigger content_curator.py --fetch as subprocess."""
+    if not CURATOR_PY.exists():
+        raise HTTPException(404, f"content_curator.py not found at {CURATOR_PY}")
+    try:
+        result = subprocess.run(
+            ["python3", str(CURATOR_PY), "--fetch"],
+            capture_output=True, text=True, timeout=120,
+            cwd=str(CURATOR_PY.parent)
+        )
+        return {
+            "ok":     result.returncode == 0,
+            "stdout": result.stdout[-3000:] if result.stdout else "",
+            "stderr": result.stderr[-1000:] if result.stderr else "",
+        }
+    except subprocess.TimeoutExpired:
+        return {"ok": False, "stdout": "", "stderr": "Fetch timed out after 120s"}
+    except Exception as e:
+        return {"ok": False, "stdout": "", "stderr": str(e)}
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+#  Sources — read/write marketing/sources.json
+# ══════════════════════════════════════════════════════════════════════════════
+
+def _load_sources():
+    if not SOURCES_FILE.exists():
+        return {}
+    return json.loads(SOURCES_FILE.read_text())
+
+
+def _save_sources(data):
+    SOURCES_FILE.write_text(json.dumps(data, indent=2))
+
+
+def _flatten_sources(data):
+    """Return a flat list of all sources with topic + kind fields."""
+    flat = []
+    for topic, topic_data in data.get("topics", {}).items():
+        for s in topic_data.get("sources", []):
+            flat.append({**s, "topic": topic, "kind": "blog",
+                         "active": s.get("active", True)})
+        for s in topic_data.get("youtube_channels", []):
+            flat.append({**s, "topic": topic, "kind": "youtube",
+                         "active": s.get("active", True)})
+    return flat
+
+
+@app.get("/api/sources")
+def get_sources():
+    data = _load_sources()
+    flat = _flatten_sources(data)
+    return flat
+
+
+@app.put("/api/sources/{name:path}")
+def update_source(name: str, body: SourceUpdate):
+    data = _load_sources()
+    updated = False
+    for topic, topic_data in data.get("topics", {}).items():
+        for lst_key in ("sources", "youtube_channels"):
+            for s in topic_data.get(lst_key, []):
+                if s.get("name") == name:
+                    if body.active is not None:
+                        s["active"] = body.active
+                    if body.authority is not None:
+                        s["authority"] = body.authority
+                    if body.notes is not None:
+                        s["notes"] = body.notes
+                    updated = True
+    if not updated:
+        raise HTTPException(404, f"Source '{name}' not found")
+    _save_sources(data)
+    return {"ok": True}
+
+
+@app.post("/api/sources")
+def add_source(body: SourceCreate):
+    data = _load_sources()
+    topic_data = data.setdefault("topics", {}).setdefault(body.topic, {
+        "keywords": [], "sources": [], "youtube_channels": []
+    })
+    lst_key = "youtube_channels" if body.source_type == "youtube" else "sources"
+    # Check for duplicate
+    for s in topic_data.get(lst_key, []):
+        if s.get("name") == body.name:
+            raise HTTPException(409, f"Source '{body.name}' already exists")
+    new_source = {
+        "name":      body.name,
+        "rss":       body.rss,
+        "authority": body.authority,
+        "type":      body.source_type,
+        "notes":     body.notes or "",
+        "active":    True,
+    }
+    topic_data.setdefault(lst_key, []).append(new_source)
+    _save_sources(data)
+    return {"ok": True, **new_source, "topic": body.topic}
+
+
+@app.delete("/api/sources/{name:path}")
+def delete_source(name: str):
+    data = _load_sources()
+    deleted = False
+    for topic, topic_data in data.get("topics", {}).items():
+        for lst_key in ("sources", "youtube_channels"):
+            before = len(topic_data.get(lst_key, []))
+            topic_data[lst_key] = [s for s in topic_data.get(lst_key, []) if s.get("name") != name]
+            if len(topic_data.get(lst_key, [])) < before:
+                deleted = True
+    if not deleted:
+        raise HTTPException(404, f"Source '{name}' not found")
+    _save_sources(data)
     return {"ok": True}
 
 
