@@ -3,7 +3,7 @@
 **Site:** https://money-and-mode.com  
 **Site Name:** Fun in the Life  
 **Tagline:** From Daily Growth to Wealth: A Life Well Lived  
-**Last Updated:** May 24, 2026 (Session 9 — Growth automation scripts built: pinterest_growth.py (18 pin variations across 6 articles via Pinterest API v5) + twitter_growth.py (conversation finder for engagement-based Twitter growth); .env.example + SETUP.md created; all 6 Pinterest portrait pins posted manually; queue.json updated)  
+**Last Updated:** June 7, 2026 (Session 10 — 5 of 6 Instagram posts done (articles 74, 76, 77, 110, 112); post-115 family connection pending; post-74 needs caption edit (⋯ → Edit); improved algorithm-optimised captions written for all 6 posts (saves+comments strategy); batch-2 deeper posts created in /social-media/future-posts/batch-2-instagram.md; Tue/Fri 9am reminder scheduled; blog email setup needed)  
 **Pen Name:** Kabir Shah (technology entrepreneur, 25 years in software/AI, India) — used for all author attribution  
 
 ---
@@ -324,6 +324,25 @@ All diagrams are custom SVG (800px wide, Georgia serif font, brand colours), upl
 - [ ] Run `python pinterest_growth.py --boards` to verify Pinterest API connection
 - [ ] Run `python pinterest_growth.py --all` to post all 18 pin variations (run once, big reach boost)
 - [ ] Run `python twitter_growth.py --find` daily for reply opportunities (free tier)
+
+### Session 10 Pending (Jun 7, 2026)
+- [ ] **Instagram post-115** (Family Connection) — final post from batch 1. Caption in clipboard. Image: ~/Downloads/ig-article-115.png. Post at https://instagram.com (verify handle = fun_in_life71 first)
+- [ ] **Edit Instagram post-74** — was posted without caption. Open Instagram → find post → ⋯ → Edit → paste new caption (see batch-2-instagram notes or queue.json for improved caption)
+- [ ] **Publish WP draft 93** (What is ChatGPT) — was due Jun 6, still draft. Go to WordPress dashboard → Posts → ID 93 → Publish
+- [ ] **Create blog email** — blog@money-and-mode.com via IONOS email panel (see below)
+- [ ] **Create Facebook Page** — Sandip to do. Page name: "Fun in the Life" or "Money & Mode". Connect to Instagram for cross-posting.
+- [ ] **Post batch-2 Instagram** — 6 deeper posts ready in /social-media/future-posts/batch-2-instagram.md. Schedule Jun 17–Jul 4.
+- [ ] **Upload FF-06/07/08 PNGs** to WordPress media + create 3 draft posts
+
+### Blog Email Setup (Do This Once)
+**Create:** `blog@money-and-mode.com`
+**Where:** Login to IONOS → Email → Create Mailbox → use money-and-mode.com domain
+**Why:** All social accounts (Instagram, Pinterest, Facebook, Twitter, YouTube) should use this one email. Currently all linked to personal emails.
+**Steps:**
+1. Login at ionos.com → "Email" section
+2. Create mailbox: blog@money-and-mode.com
+3. Set a strong password
+4. Use this email when: creating Facebook Page, YouTube channel, any new social account
 
 ---
 
