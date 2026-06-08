@@ -184,15 +184,15 @@ All diagrams are custom SVG (800px wide, Georgia serif font, brand colours), upl
 
 ## Social Media (Phase 3)
 
-**Blog email:** info@money-and-mode.com — use for all blog accounts, API sign-ups, social registrations
+**Blog email:** funInTheLife2@gmail.com — use for all blog accounts, API sign-ups, social registrations
 
 | Platform | Handle | Status |
 |----------|--------|--------|
-| Pinterest | @sandip2787 (info@money-and-mode.com) | ✅ Live — profile, 3 boards, articles pinned |
+| Pinterest | @sandip2787 (funInTheLife2@gmail.com) | ✅ Live — profile, 3 boards, articles pinned |
 | Instagram | @fun_in_life71 | ✅ Live — https://www.instagram.com/fun_in_life71/ — bio set ✅, profile photo needed |
-| Facebook Page | To be created | ⚪ Phase 3 — use info@money-and-mode.com |
+| Facebook Page | To be created | ⚪ Phase 3 — use funInTheLife2@gmail.com |
 | Twitter/X | @justIndia25 | ✅ Live — bio set, articles tweeted |
-| YouTube | To be created | ⚪ Phase 3 — use info@money-and-mode.com |
+| YouTube | To be created | ⚪ Phase 3 — use funInTheLife2@gmail.com |
 
 ---
 

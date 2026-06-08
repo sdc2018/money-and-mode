@@ -9,7 +9,7 @@ This file gives Claude full context to work on the money-and-mode.com blog proje
 **Site:** https://money-and-mode.com  
 **Site name:** Fun in the Life  
 **Owner:** Sandip (sandipc@gmail.com | sandipc on GitHub as sdc2018)  
-**Blog email:** info@money-and-mode.com (use this for all blog-related accounts, social sign-ups, API registrations)  
+**Blog email:** funInTheLife2@gmail.com (use this for all blog-related accounts, social sign-ups, API registrations — Facebook Page, YouTube, Pinterest API, Twitter Dev, AdSense, MailerLite)  
 **Purpose:** Lifestyle blog covering AI in everyday life, financial freedom, motivation, and personal growth  
 **Audience:** Regular people — laymen, not tech-savvy. Write simply, warmly, and wisely.  
 **Hosting:** IONOS WordPress (WaaS) — contract expires Jan 2027  
