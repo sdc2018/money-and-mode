@@ -184,7 +184,8 @@ All diagrams are custom SVG (800px wide, Georgia serif font, brand colours), upl
 
 ## Social Media (Phase 3)
 
-**Blog email:** funInTheLife2@gmail.com — use for all blog accounts, API sign-ups, social registrations
+**Blog email (Gmail):** funInTheLife2@gmail.com — social accounts, API sign-ups, developer registrations  
+**Blog email (Professional):** info@money-and-mode.com ✅ — reader contact, newsletters, contact page
 
 | Platform | Handle | Status |
 |----------|--------|--------|
