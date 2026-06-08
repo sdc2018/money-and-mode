@@ -61,6 +61,7 @@ SETTINGS = [
     ("twitter_handle",    "@justIndia25",                "Twitter / X Handle",     "social"),
     ("pinterest_handle",  "sandip2787",                  "Pinterest Handle",       "social"),
     ("wp_api_url",        "https://money-and-mode.com/wp-json/wp/v2", "WordPress API URL", "wordpress"),
+    ("blog_email",        "info@money-and-mode.com",                  "Blog Email",        "general"),
 ]
 
 KEYWORDS = [
